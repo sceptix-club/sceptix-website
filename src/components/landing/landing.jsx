@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useSpring, config } from 'react-spring';
+import Sidebar from '../sidenav/sidebar';
 
 const Landing = () => {
   const leftRef = useRef(null);
@@ -27,13 +28,14 @@ const Landing = () => {
   };
 
   return (
-    <main className="h-screen overflow-hidden relative" onPointerMove={handleOnMove}>
-      <div
+    <main className="h-screen overflow-hidden relative" onPointerMove={handleOnMove}>  
+
+      <div      
         className="h-screen w-full overflow-hidden absolute z-20 bg-stone-50 text-stone-950"
         id="left-box"
         ref={leftRef}
-        style={{ width: tweenWipe.value.interpolate((val) => `${val}%`) }}
-      >
+        style={{ width: tweenWipe.value.interpolate((val) => `${val}%`) }}      >
+     
         <div className="w-screen h-screen flex flex-col items-center justify-center absolute z-10">
           <h1 className="font-bold text-7xl my-6">
             The{' '}
@@ -44,7 +46,8 @@ const Landing = () => {
           </h1>
           <h3 className="text-3xl font-mono">Liberate The Mind</h3>
         </div>
-      </div>
+        <Sidebar/>
+      </div>     
 
       <div className="h-screen w-full overflow-hidden absolute z-10 bg-stone-950 text-stone-50" id="right-box">
         <div className="w-full h-screen flex flex-col items-center justify-center absolute z-10">

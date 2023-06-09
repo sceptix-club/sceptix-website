@@ -23,8 +23,8 @@ function App() {
         <Sidebar />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/" element={<TeamPage/>} />
+          <Route path="/events" element={<Landing/>} />
           <Route path="/members" element={<Members />} />
         </Routes>
       </div>
