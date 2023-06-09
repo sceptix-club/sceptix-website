@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/sidenav/sidebar.jsx";
 import Members from "./components/sidenav/Members.jsx";
 import AboutUs from "./components/About/about.jsx";
-
+import EventPage from './components/Events/events.jsx'
 
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div className='bg-black'>
         <Sidebar />
 
         <Routes>
           <Route path="/" element={<TeamPage/>} />
           <Route path="/events" element={<Landing/>} />
-          <Route path="/members" element={<Members />} />
+          <Route path="/members" element={<EventPage/>} />
         </Routes>
       </div>
     </Router>
