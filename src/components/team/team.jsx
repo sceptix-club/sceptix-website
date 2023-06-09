@@ -110,7 +110,7 @@ import Sidebar from '../sidenav/sidebar';
   ]
 
   return (
-<div className="container mx-auto py-8">
+<div className="container mx-auto py-8 ">
 
     <div className='text-center'>
     <h1 className='text-4xl font-bold mb-9 pb-2 bg-gradient-to-r from-sky-500 to-purple-400 bg-clip-text text-transparent'>Faculty</h1>
@@ -124,11 +124,11 @@ import Sidebar from '../sidenav/sidebar';
               alt={member.name}
               className="w-48 h-48 object-cover mb-4 rounded-full mt-4 "
             />
-            <h2 className="text-xl font-bold mb-3">{member.name}</h2>
+            <h2 className="text-xl text-white font-bold mb-3">{member.name}</h2>
             <p className="text-gray-500">{member.role}</p>
             <div className='flex flex-row justify-center mt-2'> 
-               <div className='m-2'><a href={member.gitlink}>{<AiFillGithub size={30}/>}</a></div>    
-               <div className='m-2'><a href={member.linked}>{<AiFillLinkedin size={30}/>}</a></div>
+               <div className='m-2'><a href={member.gitlink}>{<AiFillGithub color='white' size={30}/>}</a></div>    
+               <div className='m-2'><a href={member.linked}>{<AiFillLinkedin color='white' size={30}/>}</a></div>
                         
             </div>
           </div>
@@ -148,11 +148,11 @@ import Sidebar from '../sidenav/sidebar';
               alt={member.name}
               className="w-48 h-48 object-cover mb-4 rounded-full mt-4"
             />
-            <h2 className="text-xl font-bold mb-3">{member.name}</h2>
+            <h2 className="text-xl text-white font-bold mb-3">{member.name}</h2>
             <p className="text-gray-500">{member.role}</p>
             <div className='flex flex-row justify-center mt-2'> 
-               <div className='m-2'><a href={member.gitlink}>{<AiFillGithub size={30}/>}</a></div>    
-               <div className='m-2'><a href={member.linked}>{<AiFillLinkedin size={30}/>}</a></div>
+               <div className='m-2'><a href={member.gitlink}>{<AiFillGithub color='white' size={30}/>}</a></div>    
+               <div className='m-2'><a href={member.linked}>{<AiFillLinkedin color='white' size={30}/>}</a></div>
                         
             </div>
           </div>

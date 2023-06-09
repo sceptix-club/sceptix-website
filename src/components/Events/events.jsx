@@ -64,7 +64,7 @@ import { AiFillLinkedin } from 'react-icons/ai';
     </div>    
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ml-9">
         {eventPast.map((member, index) => (
-          <div key={index} className="bg-white shadow rounded-lg  flex flex-col  border-solid border-2 border-gray hover:shadow-xl">
+          <div key={index} className="bg-white shadow rounded-lg  flex flex-col   border-gray hover:shadow-xl">
             <img
               src={member.image}
               alt={member.name}
