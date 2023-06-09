@@ -19,9 +19,9 @@ function App() {
         <Sidebar />
 
         <Routes>
-          <Route path="/" element={<TeamPage/>} />
-          <Route path="/events" element={<Landing/>} />
-          <Route path="/members" element={<EventPage/>} />
+          <Route path="/" element={<Landing/>} />
+          <Route path="/events" element={<AboutUs/>} />
+          <Route path="/members" element={<TeamPage />} />
         </Routes>
       </div>
     </Router>
