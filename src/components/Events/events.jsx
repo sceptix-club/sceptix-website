@@ -68,7 +68,7 @@ import { AiFillLinkedin } from 'react-icons/ai';
             <img
               src={member.image}
               alt={member.eventName}
-              className="w-full  h-40 object-cover "
+              className="object-cover w-full  h-auto "
             />
             <h2 className="text-xl text-white font-bold mb-2 p-2 mt-3 ">{member.eventName}</h2>
             <p className='bg-gray-200 text-xs p-2 rounded-full w-fit size ml-3'>{member.date}</p>
@@ -83,3 +83,4 @@ import { AiFillLinkedin } from 'react-icons/ai';
 };
 
 export default EventPage;
+{/*w-full  h-41*/}
