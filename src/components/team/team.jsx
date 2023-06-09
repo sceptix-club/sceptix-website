@@ -7,6 +7,7 @@ import Sidebar from '../sidenav/sidebar';
 
 
 
+
   const TeamPage = () => {
   const teamMembers = [
     {
@@ -110,10 +111,10 @@ import Sidebar from '../sidenav/sidebar';
   ]
 
   return (
-<div className="container mx-auto py-8">
+<div className="container mx-auto py-8 ">
 
     <div className='text-center'>
-    <h1 className='text-4xl font-bold mb-8 '>Faculty</h1>
+    <h1 className='text-4xl font-bold mb-9 pb-2 bg-gradient-to-r from-sky-500 to-purple-400 bg-clip-text text-transparent'>Faculty</h1>
     </div>
 
    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -122,7 +123,7 @@ import Sidebar from '../sidenav/sidebar';
             <img 
               src={member.image}
               alt={member.name}
-              className="w-48 h-48 object-cover mb-4 rounded-full mt-4"
+              className="w-48 h-48 object-cover mb-4 rounded-full mt-4 "
             />
             <h2 className="text-xl font-bold mb-3">{member.name}</h2>
             <p className="text-gray-500">{member.role}</p>
@@ -138,11 +139,11 @@ import Sidebar from '../sidenav/sidebar';
 
       
     <div className='text-center mt-3'>
-    <h1 className="text-4xl font-bold mb-8 m-auto">Our Team</h1>  
+    <h1 className="text-4xl font-bold mb-8 m-auto bg-gradient-to-r from-sky-500 to-purple-400 bg-clip-text text-transparent">Our Team</h1>  
     </div>    
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {teamMembers.map((member, index) => (
-          <div key={index} className="bg-white shadow rounded-lg p-4 flex flex-col items-center hover:bg-green-500">
+          <div key={index} className="bg-white shadow rounded-lg p-4 flex flex-col items-center  hover:shadow-2xl">
             <img
               src={member.image}
               alt={member.name}
