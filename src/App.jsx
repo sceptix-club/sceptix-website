@@ -6,8 +6,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/sidenav/sidebar.jsx";
 import Members from "./components/sidenav/Members.jsx";
-import F from './components/footer/footer.jsx';
-import Footer from './components/footer/footer.jsx';
+import AboutUs from "./components/About/about.jsx";
+
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<TeamPage/>} />
           <Route path="/events" element={<Landing/>} />
-          <Route path="/members" element={<Footer/>} />
+          <Route path="/members" element={<Members />} />
         </Routes>
       </div>
     </Router>
