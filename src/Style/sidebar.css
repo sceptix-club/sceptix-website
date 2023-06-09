@@ -1,0 +1,61 @@
+.icons{
+    position: absolute;
+    width: 50px;
+    border: 1px solid;
+    height:400px;
+    top: 140px;
+    background-color: blueviolet;
+    border-radius: 0px 20px 20px 00px;
+    transition: 0.5s;
+    
+}
+
+.Home{
+    position: absolute;
+    font-size: 30px;
+    top: 70px;
+    left: 8px;
+    cursor: pointer;
+}
+.Home:hover{
+    color: white; 
+}
+
+
+.Event{
+    position: absolute;
+    font-size: 30px;
+    top: 170px;
+    left: 8px;
+    cursor: pointer;
+}
+.Event:hover{
+    color: white; 
+}
+.Members{
+    position: absolute;
+    font-size: 30px;
+    top: 270px;
+    left: 8px;
+    cursor: pointer;
+}
+.Members:hover{  
+    color: white; 
+}
+.User{
+    position: absolute;
+    font-size: 30px;
+    top: 370px;
+    left: 8px;
+    cursor: pointer;
+}
+.User:hover{  
+    color: white; 
+}
+label{
+    position: absolute;
+    top: 40px;
+    left: -5px;
+    font-size:15px;
+
+}
