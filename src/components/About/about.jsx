@@ -8,7 +8,7 @@ const AboutUs = () => {
       <div className="container grid grid-cols-1 xl:grid-cols-2 gap-6 mt-12">
         <div>
           <h2 className="text-6xl  text-center font-bold mb-14 bg-clip-text text-transparent bg-gradient-to-r  from-green-400 to-sky-400 ">About Us </h2>    {/* from-sky-500 from-1%  to-purple-400 to-70%*/}
-          <p className=" text-xl font-mono pl-20 text-white text-center xl:text-justify ">
+          <p className=" text-xl font-mono pl-20 text-white text-center xl:text-left ">
             <p>
               Welcome to The sceptix club, where freedom and innovation converge. We are dedicated to empowering individuals with the liberating force of open-source software. Over the past year, we have conducted engaging sessions, organized Linux installation drives, and hosted captivating coding events and hackathons. Together, we have witnessed the transformative power of collaboration and the limitless possibilities it brings.
             </p>
@@ -19,7 +19,7 @@ const AboutUs = () => {
           </p>
         </div>
         <div>
-          <img src="src/components/About/group.jpg" alt="About Us" className="w-full xl:w-10/12 h-auto my-20 hover:shadow-2xl hover:shadow-[#40cac8]" />
+          <img src="src/components/About/group.jpg" alt="About Us" className=" ml-24 xl:ml-6 w-full xl:w-10/12 h-auto my-20 hover:shadow-2xl hover:shadow-[#40cac8]" />
         </div>
       </div>
     </section>
