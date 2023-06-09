@@ -142,7 +142,7 @@ import Sidebar from '../sidenav/sidebar';
     </div>    
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {teamMembers.map((member, index) => (
-          <div key={index} className="bg-white shadow rounded-lg p-4 flex flex-col items-center border-solid border-2 border-gray-600 hover:shadow-xl">
+          <div key={index} className="bg-gray-900 hover:bg-gray-800  border-gray-400 border-solid border-1 transition duration-150 ease-out hover:ease-in shadow  p-4 flex flex-col items-center">
             <img
               src={member.image}
               alt={member.name}
