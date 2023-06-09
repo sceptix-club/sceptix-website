@@ -11,6 +11,7 @@ import Sidebar from "./components/sidenav/sidebar.jsx";
 import Home from "./components/sidenav/Home.jsx";
 import Events from "./components/sidenav/Events.jsx";
 import Members from "./components/sidenav/Members.jsx";
+import AboutUs from "./components/About/about.jsx";
 
 
 
@@ -23,9 +24,9 @@ function App() {
         <Sidebar />
 
         <Routes>
-          <Route path="/" element={<TeamPage/>} />
-          <Route path="/events" element={<Landing/>} />
-          <Route path="/members" element={<Members />} />
+          <Route path="/" element={<Landing/>} />
+          <Route path="/events" element={< AboutUs/>} />
+          <Route path="/members" element={< TeamPage />} />
         </Routes>
       </div>
     </Router>
