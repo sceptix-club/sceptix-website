@@ -9,8 +9,9 @@
     transition: 0.5s;
         /* / */
         z-index: 20;
-
+        position: fixed;
     
+        
 }
 
 .Home{
@@ -21,6 +22,7 @@
     cursor: pointer;
         /* / */
         z-index: 20;
+        
 }
 .Home:hover{
     color: white; 
