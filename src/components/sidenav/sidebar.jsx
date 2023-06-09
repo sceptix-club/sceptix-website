@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import '../../style/sidebar.css';
 
 import { HiHome } from 'react-icons/hi';
-
+import {SlCalender} from 'react-icons/sl'
 import { FaLaptopCode } from 'react-icons/fa';
 import { RiTeamLine } from 'react-icons/ri';
 
@@ -19,7 +19,7 @@ function Sidebar() {
         </div>
         <div className="Event">
           <Link to="/events">
-            <FaLaptopCode />
+            <SlCalender />
           </Link>
         </div>
         <div className="Members">
