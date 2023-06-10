@@ -26,12 +26,9 @@ function Sidebar() {
   // }
  
 
-
-
-
   return (
     <div>
-      <div className="menu" onClick={HandleState ? toggle = "toggle" : ''}>
+      <div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''}>
         <CgLoadbar className= {`first ${toggle}`} />
         <CgLoadbar className= {`second ${toggle}`} />
 
