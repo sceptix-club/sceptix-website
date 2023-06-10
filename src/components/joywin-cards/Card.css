@@ -1,0 +1,31 @@
+.Card-content {
+    display: flex; 
+    flex-direction: column;
+    background-color: aliceblue;
+    border-radius: 10px;
+    justify-content: center; 
+    align-items: center;
+    transition: transform 0.3s ease;
+    height: 400px;
+    width: 300px;
+    padding-bottom: 60px;
+    margin: 80px;
+  }
+  
+  .Card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: contain;
+  }
+
+.Card-content:hover {
+    transform: scale(1.05); 
+}
+
+.Card-info h5,
+.Card-info h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
