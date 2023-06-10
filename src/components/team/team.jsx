@@ -316,26 +316,19 @@ const TeamPage = () => {
       gitlink: "https://github.com/Charispinto",
       linked: "https://github.com/Charispinto"
     },
-    {
-      name: '',
-      role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
-      gitlink: "https://github.com/Charispinto",
-      linked: "https://github.com/Charispinto"
-    },
   ];
 
   const facultyMembers = [
     {
-      name: 'Pinto Charis',
-      role: 'Member',
+      name: 'Dr Rio Dsouza',
+      role: 'Principal',
       image: 'sam.jpg',
       gitlink: "https://github.com/Charispinto",
       linked: "https://github.com/Charispinto"
     },
     {
-      name: 'Pinto Charis',
-      role: 'hello',
+      name: 'Dr Sridevi Saralaya',
+      role: 'HoD - Dept of CSE',
       image: 'sam.jpg',
       gitlink: "https://github.com/Charispinto",
       linked: "https://github.com/Charispinto"
@@ -343,15 +336,15 @@ const TeamPage = () => {
     },
 
     {
-        name: 'Samwin Pereira',
-        role: 'hello',
+        name: 'Mrs Pruthvi M Raghav',
+        role: 'Faculty Coordinator',
         image: 'sam.jpg',
         gitlink:"https://github.com/Charispinto",
         linked: "https://github.com/Charispinto"
     },
     {
-      name: 'Pinto Charis',
-      role: 'hello',
+      name: 'Mr Lokesh Suvarna',
+      role: 'System Administrator',
       image: 'sam.jpg',
       gitlink:"https://github.com/Charispinto",
       linked: "https://github.com/Charispinto"
