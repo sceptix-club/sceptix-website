@@ -18,12 +18,7 @@ function Sidebar() {
   let HandleState = ()=>{
     SetState(!state);
   }
-  // if(state){
-  //   toggle = "toggle";
-  // }
-  // else{
-  //   toggle = "";
-  // }
+ 
  
 
   return (
