@@ -35,7 +35,7 @@ const MemberCard = ({ member }) => {
 const TeamPage = () => {
   const teamMembers = [
     {
-      name: 'Pinto Charis',
+      name: 'uthpal',
       role: 'hello',
       image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
       gitlink: "https://github.com/Charispinto",
