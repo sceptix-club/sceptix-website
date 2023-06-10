@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import './Cards.css';
+import './Card.css';
 
 const Cards = (props) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  console.log(props)
 
   const handleCardClick = () => {
     setIsExpanded(!isExpanded);
@@ -23,9 +24,9 @@ const Cards = (props) => {
       </div>
       {isExpanded ? (
         <div className="Card-info">
-          <h3>Session on Anime</h3>
+          <h3>{props.eventName}</h3>
           <h5>
-            <FontAwesomeIcon icon={faCalendarAlt} /> 12/15/2023
+            <FontAwesomeIcon icon={faCalendarAlt} /> {props.date}
           </h5>
           <p>
             {props.eventInfo}
