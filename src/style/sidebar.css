@@ -12,7 +12,7 @@
     position: fixed;
   }
   
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
     .icons {
       width: 0px;
     }
@@ -57,7 +57,7 @@
       transition: 0.5s;
     }
   }
-  @media (min-width: 480px) {
+  @media (min-width: 640px) {
     .menu, .first, .second {
       width: 0px;
     }
