@@ -107,6 +107,14 @@ import Footer from '../footer/footer.jsx';
         image: 'sam.jpg',
         gitlink:"https://github.com/Charispinto",
         linked: "https://github.com/Charispinto"
+    },
+    {
+      name: 'Pinto Charis',
+      role: 'hello',
+      image: 'sam.jpg',
+      gitlink:"https://github.com/Charispinto",
+      linked: "https://github.com/Charispinto"
+
     }
   ]
 
