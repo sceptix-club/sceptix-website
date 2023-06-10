@@ -1,28 +1,44 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../../style/sidebar.css';
+import { useState } from "react";
 import {LuPlaneLanding} from 'react-icons/lu'
 import { HiHome } from 'react-icons/hi';
 import {SlCalender} from 'react-icons/sl'
-import { FaLaptopCode } from 'react-icons/fa';
 import { RiTeamLine } from 'react-icons/ri';
+import {AiOutlineHome} from 'react-icons/ai'
+import {CgLoadbar} from  'react-icons/cg'
 
 
 
 function Sidebar() {
+  let toggle =''
+  const [state , SetState] = useState(false);
+
+  let HandleState = ()=>{
+    SetState(!state);
+  }
+ 
+ 
+
   return (
     <div>
-      <div className={`icons`}>
+      <div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''}>
+        <CgLoadbar className= {`first ${toggle}`} />
+        <CgLoadbar className= {`second ${toggle}`} />
+
+      </div>
+      <div className={`icons ${toggle}`}>
         <div className="Landing">
           <Link to="/"> 
-          <LuPlaneLanding/>
+          <LuPlaneLanding />
           </Link>
          
        
         </div>
         <div className="Home">
           <Link to="/home">
-            <HiHome />
+            <AiOutlineHome />
           </Link>
         </div>
         <div className="Event">
