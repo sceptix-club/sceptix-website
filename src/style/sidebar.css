@@ -13,6 +13,71 @@
     
         
 }
+@media (max-width:480px){
+    .icons{
+        width: 0px;
+    }
+    .icons.toggle{
+        width: 50px;
+    .Home,.Members,.Event,.Landing{
+          display: block;
+        }
+
+    }
+    .Home,.Members,.Event,.Landing{
+        display: none;
+    }
+  
+    .menu{
+        z-index: 20;
+        position: absolute;
+        left: -8px;
+        top: 30px;
+        width: 60px;
+        height: 70px;
+        position: fixed;
+        transition: 0.5s;
+        .first,.second{
+            position: absolute;
+            font-size: 50px;
+            transition: 0.5s;
+            left: 7px;
+            color: blue;
+        }
+        .first{
+            top: 0px;
+            }
+            .first.toggle{
+                transform: rotate(45deg);
+                transition: 0.5s;
+            }
+        .second{
+            top: 20px;
+        }
+       .second.toggle{
+       transform: rotate(-45deg);
+       transition: 0.5s;
+        
+        
+       }
+
+        
+    }
+
+}
+@media (min-width:480px){
+    .menu,.first,.second{
+       display: none;
+    }
+
+}
+
+/* @media (max-width:995px){
+    .icons{
+      
+        top: 10%;
+    }
+} */
 .Landing{
     position: absolute;
     font-size: 30px;
@@ -35,7 +100,7 @@
         
 }
 .Home:hover{
-    color: white; 
+    color: rgb(135, 135, 135); 
 }
 
 
@@ -49,7 +114,7 @@
         z-index: 20;
 }
 .Event:hover{
-    color: white; 
+    color: rgb(135, 135, 135); 
 }
 .Members{
     position: absolute;
@@ -61,7 +126,7 @@
         z-index: 20;
 }
 .Members:hover{  
-    color: white; 
+    color: rgb(135, 135, 135); 
 }
 /* .User{
     position: absolute;
@@ -90,3 +155,10 @@
     left: 8px;
     font-size: 30px;
 }
+
+
+.Landing:hover{  
+    color: rgb(255, 255, 255); 
+}
+
+
