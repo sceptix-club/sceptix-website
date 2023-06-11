@@ -356,7 +356,7 @@ const TeamPage = () => {
     <div>
     <div className="container mx-auto py-8 px-20">
       <div className="text-center">
-      <h1 className="py-10 text-6xl font-bold mb-9 pb-10 bg-gradient-to-r from-sky-500 to-purple-400 bg-clip-text text-transparent">
+      <h1 className="py-10 text-6xl font-bold mb-9 pb-10 bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
           Faculty
         </h1>
       </div>
@@ -368,7 +368,7 @@ const TeamPage = () => {
       </div>
 
       <div className="text-center mt-3">
-        <h1 className="py-16 text-6xl font-bold mb-8 m-auto bg-gradient-to-r from-sky-500 to-purple-400 bg-clip-text text-transparent">
+        <h1 className="py-16 text-6xl font-bold mb-8 m-auto bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
           Our Team
         </h1>
       </div>

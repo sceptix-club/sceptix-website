@@ -55,7 +55,7 @@ const EventPage = () => {
     <>
       <div className="container mx-auto py-8 bg-black">
         <div className="text-center mt-3">
-          <h1 className="text-6xl font-bold mb-8 m-auto bg-gradient-to-l from-sky-500 from-1% to-purple-400 to-70% bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold mb-8 m-auto bg-gradient-to-l from-sky-500 from-1% to-blue-400 to-70% bg-clip-text text-transparent">
             Events
           </h1>
         </div>
