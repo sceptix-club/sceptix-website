@@ -19,7 +19,7 @@ const MemberCard = ({ member }) => {
       <p className="text-gray-500">{member.role}</p>
       <div className="flex flex-row justify-center mt-2">
         <div className="m-2">
-          <a href={member.gitlink}>
+          <a href={member.gitlink} target='_blank'>
             <AiFillGithub color="white" size={30} />
           </a>
         </div>
@@ -45,7 +45,7 @@ const FacultyCard = ({ member }) => {
       <p className="text-gray-500">{member.role}</p>
       <div className="flex flex-row justify-center mt-2">
         <div className="m-2">
-          <a href={member.gitlink}>
+          <a href={member.aboutLink}>
             <AiOutlineUser color="white" size={30} />
           </a>
         </div>       
@@ -341,7 +341,7 @@ const TeamPage = () => {
       role: 'Member',
       image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
       gitlink: "https://github.com/tanishatshetty",
-      linked: "https://github.com/Charispinto"
+      // linked: "https://github.com/Charispinto"
     },
   ];
 
@@ -349,32 +349,31 @@ const TeamPage = () => {
     {
       name: 'Dr Rio Dsouza',
       role: 'Principal',
-      image: 'sam.jpg',
-      gitlink: "https://github.com/Charispinto",
-      linked: "https://github.com/Charispinto"
+      image: 'principal.jpg',
+      aboutLink: "https://www.sjec.ac.in/faculty-display.php?id=123",
+      
     },
     {
       name: 'Dr Sridevi Saralaya',
       role: 'HoD - Dept of CSE',
-      image: 'sam.jpg',
-      gitlink: "https://www.sjec.ac.in/faculty-display.php?id=125",
-      linked: "https://github.com/Charispinto"
-
+      image: 'HOD.jpg',
+      aboutLink: "https://www.sjec.ac.in/faculty-display.php?id=125",
+      
     },
 
     {
         name: 'Mrs Pruthvi M Raghav',
         role: 'Faculty Coordinator',
-        image: 'sam.jpg',
-        gitlink:"https://github.com/Charispinto",
-        linked: "https://github.com/Charispinto"
+        image: 'purvi.jpg',
+        aboutLink:"https://www.sjec.ac.in/faculty-display.php?id=652",
+      
     },
     {
       name: 'Mr Lokesh Suvarna',
       role: 'System Administrator',
-      image: 'sam.jpg',
-      gitlink:"https://github.com/Charispinto",
-      linked: "https://github.com/Charispinto"
+      image: 'lokesh.webp',
+      aboutLink:"https://www.linkedin.com/in/lokesh-suvarna-53378926/?originalSubdomain=in",
+     
 
     }
   ]
