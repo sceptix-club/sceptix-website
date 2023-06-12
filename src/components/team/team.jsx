@@ -381,7 +381,7 @@ const TeamPage = () => {
 
   return (
     <div>
-    <div className="container mx-auto py-8 px-20">
+    <div className="container mx-auto px-20">
       <div className="text-center">
       <h1 className="py-10 text-6xl font-bold mb-9 pb-10 bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
           Faculty

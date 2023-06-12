@@ -16,7 +16,7 @@ const AboutUs = () => {
       <div className="lg:flex">
         
         <div className="p-8 sm:pl-16 pt-14 sm:pt-0">
-          <div className="uppercase tracking-wide text-2xl sm:text-6xl text-blue-400 font-bold text-center sm:text-left">About Us</div>
+          <div className="tracking-wide text-2xl sm:text-6xl text-blue-400 font-bold text-center sm:text-left">About Us</div>
             <p className="sm:mt-12 mt-4 text-white sm:text-xl">
             Welcome to The sceptix club, where freedom and innovation converge. We are a open source software club. Together, we have witnessed the transformative power of collaboration and the limitless possibilities it brings. Join us at The sceptix club and let's celebrate the journey of freedom, creativity, and boundless minds.
             </p>
@@ -24,7 +24,7 @@ const AboutUs = () => {
         </div>
 
         <div className="lg:shrink">
-          <img className="h-48 w-full object-cover lg:h-full lg:w-auto transition duration-200 ease-out hover:ease-in hover:shadow-2xl hover:shadow-[#40cac8]" src="/src/components/About/group.jpg" alt="About"/>
+          <img className="h-48 w-full object-cover lg:h-full lg:w-auto px-2 rounded-2xl " src="/src/components/About/group.jpg" alt="About"/>
         </div>
         
       </div>
