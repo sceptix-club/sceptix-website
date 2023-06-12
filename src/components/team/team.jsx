@@ -3,6 +3,7 @@ import { AiFillGithub } from 'react-icons/ai'
 import { AiFillLinkedin } from 'react-icons/ai';
 import Sidebar from '../sidenav/sidebar';
 import Footer from '../footer/footer.jsx';
+import {AiOutlineUser} from 'react-icons/ai'
 
 
 
@@ -31,6 +32,32 @@ const MemberCard = ({ member }) => {
     </div>
   );
 };
+
+const FacultyCard = ({ member }) => {
+  return (
+    <div className="bg-gray-900 hover:bg-gray-800 border-gray-400 border-solid border-1 transition duration-150 ease-out hover:ease-in shadow p-4 flex flex-col items-center rounded-lg">
+      <img
+        src={member.image}
+        alt={member.name}
+        className="w-48 h-48 object-cover mb-4 rounded-full mt-4"
+      />
+      <h2 className="text-xl text-white font-bold mb-3">{member.name}</h2>
+      <p className="text-gray-500">{member.role}</p>
+      <div className="flex flex-row justify-center mt-2">
+        <div className="m-2">
+          <a href={member.gitlink}>
+            <AiOutlineUser color="white" size={30} />
+          </a>
+        </div>       
+      </div>
+    </div>
+  );
+};
+
+
+
+
+
 
 const TeamPage = () => {
   const teamMembers = [
@@ -330,7 +357,7 @@ const TeamPage = () => {
       name: 'Dr Sridevi Saralaya',
       role: 'HoD - Dept of CSE',
       image: 'sam.jpg',
-      gitlink: "https://github.com/Charispinto",
+      gitlink: "https://www.sjec.ac.in/faculty-display.php?id=125",
       linked: "https://github.com/Charispinto"
 
     },
@@ -363,7 +390,7 @@ const TeamPage = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {facultyMembers.map((member, index) => (
-          <MemberCard key={index} member={member} />
+          <FacultyCard key={index} member={member} />
         ))}
       </div>
 
