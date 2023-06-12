@@ -1,85 +1,76 @@
-import React from 'react';
-import {AiFillGithub} from 'react-icons/ai'
-import { AiFillLinkedin } from 'react-icons/ai'; 
-import Footer from '../footer/footer.jsx';
+import React from "react";
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import Footer from "../footer/footer.jsx";
+import Cards from "../joywin-cards/Card.jsx";
 
-
-
-
-
-  const EventPage = () => {
-   const eventPast = [
+const EventPage = () => {
+  const eventPast = [
     {
-    eventName: "hacktofuture",    
-    date: "July 2022",
-    image: 'hack.jpg',
-    eventInfo: "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot"
-  
-    }, 
-
+      eventName: "JS Jumpstart",
+      date: "12/6/2023",
+      image: "Final-01.jpeg",
+      eventInfo:
+        "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot",
+    },
     {
-        eventName: "hacktofuture",    
-        date: "July 2022",
-        image: 'hack.jpg',
-        eventInfo: "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot"
-      
-    }, 
+      eventName: "Hack To Future",
+      date: "25/4/2023",
+      image: "HackToFuture - 26 April 2023.jpg",
+      eventInfo:
+        "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot",
+    },
 
     {
-        eventName: "hacktofuture",    
-        date: "July 2022",
-        image: 'hack.jpg',
-        eventInfo: "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot"
-      
-    }, 
-
+      eventName: "A Guide To ARG",
+      date: "17/3/2023",
+      image: "A Guide To ARG- 17 March 2023-01.jpeg",
+      eventInfo:
+        "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot",
+    },
+    {
+      eventName: "SJEC Premiere Hackathon",
+      date: "25/1/2023",
+      image: "SJEC Premiere Hackathon - 25 Jan 2023.jpg",
+      eventInfo:
+        "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot",
+    },
+    {
+      eventName: "SJEC 30 Days Of Code",
+      date: "19/12/2022",
+      image: "sjec-30-days-of-code-01.jpeg",
+      eventInfo:
+        "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot",
+    },
 
     {
-        eventName: "hacktofuture",    
-        date: "July 2022",
-        image: 'hack.jpg',
-        eventInfo: "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot"
-      
-    }, 
-
-    {
-        eventName: "hacktofuture",    
-        date: "July 2022",
-        image: 'hack.jpg',
-        eventInfo: "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot"
-      
-    }, 
-
-
-]
-
-
-
+      eventName: "Inauguration",
+      date: "16/6/2022",
+      image: "Inauguration - 16 June 2022-01.jpeg",
+      eventInfo:
+        "some random event took place this summer i dont know what to put here how did feel dont smile too much you idiot",
+    },
+  ];
   return (
-    <><div className="container mx-auto py-8 bg-black">
-
-
-      <div className='text-center mt-3'>
-        <h1 className="text-6xl font-bold mb-8 m-auto bg-gradient-to-l from-sky-500 from-1%  to-purple-400 to-70%   bg-clip-text text-transparent">Events</h1>
+    <>
+      <div className="container mx-auto py-8 bg-black">
+        <div className="text-center mt-3">
+          <h1 className="text-6xl font-bold mb-8 m-auto bg-gradient-to-l from-sky-500 from-1% to-blue-400 to-70% bg-clip-text text-transparent">
+            Events
+          </h1>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ml-9">
+          {eventPast.map((member, index) => (
+            <Cards key={index} {...member} />
+          ))}
+        </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ml-9">
-        {eventPast.map((member, index) => (
-          <div key={index} className="bg-gray-900 shadow   flex flex-col   border-gray hover:shadow-xl">
-            <img
-              src={member.image}
-              alt={member.eventName}
-              className="object-cover w-full  h-auto " />
-            <h2 className="text-xl text-white font-bold mb-2 p-2 mt-3 ">{member.eventName}</h2>
-            <p className='bg-gray-200 text-xs p-2 rounded-full w-fit size ml-3'>{member.date}</p>
-            <p className="text-gray-500 p-3">{member.eventInfo}</p>
-            <div className='flex flex-row justify-center mt-2'>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div><Footer /></>
+      <Footer />
+    </>
   );
 };
 
 export default EventPage;
-{/*w-full  h-41*/}
+{
+  /*w-full  h-41*/
+}

@@ -1,29 +1,57 @@
+//dedicated to empowering individuals with the liberating force of open-source software
+//conducted engaging sessions, organized Linux installation drives, and hosted captivating coding events and hackathons
+//committed to expanding our community and contributing to larger-scale open-source projects
+
 import React from 'react';
 import Footer from '../footer/footer.jsx';
+import { MdPeopleOutline } from 'react-icons/md';
+import { GiTeacher } from "react-icons/gi"; 
+import { GiFist } from "react-icons/gi"; 
 
 const AboutUs = () => {
   return (
     <>
-    <section id="about" className="bg-gray-900 py-10">
-      <div className="container grid grid-cols-1 xl:grid-cols-2 gap-6 mt-12">
-        <div>
-          <h2 className="text-6xl font-mono text-center font-bold mb-14 bg-clip-text text-transparent bg-gradient-to-r  from-green-400 to-sky-400 ">About Us </h2>    {/* from-sky-500 from-1%  to-purple-400 to-70%*/}
-          <p className=" text-xl font-mono pl-20 text-white text-center xl:text-left ">
-            <p>
-              Welcome to The sceptix club, where freedom and innovation converge. We are dedicated to empowering individuals with the liberating force of open-source software. Over the past year, we have conducted engaging sessions, organized Linux installation drives, and hosted captivating coding events and hackathons. Together, we have witnessed the transformative power of collaboration and the limitless possibilities it brings.
+    <div className=" mx-auto overflow-hidden sm:mt-20 sm:mx-24">
+      
+      <div className="lg:flex">
+        
+        <div className="p-8 sm:pl-16 pt-14 sm:pt-0">
+          <div className="uppercase tracking-wide text-2xl sm:text-6xl text-blue-400 font-bold text-center sm:text-left">About Us</div>
+            <p className="sm:mt-12 mt-4 text-white sm:text-xl">
+            Welcome to The sceptix club, where freedom and innovation converge. We are a open source software club. Together, we have witnessed the transformative power of collaboration and the limitless possibilities it brings. Join us at The sceptix club and let's celebrate the journey of freedom, creativity, and boundless minds.
             </p>
-            <br />
-            <p>
-              As we forge ahead, our commitment to expanding our community and contributing to larger-scale open-source projects burns brighter than ever. Join us at The sceptix club and let's celebrate the journey of freedom, creativity, and boundless minds.
-            </p>
-          </p>
+            
         </div>
-        <div>
-          <img src="src/components/About/group.jpg" alt="About Us" className=" ml-24 xl:ml-6 w-full xl:w-10/12 h-auto my-20 hover:shadow-2xl hover:shadow-[#40cac8]" />
+
+        <div className="lg:shrink">
+          <img className="h-48 w-full object-cover lg:h-full lg:w-auto transition duration-200 ease-out hover:ease-in hover:shadow-2xl hover:shadow-[#40cac8]" src="/src/components/About/group.jpg" alt="About"/>
+        </div>
+        
+      </div>
+      
+
+    </div>
+
+    <section className="py-12 sm:mt-40 mt-10">
+      <div className="container mx-auto p-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-white sm:mx-20">
+          <div className="text-center">
+            <MdPeopleOutline className="mx-auto text-blue-400" style={{ fontSize: '50px'}}/>
+            <p className="mt-4">Dedicated to empowering individuals with the liberating force of open-source software</p>
+          </div>
+          <div className="text-center">
+            <GiTeacher className="text-blue-400 mx-auto" style={{fontSize: '50px'}} />
+            <p className="mt-4">Conducted engaging sessions, organized Linux installation drives, and hosted captivating coding events and hackathons</p>
+          </div>
+          <div className="text-center">
+            <GiFist className="text-blue-400 mx-auto" style={{fontSize: '50px'}} />
+            <p className="mt-4">Committed to expanding our community and contributing to larger-scale open-source projects</p>
+          </div>
         </div>
       </div>
     </section>
-    <section>
+    
+    <section className="sm:mt-40 mt-10 ">
        <Footer />
     </section>
     </>
@@ -31,3 +59,7 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
+{/*Welcome to The sceptix club, where freedom and innovation converge. We are a open source software club. Together, we have witnessed the transformative power of collaboration and the limitless possibilities it brings.
+
+. Join us at The sceptix club and let's celebrate the journey of freedom, creativity, and boundless minds.*/}
