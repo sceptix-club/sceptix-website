@@ -11,7 +11,7 @@ import { GiFist } from "react-icons/gi";
 const AboutUs = () => {
   return (
     <>
-    <div className=" mx-auto overflow-hidden sm:mt-20 sm:mx-24">
+    <div className=" mx-auto overflow-hidden sm:pt-20 sm:mx-24 ">
       
       <div className="lg:flex">
         
@@ -31,27 +31,26 @@ const AboutUs = () => {
       
 
     </div>
-
-    <section className="py-12 sm:mt-40 mt-10">
+    <section className="py-12 sm:mt-35 mt-10">
       <div className="container mx-auto p-8">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-white sm:mx-20">
           <div className="text-center">
-            <MdPeopleOutline className="mx-auto text-blue-400" style={{ fontSize: '50px'}}/>
+            <MdPeopleOutline className="mx-auto text-blue-400" style={{ fontSize: '80px'}}/>
             <p className="mt-4">Dedicated to empowering individuals with the liberating force of open-source software</p>
           </div>
           <div className="text-center">
-            <GiTeacher className="text-blue-400 mx-auto" style={{fontSize: '50px'}} />
+            <GiTeacher className="text-blue-400 mx-auto" style={{fontSize: '80px'}} />
             <p className="mt-4">Conducted engaging sessions, organized Linux installation drives, and hosted captivating coding events and hackathons</p>
           </div>
           <div className="text-center">
-            <GiFist className="text-blue-400 mx-auto" style={{fontSize: '50px'}} />
+            <GiFist className="text-blue-400 mx-auto" style={{fontSize: '80px'}} />
             <p className="mt-4">Committed to expanding our community and contributing to larger-scale open-source projects</p>
           </div>
         </div>
       </div>
     </section>
     
-    <section className="sm:mt-40 mt-10 ">
+    <section className="sm:mt-35 mt-10 ">
        <Footer />
     </section>
     </>
