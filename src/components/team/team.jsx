@@ -355,7 +355,7 @@ const TeamPage = () => {
     },
     {
       name: 'Dr Sridevi Saralaya',
-      role: 'HoD - Dept of CSE',
+      role: 'Head of Department - CSE',
       image: 'HOD.jpg',
       aboutLink: "https://www.sjec.ac.in/faculty-display.php?id=125",
       

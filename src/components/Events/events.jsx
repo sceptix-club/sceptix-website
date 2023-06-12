@@ -18,7 +18,14 @@ const EventPage = () => {
       date: "25/4/2023",
       image: "HackToFuture - 26 April 2023.jpg",
       eventInfo:
-        "Hack to Future was the first grand Hackathon organised at SJEc that saw the participation of over 91 institutions. The 24-hour hackathon provided an immersive and high-energy environment for participants to showcase their coding skills, creativity, and problem-solving abilities.  ",
+        "HackToFuture is a 24-hour hackathon taking place on April 25-26. It's a great chance for tech enthusiasts of all levels to demonstrate their skills, network with others, and contribute to a brighter future. Join us for an inspiring and impactful 24-hour event that will help you achieve your goals!",
+    },
+    {
+      eventName: "Recruitment",
+      date: "23/2/2023",
+      image: "Recruitment.jpeg",
+      eventInfo:
+        "Exciting opportunity ahead! Join The sceptix club's upcoming recruitment program to develop FOSS websites. We're recruiting talented students to promote FOSS acceptance within the college community. Stay tuned for details!",
     },
 
     {
@@ -33,7 +40,7 @@ const EventPage = () => {
       date: "25/1/2023",
       image: "SJEC Premiere Hackathon - 25 Jan 2023.jpg",
       eventInfo:
-        "The grand finale of the 30 day code challenge was our own hackathon. Consisting of four main themes, participants were judged on their creativity and implementation.It left a lasting impact on the participants, inspiring them to continue exploring new technologies and solving real-world challenges through their coding skills",
+        "Coming soon: An 8-hour non-stop hackathon. Choose your theme and join a maximum of four members to develop solutions in agriculture, education, healthcare, and social innovation. Get ready for inspiring projects, problem-solving, and a vibrant community of passionate coders!",
     },
     {
       eventName: "SJEC 30 Days Of Code",
@@ -41,6 +48,20 @@ const EventPage = () => {
       image: "sjec-30-days-of-code-01.jpeg",
       eventInfo:
         "An intensive coding challenge contest was conducted for 30 days. The participants were encouraged to come up with solutions and exciting cash prizes were rewarded to the outstanding contestants every week!",
+    },
+    {
+      eventName: "FOSS vs Proprietary Software",
+      date: "22/7/2022",
+      image: "Foss.jpeg",
+      eventInfo:
+        "Experience the power of Free and Open-Source Software (FOSS) at the upcoming second meeting of the sceptix club. Learn about the advantages of FOSS, explore open-source alternatives, and join our enthusiastic community of tech enthusiasts. Join us for an enlightening session and unlock new possibilities in the world of software!.",
+    },
+    {
+      eventName: "Introduction to Linux and Vim",
+      date: "15/7/2022",
+      image: "LinuxIntro.jpeg",
+      eventInfo:
+        "Discover the meeting of the sceptix club, featuring insightful sessions on Linux-based operating systems, terminal commands, and Vim efficiency. Engage with fellow students from various departments and expand your knowledge in this exciting event. Join us for an unforgettable experience!",
     },
 
     {
