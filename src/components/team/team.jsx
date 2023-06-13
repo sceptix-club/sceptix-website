@@ -23,11 +23,11 @@ const MemberCard = ({ member }) => {
             <AiFillGithub color="white" size={30} />
           </a>
         </div>
-        <div className="m-2">
+        {/* <div className="m-2">
           <a href={member.linked}>
             <AiFillLinkedin color="white" size={30} />
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -399,13 +399,13 @@ const TeamPage = () => {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
         {teamMembers.map((member, index) => (
           <MemberCard key={index} member={member} />
         ))}
       </div>
     </div>
-    <Footer />
+    <Footer className="mt-5" />
     </div>
   );
 };
