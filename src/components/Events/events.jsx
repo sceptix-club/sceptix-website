@@ -74,18 +74,24 @@ const EventPage = () => {
   ];
   return (
     <>
-      <div className="container mx-auto py-8 bg-black">
-        <div className="text-center mt-3">
-          <h1 className="text-6xl font-bold mb-8 m-auto bg-gradient-to-l from-sky-500 from-1% to-blue-400 to-70% bg-clip-text text-transparent">
-            Events
-          </h1>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ml-9">
-          {eventPast.map((member, index) => (
-            <Cards key={index} {...member} />
-          ))}
-        </div>
+   <div className="container mx-auto py-8 bg-black">
+  <div className="text-center mt-3">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 m-auto bg-gradient-to-l from-sky-500 from-1% to-blue-400 to-70% bg-clip-text text-transparent">
+      Events
+    </h1>
+  </div>
+  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mx-auto">
+    {eventPast.map((member, index) => (
+      <div className="mr-8 sm:justify-center md:justify-start lg:justify-start xl:justify-start" key={index}>
+        <Cards {...member} />
       </div>
+    ))}
+  </div>
+</div>
+
+
+
+
       <Footer />
     </>
   );

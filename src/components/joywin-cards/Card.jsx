@@ -24,15 +24,15 @@ const EventCards = (props) => {
         <img src={props.image} alt="Test Image" />
       </div>
       <div className="Card-title">
-        <h3>{props.eventName}</h3>
-        <h5>
+        <h3 className='font-bold text-lg'>{props.eventName}</h3>
+        <h5 className='font-normal'>
           <FontAwesomeIcon icon={faCalendarAlt} /> {props.date}
         </h5>
       </div>
       {isExpanded && (
         <div className="Card-info">
-          <h3>{props.eventName}</h3>
-          <h5>
+          <h3 className='py-4 font-bold text-2xl'>{props.eventName}</h3>
+          <h5 className='pb-4'>
             <FontAwesomeIcon icon={faCalendarAlt} /> {props.date}
           </h5>
           <p>{props.eventInfo}</p>
