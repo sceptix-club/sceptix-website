@@ -24,7 +24,7 @@ const AboutUs = () => {
         </div>
 
         <div className="lg:shrink">
-          <img className="h-48 w-full object-cover lg:h-full lg:w-auto px-2 rounded-2xl " src="/src/components/About/group.jpg" alt="About"/>
+          <img className="h-48 w-full object-cover lg:h-full lg:w-auto px-2 rounded-2xl " src="group.jpg" alt="About"/>
         </div>
         
       </div>
