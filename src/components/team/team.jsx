@@ -262,8 +262,8 @@ const TeamPage = () => {
     {
       name: 'Mac Reon D Souza',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
-      gitlink: "https://github.com/CheesyMac06",
+      image: 'https://avatars.githubusercontent.com/u/120902232?v=4',
+      gitlink: "https://github.com/MacDsouza",
       linked: "https://github.com/Charispinto"
     },
     {
