@@ -64,14 +64,14 @@ const TeamPage = () => {
     {
       name: 'Vyasa M Nayak',
       role: 'President',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/59310023?v=4',
       gitlink: "https://github.com/septicalls",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Anusha K',
       role: 'Vice President',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/91852247?v=4',
       gitlink: "https://github.com/Anu7ha",
       linked: "https://github.com/Charispinto"
 
@@ -80,7 +80,7 @@ const TeamPage = () => {
     {
       name: 'Alriya Treeza D Souza',
       role: 'Secretory',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/109797633?v=4',
       gitlink: "https://github.com/alriyadsouza",
       linked: "https://github.com/Charispinto"
     },
@@ -94,168 +94,168 @@ const TeamPage = () => {
     {
       name: 'Nihaal Y K',
       role: 'Planning Supervisor',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/122111345?v=4',
       gitlink: "https://github.com/Nihaalyk",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Khushi Haldankar',
       role: 'Media Supervisor',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/95235826?v=4',
       gitlink: "https://github.com/Khushi255",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Omkar Bhat',
       role: 'Co-Founder',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/116007392?v=4',
       gitlink: "https://github.com/Omkarbhat08",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Pratham V Bhat',
       role: 'Co-Founder',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/102966477?v=4',
       gitlink: "https://github.com/prathamvbhat",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Anish Shobith PS',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/38991749?v=4',
       gitlink: "https://github.com/Anish-Shobith",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Joywin Bennis',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/107112207?v=4',
       gitlink: "https://github.com/joywin2003",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Samwin Steve Pereira',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/104161408?v=4',
       gitlink: "https://github.com/samwinp",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Vaibhav K Saliyan',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/107093843?v=4',
       gitlink: "https://github.com/vaibhvc4",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Muhammed Saheed',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/89859744?v=4',
       gitlink: "https://github.com/Mainkt",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Vyshnav',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/120462272?v=4',
       gitlink: "https://github.com/Vyshnav001",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Rachan Karkera',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/125819639?v=4',
       gitlink: "https://github.com/rachan2005",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'A Sanjana B Bhat',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/99474009?v=4',
       gitlink: "https://github.com/sanju2728",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Arshith Glanwin vaz',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/107086005?v=4',
       gitlink: "https://github.com/ArshithVaz",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Abhinav C Yadav',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/85658995?v=4',
       gitlink: "https://github.com/abhi-abhinav",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'A S Vijayavitthala',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/96972960?v=4',
       gitlink: "https://github.com/vv-01",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Shivani B S',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/123190569?v=4',
       gitlink: "https://github.com/Shivani-rao123",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Uthpal Suvarna',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/121611528?v=4',
       gitlink: "https://github.com/UthpalSuvarna",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Ciana Rodrigues',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/115702806?v=4',
       gitlink: "https://github.com/cianar99",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Sabrina Hehar',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/120552555?v=4',
       gitlink: "https://github.com/heharsabrina",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Rishal D',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/125131656?v=4',
       gitlink: "https://github.com/Rishal14",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Deric Jojo',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/73828512?v=4',
       gitlink: "https://github.com/JackitudilinksG",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Joshua Quinthino Albuquerque',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/125178226?v=4',
       gitlink: "https://github.com/JoshuaAlbuquerque",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Lawrence D Souza',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/121675518?v=4',
       gitlink: "https://github.com/lawrencedsz9",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Amisha Ananda Gowda',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/107048204?v=4',
       gitlink: "https://github.com/Amisha-Ananda-Gowda",
       linked: "https://github.com/Charispinto"
     },
@@ -269,77 +269,77 @@ const TeamPage = () => {
     {
       name: 'Swastik Gurudev Bhandarkar',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/123379509?v=4',
       gitlink: "https://github.com/swastikb794",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Nahla Nafeesa Adiraja',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/120504736?v=4',
       gitlink: "https://github.com/nahla2405",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Pranaam',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/120368095?v=4',
       gitlink: "https://github.com/pranaam1",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Pranavv Raja C P',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/114171126?v=4',
       gitlink: "https://github.com/pranavvraja",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Adwaith Sanjeev C',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/106440834?v=4',
       gitlink: "https://github.com/adwxith",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Chaitanya Puthran',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/109748320?v=4',
       gitlink: "https://github.com/Chaitanyaputhran",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Devananda M Prabhu',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/107057399?v=4',
       gitlink: "https://github.com/devprabhu18",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Shane Priyanka Rodrigues',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/107060904?v=4',
       gitlink: "https://github.com/Shane0303",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Sharon Tyana Menezes',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/109790167?v=4',
       gitlink: "https://github.com/Sharontm",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Sheldon Menezes',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/63775224?v=4',
       gitlink: "https://github.com/0x5h31d0n",
       linked: "https://github.com/Charispinto"
     },
     {
       name: 'Tanisha T Shetty',
       role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/114792058?v=4',
+      image: 'https://avatars.githubusercontent.com/u/125664496?v=4',
       gitlink: "https://github.com/tanishatshetty",
       // linked: "https://github.com/Charispinto"
     },
