@@ -23,8 +23,9 @@ function App() {
           <Route path="/home" element={<AboutUs/>}/>
           <Route path="/events" element={<EventPage/>} />
           <Route path="/members" element={<TeamPage/>} />
-         
+          
         </Routes>
+        
       </div>
     </Router>
   );
