@@ -7,6 +7,7 @@ import Footer from '../footer/footer.jsx';
 import { MdPeopleOutline } from 'react-icons/md';
 import { GiTeacher } from "react-icons/gi"; 
 import { GiFist } from "react-icons/gi"; 
+import Timeline from '../timeline/timeline.jsx';
 
 const AboutUs = () => {
   return (
@@ -21,7 +22,10 @@ const AboutUs = () => {
             Welcome to The sceptix club, where freedom and innovation converge. We are a open source software club. Together, we have witnessed the transformative power of collaboration and the limitless possibilities it brings. Join us at The sceptix club and let's celebrate the journey of freedom, creativity, and boundless minds.
             </p>
             
+           
+            
         </div>
+     
 
         <div className="lg:shrink">
           <img className="h-48 w-full object-cover lg:h-full lg:w-auto px-2 rounded-2xl " src="group.jpg" alt="About"/>
@@ -37,7 +41,9 @@ const AboutUs = () => {
           <div className="text-center">
             <MdPeopleOutline className="mx-auto text-blue-400" style={{ fontSize: '80px'}}/>
             <p className="mt-4">Dedicated to empowering individuals with the liberating force of open-source software</p>
+  
           </div>
+         
           <div className="text-center">
             <GiTeacher className="text-blue-400 mx-auto" style={{fontSize: '80px'}} />
             <p className="mt-4">Conducted engaging sessions, organized Linux installation drives, and hosted captivating coding events and hackathons</p>
@@ -46,12 +52,17 @@ const AboutUs = () => {
             <GiFist className="text-blue-400 mx-auto" style={{fontSize: '80px'}} />
             <p className="mt-4">Committed to expanding our community and contributing to larger-scale open-source projects</p>
           </div>
+          <Timeline/>
+
         </div>
       </div>
     </section>
+   
     
     <section className="sm:mt-35 mt-10 ">
        <Footer />
+     
+      
     </section>
     </>
   );
