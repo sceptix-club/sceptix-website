@@ -49,6 +49,11 @@ function Sidebar() {
             <RiTeamLine />
           </Link>
         </div>
+        <div className="timeline">
+          <Link to="/timeline">
+            <RiTeamLine />
+          </Link>
+        </div>
         {/* menu bar */}
       <div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''} >
         <CgLoadbar className= {`first ${toggle}`} />

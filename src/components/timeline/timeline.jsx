@@ -6,12 +6,12 @@ AOS.init();
 
 function Timeline() {
   return (
-   <div>
-    <div data-aos="fade-up"
-     data-aos-anchor-placement="center-bottom">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vero ipsam, fuga quaerat modi delectus iure voluptatum animi unde eius, tempora reiciendis reprehenderit, neque deserunt aliquam quas! Ipsa, sequi veritatis?
+   <div className='bg-white'>
+    <button className='bg-white'>click</button>
+    
 </div>
-   </div>
+
+   
   )
 }
 

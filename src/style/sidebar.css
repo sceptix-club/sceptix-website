@@ -118,6 +118,17 @@
 .Members:hover {
   color: rgb(135, 135, 135);
 }
+.timeline {
+  position: absolute;
+  top: 400px;
+  cursor: pointer;
+  /* / */
+  z-index: 20;
+}
+
+.timeline:hover {
+  color: rgb(135, 135, 135);
+}
 
 /* .User{
     position: absolute;
