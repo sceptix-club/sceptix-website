@@ -9,6 +9,7 @@ import { GiTeacher } from "react-icons/gi";
 import { GiFist } from "react-icons/gi"; 
 
 
+
 const AboutUs = () => {
   return (
     <>
@@ -52,6 +53,7 @@ const AboutUs = () => {
             <GiFist className="text-blue-400 mx-auto" style={{fontSize: '80px'}} />
             <p className="mt-4">Committed to expanding our community and contributing to larger-scale open-source projects</p>
           </div>
+          
 
         </div>
       </div>
