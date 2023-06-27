@@ -1,50 +1,31 @@
+import React from 'react'
+import './timeline.css'
+import { useState } from 'react';
 
-import "./timeline.css";
-
-import timelineElement from "./timelineElements"
-
-import { VerticalTimeline,VerticalTimelineElement } from "react-vertical-timeline-component";
-
-import "react-vertical-timeline-component/style.min.css";
-
-function Timeline (){
-  let workIconStyle = {background:"#06d6A0"}
-  let schoolIconStyle = {background:"#f9c47f"}
-  return ( <div>
-    <h1>Timeline</h1>
-    <VerticalTimeline>
-      {
-        timelineElement.map(element => {
-let isWorkIcon = element.icon == "work";
-let showButton = 
-element.buttonText !== undefined && 
-element.buttonText !== null && 
-element.buttonText !=="";
-          return (
-            <VerticalTimelineElement
-            key={element.key}
-            date={element.date}
-            dateClassName="date"
-            // iconStyle={isWorkIcon ? WorkIconStyle : schoolIcon}
-            >
-              <h3 className="vertical-timeline-element-title">
-                {element.title}
-                </h3>
-              <h5 className="vertical-timeline-element-subtitle">
-                {element.location}
-                </h5>
-              <p id="description">
-                {element.description}
-                </p>
-                {showButton && (<a className={`button ${isWorkIcon ? "workButton" : "schoolButton"}`} href="/">{element.buttonText}</a>)}
-
-
-            </VerticalTimelineElement>
-          );
-        })
-      }
-    </VerticalTimeline>
-  </div>
-  );
+function Timeline() {
+     const [scrollState , setScrollState ] = useState(0)
+     let scrollValue = ''
+     let scrolled = 'scrolled'
+     let scroll =0;
+     const handleScroll = ()=>{
+         setScrollState(window.scrollY)
+     }
+     // if(scrollState >500){
+     //      scrollValue = 'scroll'
+     // }
+     // else{
+     //      scrollValue = ''
+     // }
+     {
+     scrollState >= 100 && scrollState <200 ? scrollValue = 'base_line_1' : scrollState >= 200 && scrollState <300 ? scrollValue = 'base_line_2' :scrollState >= 300 && scrollState <400?  scrollValue = 'base_line_3' :    scrollState >= 400 && scrollState <500? scrollValue = 'base_line_4' : scrollState >= 500 && scrollState <600? scrollValue = 'base_line_5' :scrollState >= 600 && scrollState<700 ? scrollValue = 'base_line_6': scrollState >= 700 && scrollState<800 ? scrollValue = 'base_line_7': scrollState >= 800 && scrollState<900 ? scrollValue = 'base_line_8': scrollValue = ''}
+ 
+  return (
+window.addEventListener('scroll',handleScroll),
+    <div className='flex justify-center main-div'>
+     <div className={`bg-blue-800 w-o border-[1px] ${scrolled}  ${scrollValue}`}></div>
+     <h1 className='text-white  top-[500px] fixed'>{scrollState}</h1>
+    </div>
+  )
 }
+
 export default Timeline
