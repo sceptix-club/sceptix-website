@@ -1,6 +1,9 @@
 import React from 'react'
 import './timeline.css'
 import { useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 function Timeline() {
      const [scrollState , setScrollState ] = useState(0)
@@ -21,9 +24,15 @@ function Timeline() {
  
   return (
 window.addEventListener('scroll',handleScroll),
+    <div>
+     <div className='flex justify-center main-div'>
+     <div className={`bg-blue-800 w-o border-[1px] ${scrolled}  ${scrollValue}`}></div>
+     <div data-aos="fade-left">lorem50</div>
+    </div>
     <div className='flex justify-center main-div'>
      <div className={`bg-blue-800 w-o border-[1px] ${scrolled}  ${scrollValue}`}></div>
-     <h1 className='text-white  top-[500px] fixed'>{scrollState}</h1>
+     <div data-aos="fade-left">lorem50</div>
+    </div>
     </div>
   )
 }
