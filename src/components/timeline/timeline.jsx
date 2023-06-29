@@ -27,11 +27,13 @@ window.addEventListener('scroll',handleScroll),
     <div>
      <div className='flex justify-center main-div'>
      <div className={`bg-blue-800 w-o border-[1px] ${scrolled}  ${scrollValue}`}></div>
-     <div data-aos="fade-left">lorem50</div>
+     <div data-aos="fade-left">
+      <div class="max-w-sm rounded bg-white m-9"><p class="m-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum necessitatibus rerum minima dolore earum minus dolor dignissimos atque labore quos voluptatibus, doloribus sit dolores sint eligendi quae officiis laboriosam exercitationem repudiandae voluptates ut non! Aliquam quas tenetur voluptatum veniam obcaecati? Numquam corrupti quis doloremque quod nam excepturi officiis debitis atque.</p></div>
+     </div>
     </div>
     <div className='flex justify-center main-div'>
      <div className={`bg-blue-800 w-o border-[1px] ${scrolled}  ${scrollValue}`}></div>
-     <div data-aos="fade-left">lorem50</div>
+     <div data-aos="fade-left"><div class="max-w-sm rounded bg-white m-9"><p class="m-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum necessitatibus rerum minima dolore earum minus dolor dignissimos atque labore quos voluptatibus, doloribus sit dolores sint eligendi quae officiis laboriosam exercitationem repudiandae voluptates ut non! Aliquam quas tenetur voluptatum veniam obcaecati? Numquam corrupti quis doloremque quod nam excepturi officiis debitis atque.</p></div></div>
     </div>
     </div>
   )
