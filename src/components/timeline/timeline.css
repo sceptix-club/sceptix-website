@@ -39,5 +39,14 @@ div{
 }
 
 .main-div{
-  height: 100vh;
+  height: 900px;
+}
+
+.notvisible{
+  height: 0%;
+  transition: 1s;
+}
+.visible{
+  height: 100%;
+  transition: 1s;
 }
