@@ -1,50 +1,155 @@
-
+import React, { useState, useEffect, useRef } from "react";
 import "./timeline.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import timelineElement from "./timelineElements"
+AOS.init();
 
-import { VerticalTimeline,VerticalTimelineElement } from "react-vertical-timeline-component";
+function Line() {
+  const [isVisible, setIsVisible] = useState(false);
+  const lineRef = useRef(null);
 
-import "react-vertical-timeline-component/style.min.css";
+  const handleIntersection = (entries) => {
+    const [entry] = entries;
+    setIsVisible(entry.isIntersecting);
+  };
 
-function Timeline (){
-  let workIconStyle = {background:"#06d6A0"}
-  let schoolIconStyle = {background:"#f9c47f"}
-  return ( <div>
-    <h1>Timeline</h1>
-    <VerticalTimeline>
-      {
-        timelineElement.map(element => {
-let isWorkIcon = element.icon == "work";
-let showButton = 
-element.buttonText !== undefined && 
-element.buttonText !== null && 
-element.buttonText !=="";
-          return (
-            <VerticalTimelineElement
-            key={element.key}
-            date={element.date}
-            dateClassName="date"
-            // iconStyle={isWorkIcon ? WorkIconStyle : schoolIcon}
-            >
-              <h3 className="vertical-timeline-element-title">
-                {element.title}
-                </h3>
-              <h5 className="vertical-timeline-element-subtitle">
-                {element.location}
-                </h5>
-              <p id="description">
-                {element.description}
-                </p>
-                {showButton && (<a className={`button ${isWorkIcon ? "workButton" : "schoolButton"}`} href="/">{element.buttonText}</a>)}
+  useEffect(() => {
+    const options = {
+      rootMargin: "0px",
+      threshold: 0, // Adjust this value as per your requirement
+    };
 
+    const observer = new IntersectionObserver(handleIntersection, options);
 
-            </VerticalTimelineElement>
-          );
-        })
+    if (lineRef.current) {
+      observer.observe(lineRef.current);
+    }
+
+    return () => {
+      if (lineRef.current) {
+        observer.unobserve(lineRef.current);
       }
-    </VerticalTimeline>
-  </div>
+    };
+  }, []);
+
+  let scrollValue = isVisible ? "h-full duration-2000" : "h-0";
+
+  return (
+    <div className="flex justify-center line-div">
+      <div
+        ref={lineRef}
+        className={`bg-blue-800 w-o border-[1px] scrolled ${scrollValue}`}
+      ></div>
+    </div>
   );
 }
-export default Timeline
+
+function Timeline() {
+  return (
+    <div>
+      <div className="text-center">
+      <h1 className="py-10 text-6xl font-bold mb-9 pb-10 bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
+          Timeline
+        </h1>
+      </div>
+      <div className=" flex justify-center main-div">
+        <div>
+          <div className=" h-full max-w-4xl rounded bg-white  p-0">
+            <p className="p-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+              necessitatibus rerum minima dolore earum minus dolor dignissimos
+              atque labore quos voluptatibus, doloribus sit dolores sint
+              eligendi quae officiis laboriosam exercitationem repudiandae
+              voluptates ut non! Aliquam quas tenetur voluptatum veniam
+              obcaecati? Numquam corrupti quis doloremque quod nam excepturi
+              officiis debitis atque.
+            </p>
+          </div>
+        </div>
+      </div>
+      <Line />
+      <div className=" flex justify-center main-div">
+        <div>
+          <div className=" h-full max-w-4xl  rounded bg-white  p-0">
+            <p className="p-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+              necessitatibus rerum minima dolore earum minus dolor dignissimos
+              atque labore quos voluptatibus, doloribus sit dolores sint
+              eligendi quae officiis laboriosam exercitationem repudiandae
+              voluptates ut non! Aliquam quas tenetur voluptatum veniam
+              obcaecati? Numquam corrupti quis doloremque quod nam excepturi
+              officiis debitis atque.
+            </p>
+          </div>
+        </div>
+      </div>
+      <Line />
+      <div className=" flex justify-center main-div">
+        <div>
+          <div className=" h-full max-w-4xl rounded bg-white  p-0">
+            <p className="p-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+              necessitatibus rerum minima dolore earum minus dolor dignissimos
+              atque labore quos voluptatibus, doloribus sit dolores sint
+              eligendi quae officiis laboriosam exercitationem repudiandae
+              voluptates ut non! Aliquam quas tenetur voluptatum veniam
+              obcaecati? Numquam corrupti quis doloremque quod nam excepturi
+              officiis debitis atque.
+            </p>
+          </div>
+        </div>
+      </div>
+      <Line />
+      <div className=" flex justify-center main-div">
+        <div>
+          <div className=" h-full max-w-4xl rounded bg-white  p-0">
+            <p className="p-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+              necessitatibus rerum minima dolore earum minus dolor dignissimos
+              atque labore quos voluptatibus, doloribus sit dolores sint
+              eligendi quae officiis laboriosam exercitationem repudiandae
+              voluptates ut non! Aliquam quas tenetur voluptatum veniam
+              obcaecati? Numquam corrupti quis doloremque quod nam excepturi
+              officiis debitis atque.
+            </p>
+          </div>
+        </div>
+      </div>
+      <Line />
+      <div className=" flex justify-center main-div">
+        <div>
+          <div className=" h-full max-w-4xl rounded bg-white  p-0">
+            <p className="p-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+              necessitatibus rerum minima dolore earum minus dolor dignissimos
+              atque labore quos voluptatibus, doloribus sit dolores sint
+              eligendi quae officiis laboriosam exercitationem repudiandae
+              voluptates ut non! Aliquam quas tenetur voluptatum veniam
+              obcaecati? Numquam corrupti quis doloremque quod nam excepturi
+              officiis debitis atque.
+            </p>
+          </div>
+        </div>
+      </div>
+      <Line />
+      <div className=" flex justify-center main-div">
+        <div>
+          <div className=" h-full max-w-4xl rounded bg-white  p-0">
+            <p className="p-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+              necessitatibus rerum minima dolore earum minus dolor dignissimos
+              atque labore quos voluptatibus, doloribus sit dolores sint
+              eligendi quae officiis laboriosam exercitationem repudiandae
+              voluptates ut non! Aliquam quas tenetur voluptatum veniam
+              obcaecati? Numquam corrupti quis doloremque quod nam excepturi
+              officiis debitis atque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Timeline;
