@@ -6,9 +6,8 @@ function main_timeline() {
   return (
     <div>
       <Timeline />
-      <div className="mt-5">
+    
         <Footer />
-      </div>
     </div>
   );
 }
