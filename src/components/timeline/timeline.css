@@ -1,0 +1,55 @@
+.scrolled{
+  height: 30%;
+  transition: 1s;
+}
+.base_line_1{
+height: 40%;  
+transition: 1s;
+}
+.base_line_2{
+  height: 50%;  
+  transition: 1s;
+}
+.base_line_3{
+  height: 60%;  
+  transition: 1s;
+}
+.base_line_4{
+  height: 65%;  
+  transition: 1s;
+}
+.base_line_5{
+  height: 70%;  
+ transition: 1s;
+ }
+.base_line_6{
+  height: 75%;
+  transition: 1s;
+}
+.base_line_7{
+  height: 80%;
+  transition: 1s;
+}
+.base_line_8{
+  height: 100%;
+  transition: 1s;
+}
+div{
+  transition: 1s;
+}
+
+.main-div{
+  height: 500px;
+}
+.line-div{
+  height: 300px;
+}
+
+.notvisible{
+  height: 0%;
+  transition: 1s;
+}
+.visible{
+  height: 100%;
+  transition: 1s;
+}

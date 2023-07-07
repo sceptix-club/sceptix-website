@@ -1,149 +1,161 @@
 .icons {
-    position: absolute;
+  position: absolute;
+  width: 50px;
+  /* border: 1px solid; */
+  height: 450px;
+  top: 18%;
+  background-color:transparent;
+  border-radius: 0px 20px 20px 0px;
+  transition: 0.5s;
+  /* / */
+  z-index: 20;
+  position: fixed;
+  
+}
+
+@media (max-width: 640px) {
+  .icons {
+    width: 0px;
+  }
+  .icons.toggle {
     width: 50px;
-    /* border: 1px solid; */
-    height: 450px;
-    top: 18%;
-    background-color: #D3D3D3;
-    border-radius: 0px 20px 20px 0px;
-    transition: 0.5s;
-    /* / */
-    z-index: 20;
-    position: fixed;
   }
-  
-  @media (max-width: 640px) {
-    .icons {
-      width: 0px;
-    }
-    .icons.toggle {
-      width: 50px;
-    }
-    .icons.toggle .Home, .icons.toggle .Members, .icons.toggle .Event, .icons.toggle .Landing {
-      display: block;
-    }
-    .Home, .Members, .Event, .Landing {
-      display: none;
-    }
-    .menu {
-      z-index: 20;
-      position: absolute;
-      left: -8px;
-      top: 30px;
-      width: 60px;
-      height: 60px;
-      position: fixed;
-      transition: 0.5s;
-    }
-    .menu .first, .menu .second {
-
-      position: absolute;
-      font-size: 35px;
-      transition: 0.5s;
-      left: 7px;
-      color: blue;
-    }
-    .menu .first {
-      top: 0px;
-    }
-    .menu .first.toggle {
-      transform: rotate(55deg);
-      transition: 0.5s;
-    }
-    .menu .second {
-      top: 20px;
-    }
-    .menu .second.toggle {
-      transform: rotate(-55deg);
-      transition: 0.5s;
-    }
+  .icons.toggle .Home, .icons.toggle .Members, .icons.toggle .Event, .icons.toggle .Landing {
+    display: block;
   }
-  @media (min-width: 640px) {
-    .menu, .first, .second {
-      width: 0px;
-    }
-  }
-  /* @media (max-width:995px){
-      .icons{
-  
-          top: 10%;
-      }
-  } */
   .Home, .Members, .Event, .Landing {
-    font-size: 1.3rem;
-    left: 0.7rem;
+    display: none;
   }
-  .Landing {
-    position: absolute;
-    top: 70px;
-    cursor: pointer;
-    /* / */
+  .menu {
     z-index: 20;
-  }
-  
-  .Home {
     position: absolute;
-    top: 165px;
-    cursor: pointer;
-    /* / */
-    z-index: 20;
+    left: -8px;
+    top: 30px;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    transition: 0.5s;
   }
-  
-  .Home:hover {
-    color: rgb(135, 135, 135);
-  }
-  
-  .Event {
-    position: absolute;
-    top: 260px;
-    cursor: pointer;
-    /* / */
-    z-index: 20;
-  }
-  
-  .Event:hover {
-    color: rgb(135, 135, 135);
-  }
-  
-  .Members {
-    position: absolute;
-    top: 360px;
-    cursor: pointer;
-    /* / */
-    z-index: 20;
-  }
-  
-  .Members:hover {
-    color: rgb(135, 135, 135);
-  }
-  
-  /* .User{
-      position: absolute;
-      font-size: 30px;
-      top: 370px;
-      left: 8px;
-      cursor: pointer;
-          /* / */
-  /* z-index: 20; */
-  /* } */
-  /* .User:hover{  
-      color: white; 
-  } */
-  /* label{
-      position: absolute;
-      top: 40px;
-      left: -5px;
-      font-size:15px;
-          /* / */
-  /* z-index: 20; */
-  /* } */
-  .Landing {
-    position: absolute;
-    top: 75px;
-    
-  }
-  
-  .Landing:hover {
-    color: rgb(255, 255, 255);
-  }/*# sourceMappingURL=style.css.map */
+  .menu .first, .menu .second {
 
+    position: absolute;
+    font-size: 35px;
+    transition: 0.5s;
+    left: 7px;
+    color: blue;
+  }
+  .menu .first {
+    top: 0px;
+  }
+  .menu .first.toggle {
+    transform: rotate(55deg);
+    transition: 0.5s;
+  }
+  .menu .second {
+    top: 20px;
+  }
+  .menu .second.toggle {
+    transform: rotate(-55deg);
+    transition: 0.5s;
+  }
+}
+@media (min-width: 640px) {
+  .menu, .first, .second {
+    width: 0px;
+  }
+}
+/* @media (max-width:995px){
+    .icons{
+
+        top: 10%;
+    }
+} */
+.Home, .Members, .Event, .Landing {
+  font-size: 1.3rem;
+  left: 0.7rem;
+  color: blue;
+}
+.Landing {
+  position: absolute;
+  top: 70px;
+  cursor: pointer;
+  /* / */
+  z-index: 20;
+}
+
+.Home {
+  position: absolute;
+  top: 165px;
+  cursor: pointer;
+  /* / */
+  z-index: 20;
+}
+
+.Home:hover {
+  color: rgb(135, 135, 135);
+}
+
+.Event {
+  position: absolute;
+  top: 260px;
+  cursor: pointer;
+  /* / */
+  z-index: 20;
+}
+
+.Event:hover {
+  color: rgb(135, 135, 135);
+}
+
+.Members {
+  position: absolute;
+  top: 360px;
+  cursor: pointer;
+  /* / */
+  z-index: 20;
+}
+
+.Members:hover {
+  color: rgb(135, 135, 135);
+}
+.timeline {
+  position: absolute;
+  top: 400px;
+  cursor: pointer;
+  /* / */
+  z-index: 20;
+}
+
+.timeline:hover {
+  color: rgb(135, 135, 135);
+}
+
+/* .User{
+    position: absolute;
+    font-size: 30px;
+    top: 370px;
+    left: 8px;
+    cursor: pointer;
+        /* / */
+/* z-index: 20; */
+/* } */
+/* .User:hover{  
+    color: white; 
+} */
+/* label{
+    position: absolute;
+    top: 40px;
+    left: -5px;
+    font-size:15px;
+        /* / */
+/* z-index: 20; */
+/* } */
+.Landing {
+  position: absolute;
+  top: 75px;
+  
+}
+
+.Landing:hover {
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=style.css.map */

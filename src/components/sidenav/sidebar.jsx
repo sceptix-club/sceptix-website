@@ -8,33 +8,25 @@ import {SlCalender} from 'react-icons/sl'
 import { RiTeamLine } from 'react-icons/ri';
 import {AiOutlineHome} from 'react-icons/ai'
 import {CgLoadbar} from  'react-icons/cg'
-import { useEffect } from "react";
-import { useLocation } from 'react-router-dom';
+
 
 
 
 
 
 function Sidebar() {
-  
+  // to make the side bar responsive 
   let toggle =''
-  
- 
   const [state , SetState] = useState(false);
-
   let HandleState = ()=>{
     SetState(!state);
-    console.log(state)
   }
- useEffect(()=>{
- 
 
- },[])
 
   return (
   
-   
-      <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className={`icons ${toggle}`} >
+   // icons
+      <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`icons ${toggle}`}>
         <div className="Landing">
           <Link to="/"> 
           <LuPlaneLanding />
@@ -57,7 +49,12 @@ function Sidebar() {
             <RiTeamLine />
           </Link>
         </div>
-         
+        <div className="timeline">
+          <Link to="/timeline">
+            <RiTeamLine />
+          </Link>
+        </div>
+        {/* menu bar */}
       <div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''} >
         <CgLoadbar className= {`first ${toggle}`} />
         <CgLoadbar className= {`second ${toggle}`} />

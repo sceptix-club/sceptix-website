@@ -8,6 +8,7 @@ import Sidebar from "./components/sidenav/sidebar.jsx";
 import Members from "./components/sidenav/Members.jsx";
 import AboutUs from "./components/About/about.jsx";
 import EventPage from './components/Events/events.jsx'
+import Main_timeline from './components/timeline/main_timeline';
 
 
 function App() {
@@ -23,8 +24,11 @@ function App() {
           <Route path="/home" element={<AboutUs/>}/>
           <Route path="/events" element={<EventPage/>} />
           <Route path="/members" element={<TeamPage/>} />
-         
+          <Route path="/timeline" element={<Main_timeline/>} />
+
+          
         </Routes>
+        
       </div>
     </Router>
   );
