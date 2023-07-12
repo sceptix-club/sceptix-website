@@ -1,4 +1,4 @@
-.hi{
+.line{
    
     width:310px;
     height:390px;
@@ -6,51 +6,18 @@
     align-items: center;
    
 }
-.hello{
+.card{
     width:250px; 
-    transform: translate(-15px, -15px);
-   
-  
-    
-   
-}
+    transform: translate(-15px, -15px);}
 
-/*.row{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}*/
-/*.row .card{
-    width: 250px;
-    height: 300px;
-    position: relative;
-    margin: 30px;
-    cursor: pointer;
-    background-color: rgb(52, 45, 45);
-   display:flex;
-   justify-content: center;
-   flex-wrap: wrap;
-}*/
-/*.row .card .imgbox{
-    width: 80%;
-    height: 60%;
-    overflow: hidden;
-    display:flex;
-    justify-content:space-around;
-    flex-wrap: wrap;
-    margin-top: 10px;
- }*/
-   
 
-/*.row .card .imgbox img{
-    width: 100%;
-    height: 100%;
+
+.line .card img{
+   
     object-fit: cover;
     transition: all 0.2s ease-in-out;
-}*/
-.hi .hello::before{
+}
+.line .card::before{
     content: '';
     position: absolute;
     background:none;
@@ -64,7 +31,7 @@
     z-index: -1;
     transition: all 0.2s ease-in-out;
 }
-.hi .hello::after{
+.line .card::after{
     content: '';
     position: absolute;
 bottom:0;
@@ -78,10 +45,10 @@ height:30%;
     z-index: -1;
     transition: all 0.2s ease-in-out;
 }
-.hi .hello:hover:before, .hi .hello:hover:after{
+.line .card:hover:before, .line .card:hover:after{
     width: calc(100% + 30px);
     height: calc(100% + 30px);
 }
-/*.row .card:hover .imgbox img{
+.line .card:hover  .img{
     transform: scale(1.1);
-}*/
+}
