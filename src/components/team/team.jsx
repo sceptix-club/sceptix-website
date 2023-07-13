@@ -4,17 +4,22 @@ import { AiFillLinkedin } from 'react-icons/ai';
 import Sidebar from '../sidenav/sidebar';
 import Footer from '../footer/footer.jsx';
 import {AiOutlineUser} from 'react-icons/ai'
+import './team.css';
 
 
 
 const MemberCard = ({ member }) => {
   return (
-    <div className="bg-gray-900 hover:bg-gray-800 border-gray-400 border-solid border-1 transition duration-150 ease-out hover:ease-in shadow p-4 flex flex-col items-center rounded-lg">
+    <div className="line flex flex-col items-center ">
+   
+    <div className="card bg-gray-900   flex flex-col items-center rounded-lg">
+     
       <img
         src={member.image}
         alt={member.name}
-        className="w-48 h-48 object-cover mb-4 rounded-full mt-4"
+        className="img w-48 h-48  mb-4 rounded-full mt-4 "
       />
+      
       <h2 className="text-xl text-white font-bold mb-3">{member.name}</h2>
       <p className="text-gray-500">{member.role}</p>
       <div className="flex flex-row justify-center mt-2">
@@ -23,12 +28,13 @@ const MemberCard = ({ member }) => {
             <AiFillGithub color="white" size={30} />
           </a>
         </div>
-        {/* <div className="m-2">
+        { <div className="m-2">
           <a href={member.linked}>
             <AiFillLinkedin color="white" size={30} />
           </a>
-        </div> */}
+  </div> }
       </div>
+    </div>
     </div>
   );
 };
@@ -418,29 +424,3 @@ export default TeamPage;
 
 
 // <div className='transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'>hello</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
