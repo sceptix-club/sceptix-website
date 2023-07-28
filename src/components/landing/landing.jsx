@@ -33,7 +33,7 @@ const Landing = () => {
       onPointerMove={handleOnMove}
     >
       <div
-        className="h-screen w-2/5 overflow-hidden absolute z-20 bg-[#00070e] text-stone-50 rounded-r-full hover:w-full hover:rounded-none transition-all duration-500 ease-in-ease-out"
+        className="h-screen w-5/12 overflow-hidden absolute z-20 bg-[#00070e] text-stone-50 rounded-r-full hover:w-full hover:rounded-none transition-all duration-500 ease-in-ease-out"
         id="left-box"
         ref={leftRef}
         style={{ width: tweenWipe.value.interpolate((val) => `${val}%`) }}
