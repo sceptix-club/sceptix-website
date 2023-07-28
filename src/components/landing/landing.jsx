@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useSpring, config } from "react-spring";
+// import { useSpring, config } from "react-spring";
 import Sidebar from "../sidenav/sidebar";
 
 const Landing = () => {
-  const leftRef = useRef(null);
-  const [animate, setAnimate] = useState(false);
-  const [x, setX] = useState(100);
+  // const leftRef = useRef(null);
+  // const [animate, setAnimate] = useState(false);
+  // const [x, setX] = useState(100);
 
-  const [tweenWipe, setTweenWipe] = useSpring(() => ({
-    from: { value: 100 },
-    config: config.cubicOut,
-  }));
+  // const [tweenWipe, setTweenWipe] = useSpring(() => ({
+  //   from: { value: 100 },
+  //   // config: config.cubicOut,
+  // }));
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -19,27 +19,31 @@ const Landing = () => {
   //   }, 1000);
   // }, [setTweenWipe]);
 
-  const handleOnMove = (e) => {
-    const newX = (e.clientX / window.innerWidth) * 100;
-    setX(newX);
-    if (animate) {
-      leftRef.current.style.width = `${newX}%`;
-    }
-  };
+  // const handleOnMove = (e) => {
+  //   const newX = (e.clientX / window.innerWidth) * 100;
+  //   setX(newX);
+  //   if (animate) {
+  //     leftRef.current.style.width = `${newX}%`;
+  //   }
+  // };
 
   return (
     <main
       className="h-screen overflow-hidden relative"
-      onPointerMove={handleOnMove}
+      // onPointerMove={handleOnMove}
     >
       <div
         className="h-screen w-5/12 overflow-hidden absolute z-20 bg-[#00070e] text-stone-50 rounded-r-full hover:w-full hover:rounded-none transition-all duration-500 ease-in-ease-out"
         id="left-box"
-        ref={leftRef}
-        style={{ width: tweenWipe.value.interpolate((val) => `${val}%`) }}
+        // ref={leftRef}
+        // style={{ width: tweenWipe.value.interpolate((val) => `${val}%`) }}
       >
-        <div className="w-screen h-screen flex flex-row items-end justify-center absolute p-10 z-10">
-          <img src="/l3.png" alt="logo" className="w-96 flex-row" />
+        <div className="w-screen h-screen flex flex-row justify-items-stretch absolute p-10 z-10">
+          <img
+            src="/l3.png"
+            alt="logo"
+            className="w-auto justify-center items-center"
+          />
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-bold text-7xl my-6">
               The{" "}
@@ -72,7 +76,7 @@ const Landing = () => {
         </div>
         <div
           id="left-img"
-          className="w-1/3 h-screen absolute z-30 invisible block"
+          className="w-1/3 h-screen absolute z-30 bg-transparent block"
         ></div>
         <div id="right-img" className="w-screen h-screen absolute z-0"></div>
       </div>
