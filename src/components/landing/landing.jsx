@@ -37,7 +37,7 @@ const Landing = () => {
         className="w-1/2 h-screen absolute z-30 right-0 bg-transparent "
       ></div>
       <div
-        className="h-screen w-5/12 overflow-hidden absolute z-20 bg-[#00070e] text-stone-50 rounded-r-full hover:w-full hover:rounded-none transition-all duration-500 ease-in-ease-out"
+        className="h-screen w-5/12 overflow-hidden absolute z-20 bg-[#00070e] text-stone-50 rounded-r-[300px] hover:w-full hover:rounded-none transition-all duration-500 ease-in-ease-out"
         id="left-box"
         // ref={leftRef}
         // style={{ width: tweenWipe.value.interpolate((val) => `${val}%`) }}
@@ -46,9 +46,9 @@ const Landing = () => {
           <img
             src="/l3.png"
             alt="logo"
-            className="w-auto justify-center items-center animate-pulse mix-blend-multiply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover: duration-300 ..."
+            className="w-auto justify-center items-center p-10 m-5 animate-pulse mix-blend-multiply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover: duration-400 ..."
           />
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center p-10 ml-10">
             <h1 className="font-bold text-7xl my-6">
               The{" "}
               <span className="code bg-clip-text text-transparent bg-gradient-to-r from-[#2afadf] to-sky-600">
@@ -73,7 +73,7 @@ const Landing = () => {
           alt="logo"
           className="w-auto justify-center items-center"
         />
-        <div className="flex flex-col justify-center items-center ">
+        <div className="flex flex-col justify-center items-center p-10 ml-10">
           <h1 className="font-bold text-7xl my-6">
             The{" "}
             <span className="code bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-600 ">
@@ -81,7 +81,9 @@ const Landing = () => {
             </span>{" "}
             club
           </h1>
-          <h3 className="text-3xl font-mono items-center ">Liberate The Mind</h3>
+          <h3 className="text-3xl font-mono items-center ">
+            Liberate The Mind
+          </h3>
         </div>
         <div id="right-img" className="w-screen h-screen absolute z-0"></div>
       </div>
