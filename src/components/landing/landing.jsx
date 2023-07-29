@@ -42,11 +42,11 @@ const Landing = () => {
         // ref={leftRef}
         // style={{ width: tweenWipe.value.interpolate((val) => `${val}%`) }}
       >
-        <div className="w-screen h-screen flex flex-row justify-items-stretch absolute p-10 z-10">
+        <div className="w-screen h-screen flex flex-row justify-items-stretch absolute  p-10 z-10">
           <img
             src="/l3.png"
             alt="logo"
-            className="w-auto justify-center items-center"
+            className="w-auto justify-center items-center mix-blend-multiply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover: duration-300 ..."
           />
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-bold text-7xl my-6">
@@ -81,7 +81,7 @@ const Landing = () => {
             </span>{" "}
             club
           </h1>
-          <h3 className="text-3xl font-mono items-center">Liberate The Mind</h3>
+          <h3 className="text-3xl font-mono items-center ">Liberate The Mind</h3>
         </div>
         <div id="right-img" className="w-screen h-screen absolute z-0"></div>
       </div>
