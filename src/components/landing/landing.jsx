@@ -29,34 +29,34 @@ const Landing = () => {
 
   return (
     <main
-      className="h-screen overflow-hidden relative"
+      className="lg: h-screen overflow-hidden relative"
       // onPointerMove={handleOnMove}
     >
       <div
         id="left-img"
-        className="w-1/2 h-screen absolute z-30 right-0 bg-transparent "
+        className="lg:w-1/2 h-screen absolute z-30 right-0 bg-transparent "
       ></div>
       <div
-        className="h-screen w-5/12 overflow-hidden absolute z-20 bg-[#00070e] text-stone-50 rounded-r-full hover:w-full hover:rounded-none transition-all duration-500 ease-in-ease-out"
+        className=" lg:h-screen w-5/12 overflow-hidden absolute z-20 bg-[#00070e] text-stone-50 rounded-r-full hover:w-full hover:rounded-none transition-all duration-500 ease-in-ease-out"
         id="left-box"
         // ref={leftRef}
         // style={{ width: tweenWipe.value.interpolate((val) => `${val}%`) }}
       >
-        <div className="w-screen h-screen flex flex-row justify-items-stretch absolute  p-10 z-10">
+        <div className="lg:w-screen h-screen flex flex-row justify-items-stretch absolute  p-10 z-10">
           <img
             src="/l3.png"
             alt="logo"
-            className="w-auto justify-center items-center animate-pulse mix-blend-multiply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover: duration-300 ..."
+            className=" lg:w-auto justify-center items-center animate-pulse mix-blend-multiply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover: duration-300 ..."
           />
-          <div className="flex flex-col items-center justify-center">
-            <h1 className="font-bold text-7xl my-6">
+          <div className="hidden lg:flex flex-col items-center justify-center">
+            <h1 className="lg:font-bold text-7xl my-6">
               The{" "}
-              <span className="code bg-clip-text text-transparent bg-gradient-to-r from-[#2afadf] to-sky-600">
+              <span className="lg:code bg-clip-text text-transparent bg-gradient-to-r from-[#2afadf] to-sky-600">
                 freedom
               </span>{" "}
               club
             </h1>
-            <h3 className="text-3xl font-mono items-center">
+            <h3 className="lg:text-3xl font-mono items-center">
               Unchain Your Will
             </h3>
           </div>
@@ -65,16 +65,39 @@ const Landing = () => {
       </div>
 
       <div
-        className="h-screen w-screen flex flex-row overflow-hidden absolute  z-10 justify-items-stretch p-10 bg-cyan-100 text-stone-950 "
+        className=" lg:h-screen w-screen flex flex-row overflow-hidden absolute  z-10 justify-items-stretch p-10 bg-cyan-100 text-stone-950 "
         id="right-box"
       >
         <img
           src="/l3.png"
           alt="logo"
-          className="w-auto justify-center items-center"
+          className="  lg:w-auto justify-center items-center"
+        />
+        <div className=" hidden lg:flex flex-col justify-center items-center ">
+          <h1 className="lg: font-bold text-7xl my-6 ">
+            The{" "}
+            <span className="lg:code bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-600 ">
+              sceptix
+            </span>{" "}
+            club
+          </h1>
+          <h3 className="lg:text-3xl font-mono items-center ">Liberate The Mind</h3>
+        </div>
+        
+        <div id="right-img" className="lg:w-screen h-screen absolute z-0"></div>
+      </div>
+      {/* EDited */}
+      <div
+        className="h-screen w-screen/3 absolute  z-10 justify-items-stretch p-10 bg-slate-950   text-stone-950 lg:hidden"
+        id="right-box"
+      >
+        <img
+          src="/l3.png"
+          alt="logo"
+          className="  w-auto justify-center items-center"
         />
         <div className="flex flex-col justify-center items-center ">
-          <h1 className="font-bold text-7xl my-6">
+          <h1 className=" font-bold text-7xl text-slate-50 my-6  lg:hidden ">
             The{" "}
             <span className="code bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-600 ">
               sceptix
@@ -83,10 +106,13 @@ const Landing = () => {
           </h1>
           <h3 className="text-3xl font-mono items-center ">Liberate The Mind</h3>
         </div>
-        <div id="right-img" className="w-screen h-screen absolute z-0"></div>
+        
+        <div id="right-img" className="lg:w-screen h-screen absolute z-0"></div>
       </div>
+
     </main>
   );
 };
+
 
 export default Landing;
