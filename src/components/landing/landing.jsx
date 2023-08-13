@@ -104,7 +104,9 @@ const Landing = () => {
             </span>{" "}
             club
           </h1>
-          <h3 className="text-3xl font-mono items-center ">Liberate The Mind</h3>
+          <h3 className="text-3xl font-mono items-center ">
+            Liberate The Mind
+          </h3>
         </div>
         
         <div id="right-img" className="lg:w-screen h-screen absolute z-0"></div>
