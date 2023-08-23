@@ -4,7 +4,7 @@
   /* border: 1px solid; */
   height: 450px;
   top: 18%;
-  background-color:transparent;
+  background-color:#D3D3D3;
   border-radius: 0px 20px 20px 0px;
   transition: 0.5s;
   /* / */
@@ -73,7 +73,7 @@
 .Home, .Members, .Event, .Landing {
   font-size: 1.3rem;
   left: 0.7rem;
-  color: blue;
+  color: black;
 }
 .Landing {
   position: absolute;
@@ -157,5 +157,5 @@
 }
 
 .Landing:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(135, 135, 135);
 }/*# sourceMappingURL=style.css.map */

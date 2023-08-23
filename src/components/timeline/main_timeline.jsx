@@ -1,15 +1,12 @@
-import React from "react";
-import Timeline from "../timeline/timeline.jsx";
-import Footer from "../footer/footer.jsx";
+import React from 'react'
+import Timeline from '../timeline/timeline.jsx';
 
-function main_timeline() {
+function Main_timeline() {
   return (
     <div>
-      <Timeline />
-    
-        <Footer />
+        <Timeline/>
     </div>
-  );
+  )
 }
 
-export default main_timeline;
+export default Main_timeline
