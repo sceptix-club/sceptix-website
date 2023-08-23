@@ -21,23 +21,24 @@ html{
   width: 1px;
   transition :var(--time);
 }
-/* .base_line_1{
+.base_line_1{
 height:50%;  
 transition :var(--time);
 }
 .base_line_2{
-  height: 60%;  
+  height: 80%;  
    transition :var(--time);
-} */
+} 
 
-/* .base_line_3{
-  height: 70%;  
+ .base_line_3{
+  height:100%;  
    transition :var(--time);
-} */
-.base_line_4{
-  height: 50%;  
+} 
+ .base_line_4{
+  height: 165%;  
    transition :var(--time);
 }
+/*
 .base_line_5{
   height: 100%;  
   transition :var(--time);
@@ -50,7 +51,7 @@ transition :var(--time);
 .base_line_7{
   height: 163%;
    transition :var(--time);
-}
+} */
 /*
 .base_line_8{
   height: 200%;
