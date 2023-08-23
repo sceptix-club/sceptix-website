@@ -387,17 +387,17 @@ const TeamPage = () => {
   return (
     <div>
     <div className="container mx-auto mb-10 px-20">
-      <div className="text-center">
+      {/* <div className="text-center">
       <h1 className="py-10 text-6xl font-bold mb-9 pb-10 bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
           Faculty
         </h1>
-      </div>
+      </div> */}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {facultyMembers.map((member, index) => (
           <FacultyCard key={index} member={member} />
         ))}
-      </div>
+      </div> */}
 
       <div className="text-center mt-3">
         <h1 className="py-16 text-6xl font-bold mb-8 m-auto bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">

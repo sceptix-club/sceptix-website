@@ -86,9 +86,9 @@ const Landing = () => {
         
         <div id="right-img" className="lg:w-screen h-screen absolute z-0"></div>
       </div>
-      {/* EDited */}
+      {/* EDited for mobile version */}
       <div
-        className="h-screen w-screen/3 absolute  z-10 justify-items-stretch p-10 bg-slate-950   text-stone-950 lg:hidden"
+        className="h-screen/2 w-screen/2 absolute  z-10 justify-items-stretch p-10 bg-slate-950   text-stone-950 lg:hidden"
         id="right-box"
       >
         <img
@@ -111,6 +111,11 @@ const Landing = () => {
         
         <div id="right-img" className="lg:w-screen h-screen absolute z-0"></div>
       </div>
+
+      
+
+      
+
 
     </main>
   );
