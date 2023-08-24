@@ -26,7 +26,8 @@ function Sidebar() {
   return (
   
    // icons
-      <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`icons ${toggle}`}>
+   
+      <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`flex  icons ${toggle}`}>
         <div className="Landing">
           <Link to="/"> 
           <LuPlaneLanding />
