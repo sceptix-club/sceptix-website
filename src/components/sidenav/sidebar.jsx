@@ -20,6 +20,7 @@ function Sidebar() {
   const [state , SetState] = useState(false);
   let HandleState = ()=>{
     SetState(!state);
+    window.scrollTo(0, 0);
   }
 
 
@@ -29,16 +30,10 @@ function Sidebar() {
       <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`icons ${toggle}`}>
         <div className="Landing">
           <Link to="/"> 
-          <LuPlaneLanding />
-          </Link>
-         
-       
-        </div>
-        <div className="Home">
-         <Link to="/home">
-            <AiOutlineHome />
+          <AiOutlineHome />
           </Link>
         </div>
+  
         <div className="Event">
           <Link to="/events">
             <SlCalender />
