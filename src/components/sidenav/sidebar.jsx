@@ -24,8 +24,14 @@ function Sidebar() {
 
 
   return (
-  
-   // icons
+  <>
+
+<div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''} >
+        <CgLoadbar className= {`first ${toggle}`} />
+        <CgLoadbar className= {`second ${toggle}`} />
+
+      </div>
+   
    
       <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`flex  icons ${toggle}`}>
         <div className="Landing">
@@ -52,13 +58,9 @@ function Sidebar() {
         </div>
         
         {/* menu bar */}
-      <div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''} >
-        <CgLoadbar className= {`first ${toggle}`} />
-        <CgLoadbar className= {`second ${toggle}`} />
-
+     
       </div>
-      </div>
-    
+      </>
   );
 }
 
