@@ -55,7 +55,9 @@ function Timeline() {
             if(elements.id %2 != 0){
             return (
             <>
-                <div  data-aos="fade-right" className='flex xl:justify-start lg:justify-center sm: justify-center'>
+                <div  className='flex xl:justify-start lg:justify-center sm: justify-center'>
+                {/* data-aos="fade-right" */}
+                 
                     <div className='w-2/5 xl:mt-10 ml-24 lg:mt-10 '>
                     <h2 className='text-white  text-3xl font-bold' key={index}>{elements.title}</h2><br></br>
                         <p className='text-white text-justify 2xl:mb-0 xl:mb-0 lg:mb-0 sm:mb-8' key={index}>{elements.description}</p>
@@ -67,7 +69,9 @@ function Timeline() {
         else {
             return(
              <>   
-                <div  data-aos="fade-left" className='flex xl:justify-end lg:justify-center sm: justify-center'>
+                <div   className='flex xl:justify-end lg:justify-center sm: justify-center'>
+                {/* data-aos="fade-left"  */}
+               
                         <div className='w-2/5 xl:mt-10 mr-24 lg:mt-10 ml-48 '>
                         <h2 className='text-white  text-3xl font-bold' key={index}>{elements.title}</h2><br></br>
                             <p className='text-white text-justify 2xl:mb-0 xl:mb-0 lg:mb-0 sm:mb-8' key={index}>{elements.description}</p>

@@ -34,14 +34,14 @@ function Line() {
     };
   }, []);
 
-  let scrollValue = isVisible ? "h-[490px] duration-2000 z-[1]" : "h-0";
+  let scrollValue = isVisible ? "h-[490px] duration-2000" : "h-0";
 
   return (
     <div>
     <div className="flex justify-center line-div">
       <div
         ref={lineRef}
-        className={`bg-blue-800  w-o border-[1px] scrolled z-[5] ${scrollValue}`}
+        className={`bg-blue-800  w-o border-[1px] scrolled ${scrollValue}`}
       ></div>
     </div>
 
@@ -66,7 +66,7 @@ function MobileViewTimeline() {
         <div className=" flex justify-center main-div mt-10">
         <div>
           <div className="h-full max-w-2xl border-2   border-[#7c7b7c] rounded-xl text-2xl bg-black text-white  p-4">
-          <h1 className="py-10 text-5xl pl-10 font-bold mb-9 pb-10 bg-gradient-to-r from-sky-500 to-blue-700 bg-clip-text text-transparent">
+          <h1 className="p-6 text-4xl font-bold mb-9 text-center bg-gradient-to-r from-sky-500 to-blue-700 bg-clip-text text-transparent">
           {element.title}
         </h1>
             <p className="px-6">
