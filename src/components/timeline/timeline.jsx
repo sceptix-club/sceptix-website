@@ -7,7 +7,7 @@ import { useState } from 'react';
 // // ..
 // AOS.init();
 
-function Line(){
+function Line2(){
     const [scrollState , setScrollState ] = useState(0)
     let scrollValue = ''
     let scrolled = 'scrolled'
@@ -79,12 +79,14 @@ function Timeline() {
         }
         })}
 
-    <Line/>
+    <Line2/>
     </div>
     </>
 
  )
 }
+
+
 
 
 
