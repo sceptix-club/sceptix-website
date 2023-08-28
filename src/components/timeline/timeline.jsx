@@ -7,7 +7,7 @@ import { useState } from 'react';
 // // ..
 // AOS.init();
 
-function Line(){
+function Line2(){
     const [scrollState , setScrollState ] = useState(0)
     let scrollValue = ''
     let scrolled = 'scrolled'
@@ -22,17 +22,18 @@ function Line(){
     //      scrollValue = ''
     // }
     {
-    scrollState >= 500 && scrollState <750 ? scrollValue = 'base_line_1' : scrollState >=750 && scrollState <1000 ? scrollValue = 'base_line_2' :scrollState >= 1050 && scrollState <1500?  scrollValue = 'base_line_3' :    scrollState >=1500 && scrollState <1700? scrollValue = 'base_line_4' : scrollState >= 1840 && scrollState <2140? scrollValue = 'base_line_5' :scrollState >= 2140 && scrollState<2240 ? scrollValue = 'base_line_6': scrollState >= 2240 && scrollState<2440 ? scrollValue = 'base_line_7': scrollValue = ''}
+    scrollState >= 500 && scrollState <750 ? scrollValue = 'base_line_1' : scrollState >=1000 && scrollState <1000 ? scrollValue = 'base_line_2' :scrollState >= 1000 && scrollState <1500?  scrollValue = 'base_line_3' :    scrollState >=1500 && scrollState <1700? scrollValue = 'base_line_4' : scrollState >= 1700 && scrollState <1900? scrollValue = 'base_line_5' :scrollState >= 2100 && scrollState<2300 ? scrollValue = 'base_line_6': scrollState >= 2300 && scrollState<2500 ? scrollValue = 'base_line_7': scrollValue = ''}
     // : scrollState >=2740 && scrollState<2840? scrollValue = 'base_line_8':scrollState >=2840 && scrollState <2940 ? scrollValue = 'base_line_9': scrollState >=2940 && scrollState <3040 ? scrollValue = 'base_line_10':scrollState >=3040 && scrollState <3140 ?scrollValue = 'base_line_11':scrollState >=3140 && scrollState <3240 ? scrollValue = 'base_line_12':scrollState >=3240 && scrollState <3340 ? scrollValue = 'base_line_13':scrollValue = ''}
 
     window.addEventListener('scroll',handleScroll)
     // console.log(scrollState)
+   
 
     return (
     <>
             {/* <div className={`content-center bg-blue-800 border-[1px] border-red-200 first_line`}></div> */}
                 <div  className={`xl:content-center bg-blue-800 border-[1px] border-red-300 2xl:mt-[-1070px] xl:mt-[-1070px] lg:mt-[-1070px] md:mt-[1050px] sm:mt-[1160px]  ${scrolled} ${scrollValue}`}></div>
-                {console.log(scrollState)}
+                {/* {console.log(scrollState)} */}
     </>
 
     );
@@ -54,7 +55,9 @@ function Timeline() {
             if(elements.id %2 != 0){
             return (
             <>
-                <div  data-aos="fade-right" className='flex xl:justify-start lg:justify-center sm: justify-center'>
+                <div  className='flex xl:justify-start lg:justify-center sm: justify-center'>
+                {/* data-aos="fade-right" */}
+                 
                     <div className='w-2/5 xl:mt-10 ml-24 lg:mt-10 '>
                     <h2 className='text-white  text-3xl font-bold' key={index}>{elements.title}</h2><br></br>
                         <p className='text-white text-justify 2xl:mb-0 xl:mb-0 lg:mb-0 sm:mb-8' key={index}>{elements.description}</p>
@@ -66,7 +69,9 @@ function Timeline() {
         else {
             return(
              <>   
-                <div  data-aos="fade-left" className='flex xl:justify-end lg:justify-center sm: justify-center'>
+                <div   className='flex xl:justify-end lg:justify-center sm: justify-center'>
+                {/* data-aos="fade-left"  */}
+               
                         <div className='w-2/5 xl:mt-10 mr-24 lg:mt-10 ml-48 '>
                         <h2 className='text-white  text-3xl font-bold' key={index}>{elements.title}</h2><br></br>
                             <p className='text-white text-justify 2xl:mb-0 xl:mb-0 lg:mb-0 sm:mb-8' key={index}>{elements.description}</p>
@@ -78,11 +83,15 @@ function Timeline() {
         }
         })}
 
-    <Line/>
+    <Line2/>
     </div>
     </>
 
  )
 }
+
+
+
+
 
 export default Timeline

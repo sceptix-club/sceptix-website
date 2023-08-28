@@ -16,46 +16,59 @@
 @media (max-width: 640px) {
   .icons {
     width: 0px;
+    transform: rotate(90deg);
+    left: 45%;
+    top: -200px;
   }
+  
   .icons.toggle {
-    width: 50px;
+    width:15%;
   }
+
   .icons.toggle .Home, .icons.toggle .Members, .icons.toggle .Event, .icons.toggle .Landing {
     display: block;
+    margin-top:10px;
+    margin-left:10px;
+    
+    transform: rotate(-90deg);
   }
+  
   .Home, .Members, .Event, .Landing {
     display: none;
+
   }
   .menu {
-    z-index: 20;
+    z-index: 50;
     position: absolute;
     left: -8px;
-    top: 30px;
+    top: 8%;
     width: 60px;
     height: 60px;
-    position: fixed;
+    position: static;
+    /* position: fixed; */
     transition: 0.5s;
+    transform: rotate(180deg);
   }
-  .menu .first, .menu .second {
-
+   .menu .first, .menu .second {
     position: absolute;
+    margin-top: -50px;
     font-size: 35px;
     transition: 0.5s;
-    left: 7px;
-    color: blue;
-  }
+     left: 7px; 
+    color: blue; 
+  } 
   .menu .first {
     top: 0px;
   }
   .menu .first.toggle {
-    transform: rotate(55deg);
+    transform: rotate(-48deg);
     transition: 0.5s;
   }
   .menu .second {
-    top: 20px;
+    top: 18px;
   }
   .menu .second.toggle {
-    transform: rotate(-55deg);
+    transform: rotate(48deg);
     transition: 0.5s;
   }
 }
