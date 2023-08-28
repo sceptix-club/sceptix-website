@@ -5,7 +5,6 @@ import TeamPage from './components/team/team'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/sidenav/sidebar.jsx";
-import Members from "./components/sidenav/Members.jsx";
 import AboutUs from "./components/About/about.jsx";
 import EventPage from './components/Events/events.jsx'
 import Main_timeline from './components/timeline/main_timeline';
@@ -20,7 +19,7 @@ function App() {
         <Sidebar />
 
         <Routes>
-          <Route path="/" element={<><Landing/> <AboutUs/></>} />
+          <Route path="/" element={<><Landing/></>} />
           <Route path="/home" element={<AboutUs/>}/>
           <Route path="/events" element={<EventPage/>} />
           <Route path="/members" element={<TeamPage/>} />

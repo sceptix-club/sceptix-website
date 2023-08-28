@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import '../../style/sidebar.css';
 import { useState } from "react";
 import {LuPlaneLanding} from 'react-icons/lu'
-import { HiHome } from 'react-icons/hi';
 import {SlCalender} from 'react-icons/sl'
 import { RiTeamLine } from 'react-icons/ri';
 import {AiOutlineHome} from 'react-icons/ai'
