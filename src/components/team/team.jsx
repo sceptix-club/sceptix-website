@@ -3,7 +3,7 @@ import { AiFillGithub } from 'react-icons/ai'
 import { AiFillLinkedin } from 'react-icons/ai';
 import Sidebar from '../sidenav/sidebar';
 import Footer from '../footer/footer.jsx';
-import { AiOutlineUser } from 'react-icons/ai'
+import {AiOutlineUser} from 'react-icons/ai'
 import './team.css';
 
 
@@ -11,30 +11,30 @@ import './team.css';
 const MemberCard = ({ member }) => {
   return (
     <div className="line flex flex-col items-center ">
-
-      <div className="card bg-gray-900   flex flex-col items-center rounded-lg">
-
-        <img
-          src={member.image}
-          alt={member.name}
-          className="img w-48 h-48  mb-4 rounded-full mt-4 "
-        />
-
-        <h2 className="text-xl text-white font-bold mb-3">{member.name}</h2>
-        <p className="text-gray-500">{member.role}</p>
-        <div className="flex flex-row justify-center mt-2">
-          <div className="m-2">
-            <a href={member.gitlink} target='_blank'>
-              <AiFillGithub color="white" size={30} />
-            </a>
-          </div>
-          {/*<div className="m-2">
-            <a href={member.linked}>
-              <AiFillLinkedin color="white" size={30} />
-            </a>
-  </div>*/}
+   
+    <div className="card bg-gray-900   flex flex-col items-center rounded-lg">
+     
+      <img
+        src={member.image}
+        alt={member.name}
+        className="img w-48 h-48  mb-4 rounded-full mt-4 "
+      />
+      
+      <h2 className="text-xl text-white font-bold mb-3">{member.name}</h2>
+      <p className="text-gray-500">{member.role}</p>
+      <div className="flex flex-row justify-center mt-2">
+        <div className="m-2">
+          <a href={member.gitlink} target='_blank'>
+            <AiFillGithub color="white" size={30} />
+          </a>
         </div>
+        { <div className="m-2">
+          <a href={member.linked}>
+            <AiFillLinkedin color="white" size={30} />
+          </a>
+  </div> }
       </div>
+    </div>
     </div>
   );
 };
@@ -54,7 +54,7 @@ const FacultyCard = ({ member }) => {
           <a href={member.aboutLink}>
             <AiOutlineUser color="white" size={30} />
           </a>
-        </div>
+        </div>       
       </div>
     </div>
   );
@@ -153,7 +153,6 @@ const TeamPage = () => {
       gitlink: "https://github.com/vaibhvc4",
       linked: "https://github.com/Charispinto"
     },
-   
     {
       name: 'Muhammed Saheed',
       role: 'Member',
@@ -203,21 +202,6 @@ const TeamPage = () => {
       gitlink: "https://github.com/vv-01",
       linked: "https://github.com/Charispinto"
     },
-   
-    {
-      name: 'Chaitanya ',
-      role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/109748320?v=4',
-      gitlink: "https://github.com/Chaitanyaputhran",
-      linked: "https://github.com/Charispinto"
-    },
-    {
-      name: 'Amisha Ananda Gowda',
-      role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/107048204?v=4',
-      gitlink: "https://github.com/Amisha-Ananda-Gowda",
-      linked: "https://github.com/Charispinto"
-    },
     {
       name: 'Shivani B S',
       role: 'Member',
@@ -261,7 +245,7 @@ const TeamPage = () => {
       linked: "https://github.com/Charispinto"
     },
     {
-      name: 'Joshua Q Albuquerque',
+      name: 'Joshua Quinthino Albuquerque',
       role: 'Member',
       image: 'https://avatars.githubusercontent.com/u/125178226?v=4',
       gitlink: "https://github.com/JoshuaAlbuquerque",
@@ -274,7 +258,13 @@ const TeamPage = () => {
       gitlink: "https://github.com/lawrencedsz9",
       linked: "https://github.com/Charispinto"
     },
-   
+    {
+      name: 'Amisha Ananda Gowda',
+      role: 'Member',
+      image: 'https://avatars.githubusercontent.com/u/107048204?v=4',
+      gitlink: "https://github.com/Amisha-Ananda-Gowda",
+      linked: "https://github.com/Charispinto"
+    },
     {
       name: 'Mac Reon D Souza',
       role: 'Member',
@@ -283,7 +273,7 @@ const TeamPage = () => {
       linked: "https://github.com/Charispinto"
     },
     {
-      name: 'Swastik G Bhandarkar',
+      name: 'Swastik Gurudev Bhandarkar',
       role: 'Member',
       image: 'https://avatars.githubusercontent.com/u/123379509?v=4',
       gitlink: "https://github.com/swastikb794",
@@ -317,7 +307,13 @@ const TeamPage = () => {
       gitlink: "https://github.com/adwxith",
       linked: "https://github.com/Charispinto"
     },
-   
+    {
+      name: 'Chaitanya Puthran',
+      role: 'Member',
+      image: 'https://avatars.githubusercontent.com/u/109748320?v=4',
+      gitlink: "https://github.com/Chaitanyaputhran",
+      linked: "https://github.com/Charispinto"
+    },
     {
       name: 'Devananda M Prabhu',
       role: 'Member',
@@ -361,64 +357,61 @@ const TeamPage = () => {
       role: 'Principal',
       image: 'principal.jpg',
       aboutLink: "https://www.sjec.ac.in/faculty-display.php?id=123",
-
+      
     },
     {
       name: 'Dr Sridevi Saralaya',
       role: 'Head of Department - CSE',
       image: 'HOD.jpg',
       aboutLink: "https://www.sjec.ac.in/faculty-display.php?id=125",
-
+      
     },
 
     {
-      name: 'Mrs Pruthvi M Raghav',
-      role: 'Faculty Coordinator',
-      image: 'purvi.jpg',
-      aboutLink: "https://www.sjec.ac.in/faculty-display.php?id=652",
-
+        name: 'Mrs Pruthvi M Raghav',
+        role: 'Faculty Coordinator',
+        image: 'purvi.jpg',
+        aboutLink:"https://www.sjec.ac.in/faculty-display.php?id=652",
+      
     },
     {
       name: 'Mr Lokesh Suvarna',
       role: 'System Administrator',
       image: 'lokesh.webp',
-      aboutLink: "https://www.linkedin.com/in/lokesh-suvarna-53378926/?originalSubdomain=in",
-
+      aboutLink:"https://www.linkedin.com/in/lokesh-suvarna-53378926/?originalSubdomain=in",
+     
 
     }
   ]
 
   return (
     <div>
-      <div className="container mx-auto mb-10 px-20">
-        {/* <div className="text-center">
+    <div className="container mx-auto mb-10 px-20">
+      {/* <div className="text-center">
       <h1 className="py-10 text-6xl font-bold mb-9 pb-10 bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
           Faculty
         </h1>
       </div> */}
 
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {facultyMembers.map((member, index) => (
           <FacultyCard key={index} member={member} />
         ))}
       </div> */}
 
-        <div className="text-center mt-3">
-          <h1 className="py-16 text-6xl font-bold mb-8 m-auto bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
-            Our Team
-          </h1>
-        </div>
-
-        <div className="flex justify-center items-center">
-
-          <div className="-mx-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-42 lg:grid-cols-3 gap-24 mb-20 xl:grid-cols-4">
-            {teamMembers.map((member, index) => (
-              <MemberCard key={index} member={member} />
-            ))}
-          </div>
-        </div>
+      <div className="text-center mt-3">
+        <h1 className="py-16 text-6xl font-bold mb-8 m-auto bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
+          Our Team
+        </h1>
       </div>
-      <Footer className="mt-5" />
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        {teamMembers.map((member, index) => (
+          <MemberCard key={index} member={member} />
+        ))}
+      </div>
+    </div>
+    <Footer className="mt-5" />
     </div>
   );
 };
