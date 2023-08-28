@@ -46,8 +46,7 @@ const Landing = () => {
           <img
             src="/l3.png"
             alt="logo"
-            className=" lg:w-auto justify-left items-left animate-pulse mix-blend-multiply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover: duration-300 ..."
-            style={{ left: '-5cm' }} 
+            className=" lg:w-auto justify-center items-center animate-pulse mix-blend-multiply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover: duration-300 ..."
           />
           <div className="hidden lg:flex flex-col items-center justify-center">
             <h1 className="lg:font-bold text-7xl my-6">
