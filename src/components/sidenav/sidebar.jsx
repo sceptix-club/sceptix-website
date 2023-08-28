@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import '../../style/sidebar.css';
 import { useState } from "react";
 import {LuPlaneLanding} from 'react-icons/lu'
-import { HiHome } from 'react-icons/hi';
 import {SlCalender} from 'react-icons/sl'
 import { RiTeamLine } from 'react-icons/ri';
 import {AiOutlineHome} from 'react-icons/ai'
@@ -26,11 +25,7 @@ function Sidebar() {
   return (
   <>
 
-{/* <div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''} >
-        <CgLoadbar className= {`first ${toggle}`} />
-        <CgLoadbar className= {`second ${toggle}`} />
 
-      </div> */}
    
    
       <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`flex  icons ${toggle}`}>
