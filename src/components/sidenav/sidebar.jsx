@@ -37,7 +37,7 @@ function Sidebar() {
        
         </div>
         <div className="Home">
-         <Link to="/">
+         <Link to="/home">
             <AiOutlineHome />
           </Link>
         </div>
