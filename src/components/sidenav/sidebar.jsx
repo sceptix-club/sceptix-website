@@ -20,25 +20,27 @@ function Sidebar() {
   const [state , SetState] = useState(false);
   let HandleState = ()=>{
     SetState(!state);
+    window.scrollTo(0, 0);
   }
 
 
   return (
-  
-   // icons
-      <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`icons ${toggle}`}>
+  <>
+
+      <div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''} >
+        <CgLoadbar className= {`first ${toggle}`} />
+        <CgLoadbar className= {`second ${toggle}`} />
+
+      </div>
+   
+   
+      <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`flex  icons ${toggle}`}>
         <div className="Landing">
           <Link to="/"> 
-          <LuPlaneLanding />
-          </Link>
-         
-       
-        </div>
-        <div className="Home">
-         <Link to="/home">
-            <AiOutlineHome />
+          <AiOutlineHome />
           </Link>
         </div>
+  
         <div className="Event">
           <Link to="/events">
             <SlCalender />
@@ -49,19 +51,11 @@ function Sidebar() {
             <RiTeamLine />
           </Link>
         </div>
-        <div className="timeline">
-          <Link to="/timeline">
-            <RiTeamLine />
-          </Link>
-        </div>
+        
         {/* menu bar */}
-      <div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''} >
-        <CgLoadbar className= {`first ${toggle}`} />
-        <CgLoadbar className= {`second ${toggle}`} />
-
+     
       </div>
-      </div>
-    
+      </>
   );
 }
 

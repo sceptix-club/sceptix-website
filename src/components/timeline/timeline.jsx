@@ -1,105 +1,97 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./timeline.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from 'react'
+import timelineElements from './timelineElements'
+import './timeline.css'
+import { useState } from 'react';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css'; // You can also use <link> for styles
+// // ..
+// AOS.init();
 
-AOS.init();
-
-function Line() {
-  const [isVisible, setIsVisible] = useState(false);
-  const lineRef = useRef(null);
-
-  const handleIntersection = (entries) => {
-    const [entry] = entries;
-    setIsVisible(entry.isIntersecting);
-  };
-
-  useEffect(() => {
-    const options = {
-      rootMargin: "0px",
-      threshold: 0, // Adjust this value as per your requirement
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, options);
-
-    if (lineRef.current) {
-      observer.observe(lineRef.current);
+function Line2(){
+    const [scrollState , setScrollState ] = useState(0)
+    let scrollValue = ''
+    let scrolled = 'scrolled'
+    let scroll =0;
+    const handleScroll = ()=>{
+        setScrollState(window.scrollY)
     }
+    // if(scrollState >500){
+    //      scrollValue = 'scroll'
+    // }
+    // else{
+    //      scrollValue = ''
+    // }
+    {
+    scrollState >= 500 && scrollState <750 ? scrollValue = 'base_line_1' : scrollState >=1000 && scrollState <1000 ? scrollValue = 'base_line_2' :scrollState >= 1000 && scrollState <1500?  scrollValue = 'base_line_3' :    scrollState >=1500 && scrollState <1700? scrollValue = 'base_line_4' : scrollState >= 1700 && scrollState <1900? scrollValue = 'base_line_5' :scrollState >= 2100 && scrollState<2300 ? scrollValue = 'base_line_6': scrollState >= 2300 && scrollState<2500 ? scrollValue = 'base_line_7': scrollValue = ''}
+    // : scrollState >=2740 && scrollState<2840? scrollValue = 'base_line_8':scrollState >=2840 && scrollState <2940 ? scrollValue = 'base_line_9': scrollState >=2940 && scrollState <3040 ? scrollValue = 'base_line_10':scrollState >=3040 && scrollState <3140 ?scrollValue = 'base_line_11':scrollState >=3140 && scrollState <3240 ? scrollValue = 'base_line_12':scrollState >=3240 && scrollState <3340 ? scrollValue = 'base_line_13':scrollValue = ''}
 
-    return () => {
-      if (lineRef.current) {
-        observer.unobserve(lineRef.current);
-      }
-    };
-  }, []);
+    window.addEventListener('scroll',handleScroll)
+    // console.log(scrollState)
+   
 
-  let scrollValue = isVisible ? "h-full duration-2000" : "h-0";
+    return (
+    <>
+            {/* <div className={`content-center bg-blue-800 border-[1px] border-red-200 first_line`}></div> */}
+                <div  className={`xl:content-center bg-blue-800 border-[1px] border-red-300 2xl:mt-[-1070px] xl:mt-[-1070px] lg:mt-[-1070px] md:mt-[1050px] sm:mt-[1160px]  ${scrolled} ${scrollValue}`}></div>
+                {/* {console.log(scrollState)} */}
+    </>
 
-  return (
-    <div>
-    <div className="flex justify-center line-div">
-      <div
-        ref={lineRef}
-        className={`bg-blue-800 w-o border-[1px] scrolled ${scrollValue}`}
-      ></div>
-    </div>
-    <div className=" flex justify-center main-div">
-        <div>
-          <div className=" h-full max-w-6xl border-2 border-[#7c7b7c] rounded-xl bg-gray-900  p-0">
-          <h1 className="py-10 text-5xl pl-10 font-bold mb-9 pb-10 bg-gradient-to-r from-sky-500 to-blue-700 bg-clip-text text-transparent">
-          Title
-        </h1>
-            <p className="p-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-              necessitatibus rerum minima dolore earum minus dolor dignissimos
-              atque labore quos voluptatibus, doloribus sit dolores sint
-              eligendi quae officiis laboriosam exercitationem repudiandae
-              voluptates ut non! Aliquam quas tenetur voluptatum veniam
-              obcaecati? Numquam corrupti quis doloremque quod nam excepturi
-              officiis debitis atque.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
+   
 }
 
 function Timeline() {
   return (
-    <div className="bg-[#00070e] pb-4">
-      <div className="text-center">
-      <h1 className="py-10 text-6xl font-bold mb-9 pb-10 bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
-          Timeline
+    <>     {/* <h1 className='text-white  top-[500px] fixed'>{scrollState}</h1> */}
+           
+    <div className='bg-black mt-0 h-full w-full md:h-full md:w-full lg:h-full lg:w-full xl:h-full xl:w-full  2xl:h-full 2xl:w-full  '>
+
+    
+        <h1 className=" text-center mt-0 py-16 text-6xl font-bold mb-8 m-auto bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
+          History of FOSS
         </h1>
-      </div>
-      <div className=" flex justify-center main-div">
-        <div>
-          <div className=" h-full max-w-4xl rounded bg-white  p-0">
-            <p className="p-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-              necessitatibus rerum minima dolore earum minus dolor dignissimos
-              atque labore quos voluptatibus, doloribus sit dolores sint
-              eligendi quae officiis laboriosam exercitationem repudiandae
-              voluptates ut non! Aliquam quas tenetur voluptatum veniam
-              obcaecati? Numquam corrupti quis doloremque quod nam excepturi
-              officiis debitis atque.
-            </p>
-          </div>
-        </div>
-      </div>
-      <Line />
-      
-      <Line />
-      
-      <Line />
-      
-      <Line />
-      
-      <Line />
-      
+    
+    {timelineElements.map((elements,index) =>{
+            if(elements.id %2 != 0){
+            return (
+            <>
+                <div  className='flex xl:justify-start lg:justify-center sm: justify-center'>
+                {/* data-aos="fade-right" */}
+                 
+                    <div className='w-2/5 xl:mt-10 ml-24 lg:mt-10 '>
+                    <h2 className='text-white  text-3xl font-bold' key={index}>{elements.title}</h2><br></br>
+                        <p className='text-white text-justify 2xl:mb-0 xl:mb-0 lg:mb-0 sm:mb-8' key={index}>{elements.description}</p>
+                    </div>
+                </div> 
+            </>
+            );
+        }       
+        else {
+            return(
+             <>   
+                <div   className='flex xl:justify-end lg:justify-center sm: justify-center'>
+                {/* data-aos="fade-left"  */}
+               
+                        <div className='w-2/5 xl:mt-10 mr-24 lg:mt-10 ml-48 '>
+                        <h2 className='text-white  text-3xl font-bold' key={index}>{elements.title}</h2><br></br>
+                            <p className='text-white text-justify 2xl:mb-0 xl:mb-0 lg:mb-0 sm:mb-8' key={index}>{elements.description}</p>
+                        </div>
+                </div> 
+             </>
+
+            );
+        }
+        })}
+
+    <Line2/>
     </div>
-  );
+    </>
+
+ )
 }
 
-export default Timeline;
+
+
+
+
+export default Timeline
