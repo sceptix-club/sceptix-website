@@ -16,7 +16,7 @@ import {CgLoadbar} from  'react-icons/cg'
 
 function Sidebar() {
   // to make the side bar responsive 
-  let toggle =''
+  let toggle ='toggle'
   const [state , SetState] = useState(false);
   let HandleState = ()=>{
     SetState(!state);
@@ -26,11 +26,11 @@ function Sidebar() {
   return (
   <>
 
-<div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''} >
+{/* <div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''} >
         <CgLoadbar className= {`first ${toggle}`} />
         <CgLoadbar className= {`second ${toggle}`} />
 
-      </div>
+      </div> */}
    
    
       <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`flex  icons ${toggle}`}>
@@ -42,7 +42,7 @@ function Sidebar() {
        
         </div>
         <div className="Home">
-         <Link to="/home">
+         <Link to="/">
             <AiOutlineHome />
           </Link>
         </div>

@@ -16,7 +16,7 @@ function App() {
 
   return (
     <Router>
-      <div className='bg-black'>
+      <div className='bg-black scroll-smooth'>
         <Sidebar />
 
         <Routes>

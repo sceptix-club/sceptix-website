@@ -1,3 +1,4 @@
+
 .icons {
   position: absolute;
   width: 50px;
@@ -8,9 +9,13 @@
   border-radius: 0px 20px 20px 0px;
   transition: 0.5s;
   /* / */
-  z-index: 20;
+  z-index: 50;
   position: fixed;
   
+}
+.menu{
+  display: none;
+  z-index: 50;
 }
 
 @media (max-width: 640px) {
@@ -18,20 +23,27 @@
     width: 0px;
     transform: rotate(90deg);
     left: 45%;
-    top: -200px;
+    top: 67%;
   }
+  
+  
   
   .icons.toggle {
     width:15%;
+  }
+  .menu{
+    display: block;
+  
   }
 
   .icons.toggle .Home, .icons.toggle .Members, .icons.toggle .Event, .icons.toggle .Landing {
     display: block;
     margin-top:10px;
     margin-left:10px;
-    
     transform: rotate(-90deg);
   }
+  
+ 
   
   .Home, .Members, .Event, .Landing {
     display: none;
@@ -55,7 +67,8 @@
     font-size: 35px;
     transition: 0.5s;
      left: 7px; 
-    color: blue; 
+    color: blue;
+    z-index: 50; 
   } 
   .menu .first {
     top: 0px;
@@ -76,6 +89,7 @@
   .menu, .first, .second {
     width: 0px;
   }
+  
 }
 /* @media (max-width:995px){
     .icons{
@@ -87,6 +101,8 @@
   font-size: 1.3rem;
   left: 0.7rem;
   color: black;
+  
+  
 }
 .Landing {
   position: absolute;
@@ -94,6 +110,7 @@
   cursor: pointer;
   /* / */
   z-index: 20;
+  
 }
 
 .Home {
@@ -102,6 +119,7 @@
   cursor: pointer;
   /* / */
   z-index: 20;
+ 
 }
 
 .Home:hover {
@@ -114,6 +132,7 @@
   cursor: pointer;
   /* / */
   z-index: 20;
+  
 }
 
 .Event:hover {
@@ -126,6 +145,7 @@
   cursor: pointer;
   /* / */
   z-index: 20;
+ 
 }
 
 .Members:hover {
@@ -137,6 +157,7 @@
   cursor: pointer;
   /* / */
   z-index: 20;
+  
 }
 
 .timeline:hover {
