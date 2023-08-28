@@ -2,8 +2,8 @@
   position: absolute;
   width: 50px;
   /* border: 1px solid; */
-  height: 450px;
-  top: 18%;
+  height: 50vh;
+  top: 25%;
   background-color:#D3D3D3;
   border-radius: 0px 20px 20px 0px;
   transition: 0.5s;
@@ -90,27 +90,19 @@
 }
 .Landing {
   position: absolute;
-  top: 70px;
+  top: 17vh;
   cursor: pointer;
   /* / */
   z-index: 20;
 }
 
-.Home {
-  position: absolute;
-  top: 165px;
-  cursor: pointer;
-  /* / */
-  z-index: 20;
-}
 
-.Home:hover {
-  color: rgb(135, 135, 135);
-}
+
+
 
 .Event {
   position: absolute;
-  top: 260px;
+  top: 23vh;
   cursor: pointer;
   /* / */
   z-index: 20;
@@ -122,7 +114,7 @@
 
 .Members {
   position: absolute;
-  top: 360px;
+  top: 36vh;
   cursor: pointer;
   /* / */
   z-index: 20;
