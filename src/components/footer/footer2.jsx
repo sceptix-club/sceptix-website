@@ -7,7 +7,7 @@ import {
 } from "react-icons/ai";
 import Image from "./L4.svg";
 
-const Footer = () => {
+const Footer2 = () => {
   const socialIcons = [
     {
       name: "Github",
@@ -96,4 +96,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer2;
