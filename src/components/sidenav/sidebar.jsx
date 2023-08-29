@@ -17,8 +17,8 @@ function Sidebar() {
   // to make the side bar responsive 
   let toggle ='toggle'
   const [state , SetState] = useState(false);
-  let HandleState = ()=>{
-    
+  
+  let HandleClick = ()=>{ 
     window.scrollTo({
       top:0,
       behavior:'smooth'
@@ -33,25 +33,25 @@ function Sidebar() {
 
    
    
-      <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`flex  icons ${toggle}`}>
-        <div onClick={HandleState} className="Landing">
+      <div {...state ? toggle = "toggle" : ''} className= {`flex  icons ${toggle}`}>
+        <div onClick={HandleClick} className="Landing">
           <Link to="/"> 
           <LuPlaneLanding />
           </Link>
          
        
         </div>
-        <div onClick={HandleState} className="Home">
+        <div onClick={HandleClick} className="Home">
          <Link to="/home">
             <AiOutlineHome />
           </Link>
         </div>
-        <div onClick={HandleState} className="Event">
+        <div onClick={HandleClick} className="Event">
           <Link to="/events">
             <SlCalender />
           </Link>
         </div>
-        <div onClick={HandleState} className="Members">
+        <div onClick={HandleClick} className="Members">
           <Link to="/members">
             <RiTeamLine />
           </Link>
