@@ -18,7 +18,12 @@ function Sidebar() {
   let toggle ='toggle'
   const [state , SetState] = useState(false);
   let HandleState = ()=>{
-    SetState(!state);
+    
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    })
+    
   }
 
 
@@ -29,24 +34,24 @@ function Sidebar() {
    
    
       <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`flex  icons ${toggle}`}>
-        <div className="Landing">
+        <div onClick={HandleState} className="Landing">
           <Link to="/"> 
           <LuPlaneLanding />
           </Link>
          
        
         </div>
-        <div className="Home">
+        <div onClick={HandleState} className="Home">
          <Link to="/home">
             <AiOutlineHome />
           </Link>
         </div>
-        <div className="Event">
+        <div onClick={HandleState} className="Event">
           <Link to="/events">
             <SlCalender />
           </Link>
         </div>
-        <div className="Members">
+        <div onClick={HandleState} className="Members">
           <Link to="/members">
             <RiTeamLine />
           </Link>
