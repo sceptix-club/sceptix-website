@@ -386,7 +386,7 @@ const TeamPage = () => {
 
   return (
     <div>
-    <div className="container mx-auto mb-10 px-20">
+    <div className="container mx-auto mb-10 pl-4">
       {/* <div className="text-center">
       <h1 className="py-10 text-6xl font-bold mb-9 pb-10 bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
           Faculty
@@ -405,8 +405,8 @@ const TeamPage = () => {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-        {teamMembers.map((member, index) => (
+       <div className=" grid place-items-center grid-cols-1 md:grid-cols-2 gap-x-6 lg:grid-cols-2 mb-20 xl:grid-cols-3 ">     
+          {teamMembers.map((member, index) => (
           <MemberCard key={index} member={member} />
         ))}
       </div>

@@ -85,7 +85,7 @@
   @media screen and (max-width: 767px) {
     .Card-content {
       height: 550px;
-      width: 400px;
+      width: 300px;
       margin: 65px 55px 30px 75px;
       justify-self: center;
     }
@@ -102,9 +102,9 @@
   
   @media screen and (max-width: 380px) {
     .Card-content {
-      height: 280px;
-      width: 210px;
-      margin: 45px auto 30px 80px;
+      height: 340px;
+      width: 250px;
+      margin: 50px auto 60px 55px;
       justify-self: center;
     }
   }

@@ -1,7 +1,3 @@
-//dedicated to empowering individuals with the liberating force of open-source software
-//conducted engaging sessions, organized Linux installation drives, and hosted captivating coding events and hackathons
-//committed to expanding our community and contributing to larger-scale open-source projects
-
 import React from 'react';
 import Footer from '../footer/footer.jsx';
 import { MdPeopleOutline } from 'react-icons/md';
@@ -72,7 +68,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-
-{/*Welcome to The sceptix club, where freedom and innovation converge. We are a open source software club. Together, we have witnessed the transformative power of collaboration and the limitless possibilities it brings.
-
-. Join us at The sceptix club and let's celebrate the journey of freedom, creativity, and boundless minds.*/}

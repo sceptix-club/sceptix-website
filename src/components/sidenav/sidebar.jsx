@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import '../../style/sidebar.css';
 import { useState } from "react";
 import {LuPlaneLanding} from 'react-icons/lu'
-import { HiHome } from 'react-icons/hi';
 import {SlCalender} from 'react-icons/sl'
 import { RiTeamLine } from 'react-icons/ri';
 import {AiOutlineHome} from 'react-icons/ai'
@@ -16,48 +15,52 @@ import {CgLoadbar} from  'react-icons/cg'
 
 function Sidebar() {
   // to make the side bar responsive 
-  let toggle =''
+  let toggle ='toggle'
   const [state , SetState] = useState(false);
-  let HandleState = ()=>{
-    SetState(!state);
+  
+  let HandleClick = ()=>{ 
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    })
+    
   }
 
 
   return (
-  
-   // icons
-      <div onClick={HandleState} {...state ? toggle = "toggle" : ''} className= {`icons ${toggle}`}>
-        <div className="Landing">
+  <>
+
+
+   
+   
+      <div {...state ? toggle = "toggle" : ''} className= {`flex  icons ${toggle}`}>
+        <div onClick={HandleClick} className="Landing">
           <Link to="/"> 
           <LuPlaneLanding />
           </Link>
          
        
         </div>
-        <div className="Home">
+        <div onClick={HandleClick} className="Home">
          <Link to="/home">
             <AiOutlineHome />
           </Link>
         </div>
-        <div className="Event">
+        <div onClick={HandleClick} className="Event">
           <Link to="/events">
             <SlCalender />
           </Link>
         </div>
-        <div className="Members">
+        <div onClick={HandleClick} className="Members">
           <Link to="/members">
             <RiTeamLine />
           </Link>
         </div>
         
         {/* menu bar */}
-      <div className="menu" onClick={HandleState} {...state ? toggle = "toggle" : ''} >
-        <CgLoadbar className= {`first ${toggle}`} />
-        <CgLoadbar className= {`second ${toggle}`} />
-
+     
       </div>
-      </div>
-    
+      </>
   );
 }
 
