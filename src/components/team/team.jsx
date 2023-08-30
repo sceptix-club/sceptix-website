@@ -5,6 +5,7 @@ import Sidebar from '../sidenav/sidebar';
 import Footer from '../footer/footer.jsx';
 import {AiOutlineUser} from 'react-icons/ai'
 import './team.css';
+import Mainfooter from '../footer/mainfooter';
 
 
 
@@ -411,7 +412,7 @@ const TeamPage = () => {
         ))}
       </div>
     </div>
-    <Footer className="mt-5" />
+    <Mainfooter className="mt-5" />
     </div>
   );
 };

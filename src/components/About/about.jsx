@@ -4,6 +4,7 @@ import { MdPeopleOutline } from 'react-icons/md';
 import { GiTeacher } from "react-icons/gi"; 
 import { GiFist } from "react-icons/gi"; 
 import Main_timeline from '../timeline/main_timeline.jsx';
+import Mainfooter from '../footer/mainfooter.jsx';
 
 
 
@@ -59,7 +60,7 @@ const AboutUs = () => {
    
     
     <section className="sm:mt-35 mt-10 ">
-       <Footer />
+       <Mainfooter />
      
       
     </section>

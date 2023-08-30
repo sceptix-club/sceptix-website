@@ -3,6 +3,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import Footer from "../footer/footer.jsx";
 import Cards from "../joywin-cards/Card.jsx";
+import Mainfooter from "../footer/mainfooter.jsx";
 
 const EventPage = () => {
   const eventPast = [
@@ -92,7 +93,7 @@ const EventPage = () => {
 
 
 
-      <Footer />
+      <Mainfooter />
     </>
   );
 };

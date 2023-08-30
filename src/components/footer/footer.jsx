@@ -7,7 +7,12 @@ import {
   AiFillMail,
 } from "react-icons/ai";
 import Image from "./L1.png";
-
+const HandleClick = ()=>{
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  })
+}
 const Footer = () => {
   const socialIcons = [
     {
@@ -59,7 +64,7 @@ const Footer = () => {
               <br />
               <br />
               <br />
-              <div className="mb-6">
+              <div className="mb-6" onClick={HandleClick}>
                 <h1 className="text-3xl font-semibold">About Us</h1>
                 <br />
                 <Link
@@ -73,7 +78,7 @@ const Footer = () => {
                   Home
                 </Link>
               </div>
-              <div className="mb-6">
+              <div onClick={HandleClick} className="mb-6">
                 <Link
                   to="/events"
                   className={`text-2xl cursor-pointer block ${
@@ -85,7 +90,7 @@ const Footer = () => {
                   Events
                 </Link>
               </div>
-              <div className="mb-6">
+              <div onClick={HandleClick} className="mb-6">
                 <Link
                   to="/members"
                   className={`text-2xl cursor-pointer block ${

@@ -7,8 +7,13 @@ import {
   AiFillMail,
 } from "react-icons/ai";
 import Image from "./L1.png";
-
-const Footer = () => {
+const HandleClick = ()=>{
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  })
+}
+const Footer2 = () => {
   return (
     <footer className="bg-black-700 py-4 text-white ">
       <hr className="border-t border-gray-1000 my-6" />
@@ -27,7 +32,7 @@ const Footer = () => {
           </div>
           <div className="md:mt-3 lg:mt-0 justify-self-center space-y-4 md:space-y-0 md:flex md:items-center md:justify-center">
             <div className="mb-6 md:mb-0">
-              <div className="flex space-x-4 mt-1">
+              <div onClick={HandleClick} className="flex space-x-4 mt-1">
                 <Link
                   to="/"
                   className={`text-lg cursor-pointer mt-1 ${
@@ -109,4 +114,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer2;
