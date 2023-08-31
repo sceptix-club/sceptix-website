@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import '../../style/sidebar.css';
 import { useState } from "react";
@@ -6,7 +6,7 @@ import {LuPlaneLanding} from 'react-icons/lu'
 import {SlCalender} from 'react-icons/sl'
 import { RiTeamLine } from 'react-icons/ri';
 import {AiOutlineHome} from 'react-icons/ai'
-import {CgLoadbar} from  'react-icons/cg'
+import {CgLoadbar, CgToggleOff} from  'react-icons/cg'
 
 
 
@@ -15,8 +15,27 @@ import {CgLoadbar} from  'react-icons/cg'
 
 function Sidebar() {
   // to make the side bar responsive 
-  let toggle ='toggle'
-  const [state , SetState] = useState(false);
+  let toggle =''
+  const [visible,setVisible] = useState(true)
+  const [prevScrollPos , setPrevScrollPos] = useState(0)
+
+ 
+  const HandleScroll = ()=>{
+    const currentScroll = window.scrollY
+
+    if(currentScroll > prevScrollPos){
+      setVisible(false)
+    }
+    else{
+      setVisible(true)
+    }
+    setPrevScrollPos(currentScroll)
+  }
+
+  useEffect(()=>{
+    window.addEventListener('scroll',HandleScroll)
+  },[prevScrollPos])
+
   
   let HandleClick = ()=>{ 
     window.scrollTo({
@@ -26,14 +45,10 @@ function Sidebar() {
     
   }
 
-
   return (
   <>
-
-
    
-   
-      <div {...state ? toggle = "toggle" : ''} className= {`flex  icons ${toggle}`}>
+      <div className= {`flex  icons ${visible ? toggle = "toggle" : toggle = "" }`}>
         <div onClick={HandleClick} className="Landing">
           <Link to="/"> 
           <LuPlaneLanding />

@@ -20,16 +20,20 @@
 
 @media (max-width: 640px) {
   .icons {
-    width: 0px;
+    transition: 0.5s;
     transform: rotate(90deg);
     left: 46%;
-    top: 68%;
+    top: 80%;
+    
+
   }
   
   
   
   .icons.toggle {
+    transition: 0.5s;
     width:15%;
+    top: 69%;
   }
   .menu{
     display: block;
@@ -86,6 +90,9 @@
   .menu .second.toggle {
     transform: rotate(48deg);
     transition: 0.5s;
+  }
+  .icons.toggle{
+    width: 70px;
   }
 }
 @media (min-width: 640px) {
