@@ -8,6 +8,7 @@ import Sidebar from "./components/sidenav/sidebar.jsx";
 import AboutUs from "./components/About/about.jsx";
 import EventPage from './components/Events/events.jsx'
 import Main_timeline from './components/timeline/main_timeline';
+import MobileviewSidebar from './components/sidenav/mobileviewSidebar';
 
 
 function App() {
