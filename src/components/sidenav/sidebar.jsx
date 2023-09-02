@@ -26,7 +26,7 @@ function Sidebar() {
     if(currentScroll > prevScrollPos){
       setVisible(false)
     }
-    else{
+    else if(currentScroll+100 < prevScrollPos){
       setVisible(true)
     }
     setPrevScrollPos(currentScroll)
