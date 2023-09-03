@@ -29,11 +29,11 @@ const MemberCard = ({ member }) => {
             <AiFillGithub color="white" size={30} />
           </a>
         </div>
-        { <div className="m-2">
+       {/*  <div className="m-2">
           <a href={member.linked}>
             <AiFillLinkedin color="white" size={30} />
           </a>
-  </div> }
+  </div> */}
       </div>
     </div>
     </div>
@@ -203,6 +203,7 @@ const TeamPage = () => {
       gitlink: "https://github.com/vv-01",
       linked: "https://github.com/Charispinto"
     },
+
     {
       name: 'Shivani B S',
       role: 'Member',
@@ -246,7 +247,21 @@ const TeamPage = () => {
       linked: "https://github.com/Charispinto"
     },
     {
-      name: 'Joshua Quinthino Albuquerque',
+      name: 'Amisha Ananda Gowda',
+      role: 'Member',
+      image: 'https://avatars.githubusercontent.com/u/107048204?v=4',
+      gitlink: "https://github.com/Amisha-Ananda-Gowda",
+      linked: "https://github.com/Charispinto"
+    },
+    {
+      name: 'Chaitanya Puthran',
+      role: 'Member',
+      image: 'https://avatars.githubusercontent.com/u/109748320?v=4',
+      gitlink: "https://github.com/Chaitanyaputhran",
+      linked: "https://github.com/Charispinto"
+    },
+    {
+      name: 'Joshua Q Albuquerque',
       role: 'Member',
       image: 'https://avatars.githubusercontent.com/u/125178226?v=4',
       gitlink: "https://github.com/JoshuaAlbuquerque",
@@ -259,13 +274,7 @@ const TeamPage = () => {
       gitlink: "https://github.com/lawrencedsz9",
       linked: "https://github.com/Charispinto"
     },
-    {
-      name: 'Amisha Ananda Gowda',
-      role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/107048204?v=4',
-      gitlink: "https://github.com/Amisha-Ananda-Gowda",
-      linked: "https://github.com/Charispinto"
-    },
+   
     {
       name: 'Mac Reon D Souza',
       role: 'Member',
@@ -274,7 +283,7 @@ const TeamPage = () => {
       linked: "https://github.com/Charispinto"
     },
     {
-      name: 'Swastik Gurudev Bhandarkar',
+      name: 'Swastik G Bhandarkar',
       role: 'Member',
       image: 'https://avatars.githubusercontent.com/u/123379509?v=4',
       gitlink: "https://github.com/swastikb794",
@@ -308,13 +317,7 @@ const TeamPage = () => {
       gitlink: "https://github.com/adwxith",
       linked: "https://github.com/Charispinto"
     },
-    {
-      name: 'Chaitanya Puthran',
-      role: 'Member',
-      image: 'https://avatars.githubusercontent.com/u/109748320?v=4',
-      gitlink: "https://github.com/Chaitanyaputhran",
-      linked: "https://github.com/Charispinto"
-    },
+   
     {
       name: 'Devananda M Prabhu',
       role: 'Member',
