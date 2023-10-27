@@ -32,13 +32,10 @@ module.exports.validationCheck = async function (username,email,UserModel,res,du
                     date:new Date(),
                     createdAT:Date.now(),
                     expiresAT : Date.now () + 3600000 * +duration,
-                    verified:false
+                    
 
                 })
-
-
-
-                //  await user.save();
+                  await user.save();
 
                 
                

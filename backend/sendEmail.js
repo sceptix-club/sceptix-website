@@ -14,7 +14,7 @@ const sendEmail = async (mailOptions,res)=>{
     try{
         transpoter.sendMail(mailOptions,(error,info)=>{
             if(error){
-                res.status(400).json({message: error});
+                res.status(400).json({message: "Server Error"});
                 console.log("Error"+error)
             }
             else{

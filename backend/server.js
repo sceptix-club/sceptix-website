@@ -29,7 +29,10 @@ const userSchema = new mongoose.Schema({
     date:String,
     createdAT:Date,
     expiresAT:Date,
-    verified:Boolean
+    verified:{
+        type:Boolean,
+        default:false
+    }
 })
 //Model
 const UserModel = mongoose.model('User',userSchema)
@@ -46,11 +49,25 @@ app.post('/api/reg',async (req,res)=>{
 })
 
 app.post('/api/otp',async (req,res)=>{
+    
     try{
     const {email,otp} = req.body
     const validOTP = await verifyOtp({email,otp})
     if(validOTP){
         res.status(200).json({message:"OTP verified"})
+        await UserModel.updateOne({email},{ $set: { verified: true } }).then((res)=>{
+            console.log(res)
+        
+        }).catch((error)=>{
+            // res.status(400).json({message:error})
+        })
+        await UserModel.updateOne({email},{$unset: {otp:1}}).then((response)=>{
+            console.log(response)
+        
+        }).catch((error)=>{
+            // res.status(400).json({message:error})
+        
+        })
     }
     else{
         res.status(400).json({message:"Invalid OTP"})
