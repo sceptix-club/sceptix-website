@@ -1,6 +1,6 @@
-const { toHtml } = require('@fortawesome/fontawesome-svg-core');
+
 const bcrypt = require('bcrypt');
-const { err } = require('react-native-svg/lib/typescript/xml');
+
 
 const hashData = async(data,saltRounds = 10)=>{
     try{

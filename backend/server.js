@@ -26,8 +26,10 @@ const userSchema = new mongoose.Schema({
     userName:String,
     email:String,
     otp:String,
+    date:String,
     createdAT:Date,
     expiresAT:Date,
+    verified:Boolean
 })
 //Model
 const UserModel = mongoose.model('User',userSchema)
@@ -35,27 +37,41 @@ const UserModel = mongoose.model('User',userSchema)
 app.post('/api/reg',async (req,res)=>{
     const username = req.body.userName
     const email = req.body.email
-   
-    
     // const user = new UserModel({userName:username,email:email,date:new Date()})
     //function to check if the user already registered or not
-    validationcheck.validationCheck(username,email,otp,UserModel,res)
+    validationcheck.validationCheck(username,email,UserModel,res)
 
 
     
 })
 
-app.post('/api/verify',async(req,res)=>{
+app.post('/api/otp',async (req,res)=>{
     try{
-        let {email,otp} = req.body
-        const validOTP = await verifyOtp({email,otp})
-        res.status(200).json({valid:validOTP})
-
+    const {email,otp} = req.body
+    const validOTP = await verifyOtp({email,otp})
+    if(validOTP){
+        res.status(200).json({message:"OTP verified"})
+    }
+    else{
+        res.status(400).json({message:"Invalid OTP"})
+    }
     }
     catch(error){
-       res.status(400).send(error.message)
+        throw error
     }
 })
+
+// app.post('/api/verify',async(req,res)=>{
+//     try{
+//         let {email,otp} = req.body
+//         const validOTP = await verifyOtp({email,otp})
+//         res.status(200).json({valid:validOTP})
+
+//     }
+//     catch(error){
+//        res.status(400).send(error.message)
+//     }
+// })
 
 async function deleteOTP({email}){
     try{

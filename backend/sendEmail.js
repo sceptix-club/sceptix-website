@@ -10,7 +10,7 @@ const transpoter = nodemailer.createTransport({
 })
 
 
-const sendEmail = async (mailOptions)=>{
+const sendEmail = async (mailOptions,res)=>{
     try{
         transpoter.sendMail(mailOptions,(error,info)=>{
             if(error){

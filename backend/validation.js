@@ -6,35 +6,39 @@ const sendEmail = require('./sendEmail')
 const {hashData,verifyHasedData} = require('./hashData')
 // process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-module.exports.validationCheck = async function (username,email,otp,UserModel,res,duration = 1) {
+module.exports.validationCheck = async function (username,email,UserModel,res,duration = 1) {
     UserModel.find({ email: email }).then(async (response) => {
         if (response.length === 0) {
             try {
-                const generatedOtp = await generatedOtp()
+                const code = await generatedOtp()
 
                 const mailOptions = {
                     from:process.env.EMAIL,
                     to:email,
-                    subject:"Email otp  Verification",
+                    subject:"Otp for Email Verification",
                     html:`<p style = "color:tomato;
-                    font-size:25px; letter-spacing:2px;"><br>${generatedOtp}</br></p> <p>This code <b>expires in ${duration} hour(s)</b></p></p>`
+                    font-size:25px; letter-spacing:2px;"><br>${code}</br></p> <p>This code <b>expires in ${duration} hour(s)</b></p></p>`
                 }
 
-                await sendEmail(mailOptions)
+                await sendEmail(mailOptions,res)
 
-                const hashedOtp = await hashData(generatedOtp)
+                const hashedOtp = await hashData(code)
 
 
                 const user = new UserModel({
                     userName:username,
                     email:email,
                     otp:hashedOtp,
+                    date:new Date(),
                     createdAT:Date.now(),
-                    expiresAT : Date.now () + 3600000 *+duration,
+                    expiresAT : Date.now () + 3600000 * +duration,
+                    verified:false
 
                 })
 
-                 await user.save();
+
+
+                //  await user.save();
 
                 
                
