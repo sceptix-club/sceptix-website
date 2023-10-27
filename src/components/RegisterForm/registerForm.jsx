@@ -5,10 +5,56 @@ import { validate } from 'react-email-validator';
 
 function RegisterForm() {
   const [otpField,setOtpField] = useState("hidden")
+  const [registerButton,setRegisterButton] = useState("")
   const [userName,setUserName] = useState("")
   const [email,setEmail] = useState("")
   const [otp,setOtp] = useState("")
   const [messageFromServer,setMessageFromServer] = useState("")
+
+  const handleOtpSubmit = (e)=>{
+    e.preventDefault()
+    if(!validate(email) || email === ""){
+      alert("Please enter a valid email")
+      return
+    }
+    else if(userName === ""){
+      alert("Please enter a valid username")
+      return
+    }
+    else if(otp.length < 4){
+      alert("Enter correct 4 digit Otp")
+    }
+
+    else{
+      try{
+        fetch("http://localhost:3000/api/otp",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          email,
+          otp
+        })
+
+        }).then(res=>res.json())
+        .then(data=>{
+          if(data.message == "OTP verified"){
+            setMessageFromServer("Registration successfull")
+          }
+          else if (data.message == "Invalid OTP"){
+            setMessageFromServer("Invalid OTP")
+          }
+        })
+
+      }
+      catch(error){
+        console.log(error.message)
+      }
+    }
+
+
+  }
 
   const handleSubmit = (e)=>{
     e.preventDefault()
@@ -30,7 +76,6 @@ function RegisterForm() {
       body:JSON.stringify({
         userName,
         email,
-        otp
       })
     }).then(res=>res.json())
     .then(data=>{
@@ -42,6 +87,7 @@ function RegisterForm() {
       }
       else if (data.message == "otp sent sucessfull"){
         setOtpField("")
+        setRegisterButton("hidden")
       }
       else if (data.message != "otp sent sucessfull"){
         setMessageFromServer(data.message)
@@ -86,7 +132,8 @@ function RegisterForm() {
 
 
           <div className='mt-10 flex justify-center'>
-          <button onClick={handleSubmit} className='font-bold text-2xl text-white'>Submit</button>
+          <button onClick={handleSubmit} className={`font-bold ${registerButton} text-2xl text-white`}>Submit</button>
+          {registerButton === "hidden" && <button onClick={handleOtpSubmit} className='font-bold text-2xl text-white'>Register</button>}
           </div>
 
          
