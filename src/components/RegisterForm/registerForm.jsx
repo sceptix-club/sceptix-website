@@ -79,19 +79,15 @@ function RegisterForm() {
       })
     }).then(res=>res.json())
     .then(data=>{
-      if(data.message == "Registration Successfull"){
-        setMessageFromServer("Registration successfull")
-      }
-      else if (data.message == "This email Id already registerd"){
-        setMessageFromServer("This email Id already registerd")
-      }
-      else if (data.message == "otp sent sucessfull"){
-        setOtpField("")
-        setRegisterButton("hidden")
-      }
-      else if (data.message != "otp sent sucessfull"){
+      if(data.message){
         setMessageFromServer(data.message)
+        if(data.message === "otp sent sucessfull"){
+          setOtpField("")
+          setRegisterButton("hidden")
+        }
       }
+      
+      
       
     })
   }
@@ -120,15 +116,15 @@ function RegisterForm() {
             
           <div className={`mt-10 ${otpField}`}>
             <label name = "otp" className='text-white font-bold text-2xl'>OTP</label>
-            <input onChange={(e)=>{setOtp(e.target.value)}} type="text" className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white' />
+            <input onChange={(e)=>{setOtp(e.target.value)}} type="text" className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-serif' />
           </div>
           
           {/* <div className={`mt-10 `}>
             <p className='text-white text-center'>This is a message from the server</p>
           </div> */}
 
-          {messageFromServer === "Registration successfull" && <div className='text-white mt-8 text-center text-lg font-semibold'>{messageFromServer}</div>}
-          {messageFromServer === "This email Id already registerd" && <div className='text-white mt-8 text-center text-lg font-semibold'>{messageFromServer}</div>}
+          {messageFromServer != "" && <div className=' font-serif text-white mt-8 text-center text-lg font-semibold'>{messageFromServer}</div>}
+          {/* {messageFromServer === "This email Id already registerd" && <div className='text-white mt-8 text-center text-lg font-semibold'>{messageFromServer}</div>} */}
 
 
           <div className='mt-10 flex justify-center'>
