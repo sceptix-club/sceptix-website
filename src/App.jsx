@@ -8,6 +8,7 @@ import Sidebar from "./components/sidenav/sidebar.jsx";
 import AboutUs from "./components/About/about.jsx";
 import EventPage from './components/Events/events.jsx'
 import Main_timeline from './components/timeline/main_timeline';
+import RegisterForm from './components/RegisterForm/registerForm';
 
 import './App.css';
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/home" element={<AboutUs/>}/>
           <Route path="/events" element={<EventPage/>} />
           <Route path="/members" element={<TeamPage/>} />
+          <Route path="/register" element={<RegisterForm/>}/>
           {/* <Route path="/timeline" element={<Main_timeline/>} /> */}
 
           
