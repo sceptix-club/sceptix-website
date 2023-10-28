@@ -41,6 +41,12 @@ function RegisterForm() {
         .then(data=>{
           if(data.message == "OTP verified"){
             setMessageFromServer("Registration successfull")
+            setOtpField("hidden")
+            setRegisterButton("hidden")
+            setUserName("")
+            setEmail("")
+            setOtp("")
+
           }
           else if (data.message == "Invalid OTP"){
             setMessageFromServer("Invalid OTP")
@@ -107,16 +113,16 @@ function RegisterForm() {
         <form action="">
           <div className='mt-10'>
             <label name = "username" className='text-white font-bold text-2xl'>Username</label>
-            <input onChange={(e)=>{setUserName(e.target.value)}} type="text" name='userName' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
+            <input onChange={(e)=>{setUserName(e.target.value)}} value={userName} type="text" name='userName' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
           </div>
           <div className='mt-10'>
             <label name="email" className='text-white font-bold text-2xl'>Email</label>
-            <input onChange={(e)=>setEmail(e.target.value)} type="text" name='email' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
+            <input onChange={(e)=>setEmail(e.target.value)} value={email} type="text" name='email' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
           </div>
             
           <div className={`mt-10 ${otpField}`}>
             <label name = "otp" className='text-white font-bold text-2xl'>OTP</label>
-            <input onChange={(e)=>{setOtp(e.target.value)}} type="text" className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-serif' />
+            <input onChange={(e)=>{setOtp(e.target.value)}} value={otp} type="text" className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-serif' />
           </div>
           
           {/* <div className={`mt-10 `}>
