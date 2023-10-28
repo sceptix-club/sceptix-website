@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const upcomingEvents = require('./events.json')
 require('dotenv').config()
 const app = express()
 const {hashData,verifyHasedData} = require('./hashData')
@@ -36,6 +37,13 @@ const userSchema = new mongoose.Schema({
 })
 //Model
 const UserModel = mongoose.model('User',userSchema)
+
+// app.get('/upcoming_events',(req,res)=>{
+//     res.json(upcomingEvents)
+
+// })
+
+
 
 app.post('/api/reg',async (req,res)=>{
     const username = req.body.userName

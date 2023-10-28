@@ -4,7 +4,7 @@ const speakeasy = require("speakeasy");
 const generatedOtp = require('./generateOtp')
 const sendEmail = require('./sendEmail')
 const {hashData,verifyHasedData} = require('./hashData')
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 module.exports.validationCheck = async function (username,email,UserModel,res,duration = 1) {
     UserModel.find({ email: email }).then(async (response) => {
