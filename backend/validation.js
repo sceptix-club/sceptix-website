@@ -32,29 +32,21 @@ module.exports.validationCheck = async function (username,email,UserModel,res,du
                     date:new Date(),
                     createdAT:Date.now(),
                     expiresAT : Date.now () + 3600000 * +duration,
-                    
-
                 })
-                  await user.save();
+                await user.save();
 
-                
-               
-
-                //to send otp through email 
-
-                
-
-                
-              
-            } catch (err) {
+                //to send otp through email  
+            } 
+            catch (err) {
                 console.log(err.message);
-                res.status(500).json({ message: "Internal Server Error" });
+                // res.status(500).json({ message: "Internal Server Error" });
             }
 
             // await user.save()
             // const statusCode = 200;
             // res.status(statusCode).json({message:"Registration Successfull"})
-        } else {
+        } 
+        else {
             console.log("user exist");
             res.status(409).json({ message: "This email Id already registerd" });
         }

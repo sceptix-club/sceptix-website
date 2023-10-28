@@ -1,14 +1,21 @@
-import { useState } from 'react'
+import { useState,lazy,Suspense } from 'react'
 import './App.css'
-import Landing from './components/landing/landing'
-import TeamPage from './components/team/team'
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/sidenav/sidebar.jsx";
-import AboutUs from "./components/About/about.jsx";
-import EventPage from './components/Events/events.jsx'
-import Main_timeline from './components/timeline/main_timeline';
-import RegisterForm from './components/RegisterForm/registerForm';
+import React from "react";
+// import Landing from './components/landing/landing'
+// import TeamPage from './components/team/team'
+// import Sidebar from "./components/sidenav/sidebar.jsx";
+// import AboutUs from "./components/About/about.jsx";
+// import EventPage from './components/Events/events.jsx'
+// import Main_timeline from './components/timeline/main_timeline';
+// import RegisterForm from './components/RegisterForm/registerForm';
+const Landing = lazy(()=> import("./components/landing/landing"))
+const TeamPage = lazy(()=> import("./components/team/team"))
+const Sidebar = lazy(()=> import("./components/sidenav/sidebar.jsx"))
+const AboutUs = lazy(()=> import("./components/About/about.jsx"))
+const EventPage = lazy(()=> import("./components/Events/events.jsx"))
+const Main_timeline = lazy(()=> import("./components/timeline/main_timeline"))
+const RegisterForm = lazy(()=> import("./components/RegisterForm/registerForm"))
 
 import './App.css';
 
@@ -21,7 +28,7 @@ function App() {
     <Router>
       <div className='bg-black scroll-smooth'>
         <Sidebar />
-
+        <Suspense fallback = {<h1>Loading ....</h1>}>
         <Routes>
           <Route path="/" element={<><Landing/></>} />
           <Route path="/home" element={<AboutUs/>}/>
@@ -32,6 +39,7 @@ function App() {
 
           
         </Routes>
+        </Suspense>
         
       </div>
     </Router>

@@ -83,7 +83,7 @@ const UpComingEventCards = (props) => {
             <FontAwesomeIcon icon={faCalendarAlt} /> {props.date}
           </h5>
           <p>{props.eventInfo}</p>
-          <button   className = "transition-all mt-10 font-bold text-lg absolute bottom-5 hover:scale-125"><Link  to='/register'>Register Now</Link></button>
+          <button className = "transition-all mt-10 font-bold text-lg absolute bottom-5 hover:scale-125"><Link  to='/register'>Register Now</Link></button>
            
         </div>
       )}

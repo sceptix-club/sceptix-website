@@ -55,7 +55,7 @@ function Timeline() {
             if(elements.id %2 != 0){
             return (
             <>
-                <div  className='flex xl:justify-start lg:justify-center sm: justify-center'>
+                <div key={elements.id}  className='flex xl:justify-start lg:justify-center sm: justify-center'>
                 {/* data-aos="fade-right" */}
                  
                     <div className='w-2/5 xl:mt-10 ml-24 lg:mt-10 '>
@@ -69,7 +69,7 @@ function Timeline() {
         else {
             return(
              <>   
-                <div   className='flex xl:justify-end lg:justify-center sm: justify-center'>
+                <div key={elements.idd} className='flex xl:justify-end lg:justify-center sm: justify-center'>
                 {/* data-aos="fade-left"  */}
                
                         <div className='w-2/5 xl:mt-10 mr-24 lg:mt-10 ml-48 '>

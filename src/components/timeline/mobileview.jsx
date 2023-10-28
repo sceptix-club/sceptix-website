@@ -63,7 +63,7 @@ function MobileViewTimeline() {
         <div>
         {timelineElements.map((element)=>{
         return(
-        <div className=" flex justify-center main-div mt-10">
+        <div key={element.id} className=" flex justify-center main-div mt-10">
         <div>
           <div className="h-full max-w-2xl border-2   border-[#7c7b7c] rounded-xl text-2xl bg-black text-white  p-4">
           <h1 key={element.id} className="p-6 text-4xl font-bold mb-9 text-center bg-gradient-to-r from-sky-500 to-blue-700 bg-clip-text text-transparent">
