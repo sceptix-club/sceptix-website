@@ -4,12 +4,14 @@ import { validate } from 'react-email-validator';
 
 
 function RegisterForm() {
+ 
   const [otpField,setOtpField] = useState("hidden")
   const [registerButton,setRegisterButton] = useState("")
   const [userName,setUserName] = useState("")
   const [email,setEmail] = useState("")
   const [otp,setOtp] = useState("")
   const [messageFromServer,setMessageFromServer] = useState("")
+  const [readOnly,setReadOnly] = useState(false)
 
   const handleOtpSubmit = (e)=>{
     e.preventDefault()
@@ -64,6 +66,7 @@ function RegisterForm() {
 
   const handleSubmit = (e)=>{
     e.preventDefault()
+    setReadOnly(true)
     if(!validate(email) || email === ""){
       alert("Please enter a valid email")
       return
@@ -113,11 +116,11 @@ function RegisterForm() {
         <form action="">
           <div className='mt-10'>
             <label name = "username" className='text-white font-bold text-2xl'>Username</label>
-            <input onChange={(e)=>{setUserName(e.target.value)}} value={userName} type="text" name='userName' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
+            <input readOnly = {readOnly}  onChange={(e)=>{setUserName(e.target.value)}} value={userName} type="text" name='userName' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
           </div>
           <div className='mt-10'>
             <label name="email" className='text-white font-bold text-2xl'>Email</label>
-            <input onChange={(e)=>setEmail(e.target.value)} value={email} type="text" name='email' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
+            <input  readOnly = {readOnly} onChange={(e)=>setEmail(e.target.value)} value={email} type="text" name='email' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
           </div>
             
           <div className={`mt-10 ${otpField}`}>
