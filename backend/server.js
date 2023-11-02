@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 require("dotenv").config();
 const app = express();
-const EventData = require('./eventData.json')
+const EventData = require('./eventData')
 const { hashData, verifyHasedData } = require("./hashData");
 const validationcheck = require("./validation");
 const port = process.env.PORT;

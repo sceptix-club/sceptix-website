@@ -96,9 +96,9 @@ const EventPage = () => {
   return (
 
     <>
-    <div className="container mx-auto py-8 bg-black">
-   <div className="text-center mt-3">
-     <h1 className=" h-20 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 m-auto bg-gradient-to-l from-sky-500 from-1% to-blue-400 to-70% bg-clip-text text-transparent">
+    <div className="container mx-auto py-5 bg-black">
+   <div className="text-center mt-2">
+     <h1 className=" h-20 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-0 m-auto bg-gradient-to-l from-sky-500 from-1% to-blue-400 to-70% bg-clip-text text-transparent">
        Up Comming Events
      </h1>
      

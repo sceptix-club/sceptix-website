@@ -118,7 +118,7 @@ function RegisterForm() {
     <>
     <div className='flex w-full h-screen bg-black items-center justify-center'>
       <div className='bg-bkack w-80 h-screen'>
-        <h1 className='text-center text-white py-8 font-extrabold text-4xl'>Registration</h1>
+        <h1 className='text-center text-white py-8 font-extrabold text-4xl'>{`Registration For ${eventName} `}</h1>
         <form action="">
           <div className='mt-10'>
             <label name = "name" className='text-white font-bold text-2xl'>Name</label>

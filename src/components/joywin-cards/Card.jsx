@@ -78,7 +78,11 @@ const UpComingEventCards = (props) => {
       <div className="Card-title ">
         <h3 className="font-bold text-lg">{props.eventName}</h3>
         <h5 className="font-normal">
-          <FontAwesomeIcon icon={faCalendarAlt} /> <button className='font-bold'>Register Now</button>
+          <FontAwesomeIcon icon={faCalendarAlt} /> 
+          <button onClick={()=>{
+            setEventName(props.eventName)
+            setShowRegister(true)
+          }} className='font-bold'>Register Now</button>
         </h5>
       </div>
       {isExpanded && (
