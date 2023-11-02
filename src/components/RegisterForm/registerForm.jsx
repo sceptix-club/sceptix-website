@@ -1,17 +1,21 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useEffect } from 'react'
+import { useState,useContext } from 'react'
 import { validate } from 'react-email-validator';
+import {RegisterContext} from '../../Context/RegisterContext'
 
 
 function RegisterForm() {
  
   const [otpField,setOtpField] = useState("hidden")
   const [registerButton,setRegisterButton] = useState("")
-  const [userName,setUserName] = useState("")
+  const [name,setName] = useState("")
   const [email,setEmail] = useState("")
   const [otp,setOtp] = useState("")
   const [messageFromServer,setMessageFromServer] = useState("")
   const [readOnly,setReadOnly] = useState(false)
+  const {eventName,setEventName} = useContext(RegisterContext)
+  const {showRegister,setShowRegister} = useContext(RegisterContext)
+ 
 
   const handleOtpSubmit = (e)=>{
     e.preventDefault()
@@ -19,8 +23,8 @@ function RegisterForm() {
       alert("Please enter a valid email")
       return
     }
-    else if(userName === ""){
-      alert("Please enter a valid username")
+    else if(name === ""){
+      alert("Please enter a valid name")
       return
     }
     else if(otp.length < 4){
@@ -45,9 +49,10 @@ function RegisterForm() {
             setMessageFromServer("Registration successfull")
             setOtpField("hidden")
             setRegisterButton("hidden")
-            setUserName("")
+            setName("")
             setEmail("")
             setOtp("")
+            setShowRegister(false)
 
           }
           else if (data.message == "Invalid OTP"){
@@ -71,8 +76,8 @@ function RegisterForm() {
       alert("Please enter a valid email")
       return
     }
-    else if(userName === ""){
-      alert("Please enter a valid username")
+    else if(name === ""){
+      alert("Please enter a valid name")
       return
     }
     else{
@@ -83,8 +88,9 @@ function RegisterForm() {
         "Content-Type":"application/json"
       },
       body:JSON.stringify({
-        userName,
+        name,
         email,
+        eventName
       })
     }).then(res=>res.json())
     .then(data=>{
@@ -115,8 +121,8 @@ function RegisterForm() {
         <h1 className='text-center text-white py-8 font-extrabold text-4xl'>Registration</h1>
         <form action="">
           <div className='mt-10'>
-            <label name = "username" className='text-white font-bold text-2xl'>Username</label>
-            <input readOnly = {readOnly}  onChange={(e)=>{setUserName(e.target.value)}} value={userName} type="text" name='userName' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
+            <label name = "name" className='text-white font-bold text-2xl'>Name</label>
+            <input readOnly = {readOnly}  onChange={(e)=>{setName(e.target.value)}} value={name} type="text" name='name' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
           </div>
           <div className='mt-10'>
             <label name="email" className='text-white font-bold text-2xl'>Email</label>
