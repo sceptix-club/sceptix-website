@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 require("dotenv").config();
 const app = express();
+const EventData = require('./eventData.json')
 const { hashData, verifyHasedData } = require("./hashData");
 const validationcheck = require("./validation");
 const port = process.env.PORT;
@@ -25,6 +26,7 @@ db.once("open", function () {
 const userSchema = new mongoose.Schema({
     userName: String,
     email: String,
+    eventName:String,
     otp: String,
     date: String,
     createdAT: Date,
@@ -37,13 +39,20 @@ const userSchema = new mongoose.Schema({
 //Model
 const UserModel = mongoose.model("User", userSchema);
 
+app.get('/api/events',(req,res)=>{
+    res.json([{...EventData}]
+    
+    )
+})
+
 
 app.post("/api/reg", async (req, res) => {
     const username = req.body.userName;
     const email = req.body.email;
+    const eventName = req.body.eventName;
     // const user = new UserModel({userName:username,email:email,date:new Date()})
     //function to check if the user already registered or not
-    validationcheck.validationCheck(username, email, UserModel, res);
+    validationcheck.validationCheck(username, email, UserModel,eventName, res);
 });
 
 app.post("/api/otp", async (req, res) => {

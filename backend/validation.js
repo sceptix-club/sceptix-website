@@ -6,7 +6,7 @@ const sendEmail = require('./sendEmail')
 const {hashData,verifyHasedData} = require('./hashData')
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-module.exports.validationCheck = async function (username,email,UserModel,res,duration = 1) {
+module.exports.validationCheck = async function (username,email,UserModel,eventName,res,duration = 1) {
     UserModel.find({ email: email }).then(async (response) => {
         if (response.length === 0) {
             try {
@@ -28,6 +28,7 @@ module.exports.validationCheck = async function (username,email,UserModel,res,du
                 const user = new UserModel({
                     userName:username,
                     email:email,
+                    eventName:eventName,
                     otp:hashedOtp,
                     date:new Date(),
                     createdAT:Date.now(),
