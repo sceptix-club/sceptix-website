@@ -27,8 +27,8 @@ function App() {
       
     <Router>
       <div className='bg-black scroll-smooth'>
+      <Suspense fallback = {<h1 className='text-black text-center'>Loading ....</h1>}>
         <Sidebar />
-        <Suspense fallback = {<h1>Loading ....</h1>}>
         <Routes>
           <Route path="/" element={<><Landing/></>} />
           <Route path="/home" element={<AboutUs/>}/>
@@ -37,10 +37,10 @@ function App() {
           {/* <Route path="/events" element={register ? <RegisterForm/> : <EventPage/>} /> */}
           {/* <Route path="/timeline" element={<Main_timeline/>} /> */}
         </Routes>
-        </Suspense>
         
         
         
+  </Suspense>
       </div>
     </Router>
     </RegisterProvider>

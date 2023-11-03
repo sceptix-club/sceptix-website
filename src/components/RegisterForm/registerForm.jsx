@@ -69,9 +69,15 @@ function RegisterForm() {
 
   }
 
+  useEffect(()=>{
+    if(eventName === undefined){
+      setMessageFromServer("Server Not Responding Now")
+    }
+  },[])
+
   const handleSubmit = (e)=>{
     e.preventDefault()
-    setReadOnly(true)
+    
     if(!validate(email) || email === ""){
       alert("Please enter a valid email")
       return
@@ -81,6 +87,7 @@ function RegisterForm() {
       return
     }
     else{
+      setReadOnly(true)
     try{
     fetch("http://localhost:3000/api/reg",{
       method:"POST",
@@ -118,7 +125,10 @@ function RegisterForm() {
     <>
     <div className='flex w-full h-screen bg-black items-center justify-center'>
       <div className='bg-bkack w-80 h-screen'>
-        <h1 className='text-center text-white py-8 font-extrabold text-4xl'>{`Registration For ${eventName} `}</h1>
+        
+        {eventName != undefined &&  <h1 className='text-center text-white py-8 font-extrabold text-4xl'>{`Registration For ${eventName}`}</h1>}
+        
+       
         <form action="">
           <div className='mt-10'>
             <label name = "name" className='text-white font-bold text-2xl'>Name</label>
