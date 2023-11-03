@@ -1,13 +1,15 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
+const mongoose = require("mongoose");
 const speakeasy = require("speakeasy");
 const generatedOtp = require('./generateOtp')
 const sendEmail = require('./sendEmail')
 const {hashData,verifyHasedData} = require('./hashData')
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-module.exports.validationCheck = async function (username,email,UserModel,eventName,res,duration = 1) {
-    UserModel.find({ email: email }).then(async (response) => {
+module.exports.validationCheck = async function (username,email,EventModel,eventName,res,duration = 1) {
+   
+    EventModel.find({ email: email }).then(async (response) => {
         if (response.length === 0) {
             try {
                 const code = await generatedOtp()
@@ -23,9 +25,10 @@ module.exports.validationCheck = async function (username,email,UserModel,eventN
                 await sendEmail(mailOptions,res)
 
                 const hashedOtp = await hashData(code)
+                let dbName = eventName
 
 
-                const user = new UserModel({
+                const user = new EventModel({
                     userName:username,
                     email:email,
                     eventName:eventName,

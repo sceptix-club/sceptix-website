@@ -38,7 +38,11 @@ const userSchema = new mongoose.Schema({
     },
 });
 //Model
-const UserModel = mongoose.model("User", userSchema);
+// const UserModel = mongoose.model("User", userSchema);
+
+
+var dbModel;
+let EventModel;
 
 app.get('/api/events',(req,res)=>{
    fs.readFile('eventData.json','utf8',(err,data)=>{
@@ -55,10 +59,17 @@ app.post("/api/reg", async (req, res) => {
     const username = req.body.userName;
     const email = req.body.email;
     const eventName = req.body.eventName;
+    dbModel = eventName
+    await createDbModel()
+   
     // const user = new UserModel({userName:username,email:email,date:new Date()})
     //function to check if the user already registered or not
-    validationcheck.validationCheck(username, email, UserModel,eventName, res);
+    validationcheck.validationCheck(username, email, EventModel,eventName, res);
 });
+const createDbModel = async()=>{
+
+    EventModel = mongoose.model(dbModel,userSchema)
+}
 
 app.post("/api/otp", async (req, res) => {
     try {
@@ -66,14 +77,14 @@ app.post("/api/otp", async (req, res) => {
         const validOTP = await verifyOtp({ email, otp });
         if (validOTP) {
             res.status(200).json({ message: "OTP verified" });
-            await UserModel.updateOne({ email }, { $set: { verified: true } })
+            await EventModel.updateOne({ email }, { $set: { verified: true } })
                 .then((res) => {
                     console.log(res);
                 })
                 .catch((error) => {
                     // res.status(400).json({message:error})
                 });
-            await UserModel.updateOne({ email }, { $unset: { otp: 1 } })
+            await EventModel.updateOne({ email }, { $unset: { otp: 1 } })
                 .then((response) => {
                     console.log(response);
                 })
@@ -90,7 +101,7 @@ app.post("/api/otp", async (req, res) => {
 
 async function deleteOTP({ email }) {
     try {
-        await UserModel.deleteOne({ email });
+        await EventModel.deleteOne({ email });
     } catch (error) {
         throw error;
     }
@@ -102,7 +113,7 @@ async function verifyOtp({ email, otp }) {
             throw Error("Provide values for email,otp");
         }
         // ensure otp record exists
-        const matchOTPRecord = await UserModel.findOne({
+        const matchOTPRecord = await EventModel.findOne({
             email,
         });
 
@@ -111,7 +122,7 @@ async function verifyOtp({ email, otp }) {
         }
         const { expiresAT } = matchOTPRecord;
         if (expiresAT < Date.now()) {
-            await UserModel.deleteOne({ email });
+            await EventModel.deleteOne({ email });
             throw Error("OTP expired");
         }
         // not expired
