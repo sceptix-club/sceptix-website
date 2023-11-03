@@ -1,12 +1,13 @@
 const express = require("express");
+const fs = require('fs');
 const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 require("dotenv").config();
 const app = express();
-const EventData = require('./eventData')
 const { hashData, verifyHasedData } = require("./hashData");
 const validationcheck = require("./validation");
+
 const port = process.env.PORT;
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -40,9 +41,13 @@ const userSchema = new mongoose.Schema({
 const UserModel = mongoose.model("User", userSchema);
 
 app.get('/api/events',(req,res)=>{
-    res.json([{...EventData}]
-    
-    )
+   fs.readFile('eventData.json','utf8',(err,data)=>{
+         if(err){
+              console.error(err)
+         }else{
+            res.json(JSON.parse(data));
+         }
+   })
 })
 
 
