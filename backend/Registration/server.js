@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require('fs');
 const cors = require("cors");
 const mongoose = require("mongoose");
+const userSchema = require('../Schema/userSchema')
 const bodyParser = require("body-parser");
 require("dotenv").config();
 const app = express();
@@ -24,35 +25,28 @@ db.once("open", function () {
     console.log("database connected");
 });
 //Schema for DB
-const userSchema = new mongoose.Schema({
-    userName: String,
-    email: String,
-    eventName:String,
-    otp: String,
-    date: String,
-    createdAT: Date,
-    expiresAT: Date,
-    verified: {
-        type: Boolean,
-        default: false,
-    },
-});
+
+
+
 //Model
 // const UserModel = mongoose.model("User", userSchema);
-
 
 var dbModel;
 let EventModel;
 
 app.get('/api/events',(req,res)=>{
-   fs.readFile('eventData.json','utf8',(err,data)=>{
-         if(err){
-              console.error(err)
-         }else{
-            res.json(JSON.parse(data));
-         }
-   })
-})
+       fs.readFile('eventData.json','utf8',(err,data)=>{
+                 if(err){
+                          console.error(err)
+                     }else{
+                            res.json(JSON.parse(data));
+                         }
+                   })
+                })
+                
+               
+                    
+
 
 
 app.post("/api/reg", async (req, res) => {

@@ -52,7 +52,7 @@ function RegisterForm() {
             setName("")
             setEmail("")
             setOtp("")
-            setShowRegister(false)
+           
 
           }
           else if (data.message == "Invalid OTP"){
