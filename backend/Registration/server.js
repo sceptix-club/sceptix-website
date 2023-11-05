@@ -4,12 +4,16 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const userSchema = require('../Schema/userSchema')
 const bodyParser = require("body-parser");
+const multer = require('multer')
 require("dotenv").config();
 const app = express();
+const newEventModel = require('../Schema/newEventSchema')
+
 const { hashData, verifyHasedData } = require("./hashData");
 const validationcheck = require("./validation");
 
 const port = process.env.PORT;
+
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -39,13 +43,14 @@ app.get('/api/events',(req,res)=>{
                  if(err){
                           console.error(err)
                      }else{
+                        console.log("inside api")
                             res.json(JSON.parse(data));
                          }
                    })
                 })
                 
                
-                    
+       
 
 
 
@@ -60,6 +65,7 @@ app.post("/api/reg", async (req, res) => {
     //function to check if the user already registered or not
     validationcheck.validationCheck(username, email, EventModel,eventName, res);
 });
+// function to create 
 const createDbModel = async()=>{
 
     EventModel = mongoose.model(dbModel,userSchema)
@@ -128,6 +134,41 @@ async function verifyOtp({ email, otp }) {
         throw error;
     }
 }
+
+/////////////////////////////////////////////
+
+
+const storage = multer.diskStorage({
+    destination:(req,file,cb)=>{
+        cb(null,'./uploads')
+    },
+    filename:(req,file,cb)=>{
+        cb(null,file.originalname)
+    }
+})
+
+const upload = multer({storage:storage})
+
+
+app.post('/api/addEvent',upload.single('newEventImage'),async(req,res)=>{
+    const EventData = new newEventModel({
+        eventName:req.body.eventName,
+        eventDate:req.body.eventDate,
+        eventInfo:req.body.eventInfo,
+        img:{
+            data:fs.readFileSync('uploads/' + req.file.filename),
+            contentType:'image/png'
+        }
+    }) 
+    try{
+        const savedEvent = await EventData.save()
+        res.json(savedEvent)
+    }
+    catch(error){
+        res.json({message:error})
+    }
+    
+})
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
