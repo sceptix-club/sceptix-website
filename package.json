@@ -16,6 +16,7 @@
     "aos": "^2.3.4",
     "axios": "^1.6.0",
     "font-awesome": "^4.7.0",
+    "gsap": "^3.12.2",
     "hamburger-react": "^2.5.0",
     "lottie-web": "^5.12.0",
     "query-string": "^8.1.0",
@@ -26,6 +27,7 @@
     "react-router-dom": "^6.12.1",
     "react-spring": "^9.7.1",
     "react-vertical-timeline-component": "^3.6.0",
+    "scrollmagic": "^2.0.8",
     "styled-component": "^2.8.0",
     "validator": "^13.11.0"
   },

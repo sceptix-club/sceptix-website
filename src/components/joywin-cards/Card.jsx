@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faL } from '@fortawesome/free-solid-svg-icons';
 import { useState,useContext } from 'react';
-import { RegisterContext } from '../../Context/RegisterContext';
+import { MainContext } from '../../Context/MainContext';
 import './Card.css';
 
 
@@ -51,8 +51,8 @@ const EventCards = (props) => {
 
 
 const UpComingEventCards = (props) => {  
-  const {showRegister,setShowRegister} = useContext(RegisterContext)
-  const {eventName,setEventName} = useContext(RegisterContext)
+  const {showRegister,setShowRegister} = useContext(MainContext)
+  const {eventName,setEventName} = useContext(MainContext)
   const [isExpanded, setIsExpanded] = useState(false);
  
  

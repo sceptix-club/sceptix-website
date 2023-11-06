@@ -3,29 +3,36 @@ import axios from 'axios'
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import Footer from "../footer/footer.jsx";
-import {RegisterContext} from '../../Context/RegisterContext.jsx'
+import {MainContext} from '../../Context/MainContext.jsx'
 import {EventCards,UpComingEventCards} from "../joywin-cards/Card.jsx";
 
 
 import Mainfooter from "../footer/mainfooter.jsx";
 
 const EventPage = () => {
-  const {showRegister,setShowRegister} = useContext(RegisterContext)
+  const {showRegister,setShowRegister} = useContext(MainContext)
+  const {newEvents,setNewEvents} = useContext(MainContext)
+  
   
 
 
   const [upComingEvent,setUpComingEvent] = useState([{}])
 
-  useEffect(() => {
-    async function fetchEventData() {
-      let response = await fetch('http://localhost:3000/api/events')
-      let data = await response.json()
-      await setUpComingEvent([...data])
-      
-    }
+  const getData = async()=>{
+    await axios
+    .get("http://localhost:3000/api/getEvent")
+    .then((res)=> {
+      setNewEvents(res.data[0])  
+    })
+    .catch((err)=> console.log(err," it has an error"))
 
-    fetchEventData()
-  }, [])
+    
+    
+}
+useEffect(()=>{
+    getData()
+    
+ },[]);
   const eventPast = [
     {
       eventName: "JS Jumpstart",
@@ -106,11 +113,8 @@ const EventPage = () => {
    </div>
 
    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mx-auto">
-     {upComingEvent.map((member, index) => (
-       <div className="mr-4 sm:justify-center md:justify-start lg:justify-start xl:justify-start" key={index}>
-         <UpComingEventCards {...member}/>
-       </div>
-     ))}
+   {newEvents === null  && <div className="text-white"></div>}
+  {newEvents  && <UpComingEventCards eventName = {newEvents.eventName} date = {newEvents.eventDate} eventInfo = {newEvents.eventInfo} image = {newEvents.eventName+".jpg"} _id = {newEvents._id}/>  }
    </div>
  </div>
  

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState,useContext } from 'react'
 import { validate } from 'react-email-validator';
-import {RegisterContext} from '../../Context/RegisterContext'
+import {MainContext} from '../../Context/MainContext'
 
 
 function RegisterForm() {
@@ -13,8 +13,8 @@ function RegisterForm() {
   const [otp,setOtp] = useState("")
   const [messageFromServer,setMessageFromServer] = useState("")
   const [readOnly,setReadOnly] = useState(false)
-  const {eventName,setEventName} = useContext(RegisterContext)
-  const {showRegister,setShowRegister} = useContext(RegisterContext)
+  const {eventName,setEventName} = useContext(MainContext)
+  const {showRegister,setShowRegister} = useContext(MainContext)
  
 
   const handleOtpSubmit = (e)=>{

@@ -140,7 +140,7 @@ async function verifyOtp({ email, otp }) {
 
 const storage = multer.diskStorage({
     destination:(req,file,cb)=>{
-        cb(null,'./uploads')
+        cb(null,'../../public')
     },
     filename:(req,file,cb)=>{
         cb(null,file.originalname)
@@ -152,22 +152,37 @@ const upload = multer({storage:storage})
 
 app.post('/api/addEvent',upload.single('newEventImage'),async(req,res)=>{
     const EventData = new newEventModel({
-        eventName:req.body.eventName,
-        eventDate:req.body.eventDate,
-        eventInfo:req.body.eventInfo,
-        img:{
-            data:fs.readFileSync('uploads/' + req.file.filename),
-            contentType:'image/png'
-        }
+        eventName:req.body.newEventName,
+        eventDate:req.body.newEventDate,
+        eventInfo:req.body.newEventInfo,
+        // img:{
+        //     data:fs.readFileSync('uploads/' + req.file.filename),
+        //     contentType:'image/png'
+        // }
     }) 
     try{
         const savedEvent = await EventData.save()
-        res.json(savedEvent)
+        res.json({message:"Event Added Successfully"})
+        
     }
     catch(error){
         res.json({message:error})
     }
     
+})
+
+app.get("/api/getEvent",async(req,res)=>{
+    
+    const allData = await newEventModel.find()
+    res.json(allData)
+})
+
+app.post("/api/deleteEvent",async(req,res)=>{
+    const id = req.body.id
+    await newEventModel.deleteOne({_id:id})
+    
+
+
 })
 
 app.listen(port, () => {

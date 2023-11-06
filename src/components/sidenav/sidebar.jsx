@@ -1,5 +1,5 @@
 import React, { useEffect,useContext } from "react";
-import {RegisterContext} from '../../Context/RegisterContext'
+import {MainContext} from '../../Context/MainContext'
 import { Link } from "react-router-dom";
 import '../../style/sidebar.css';
 import { useState } from "react";
@@ -15,7 +15,7 @@ import {CgLoadbar, CgToggleOff} from  'react-icons/cg'
 
 
 function Sidebar() {
-    const {showRegister,setShowRegister} = useContext(RegisterContext)
+    const {showRegister,setShowRegister} = useContext(MainContext)
   // to make the side bar responsive 
   let toggle =''
   const [visible,setVisible] = useState(true)

@@ -2,7 +2,7 @@ import { useState,lazy,Suspense, useEffect,useContext } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
-import { RegisterProvider } from './Context/RegisterContext';
+import { MainContextProvider } from './Context/MainContext';
 // import EventOrRegister from './Context/EventOrRegister';
 // import Landing from './components/landing/landing'
 // import TeamPage from './components/team/team'
@@ -17,6 +17,7 @@ const Sidebar = lazy(()=> import("./components/sidenav/sidebar.jsx"))
 const AboutUs = lazy(()=> import("./components/About/about.jsx"))
 const EventOrRegister = lazy(()=> import("./Context/EventOrRegister"))
 const UpComingEventCardForAdmin = lazy(()=> import ('./pages/AdminEventCard/upComingEventCardForAdmin.jsx'))
+const AdminPage = lazy(()=> import ('./pages/AminPage/AdminPage.jsx'))
 const AddEvent = lazy(()=> import ('./pages/AddEvent/AddEvent.jsx'))
 
 // const Main_timeline = lazy(()=> import("./components/timeline/main_timeline"))
@@ -26,7 +27,7 @@ const AddEvent = lazy(()=> import ('./pages/AddEvent/AddEvent.jsx'))
 function App() {
   const [count, setCount] = useState(0)
   return (
-    <RegisterProvider>
+    <MainContextProvider>
       
     <Router>
       <div className='bg-black scroll-smooth'>
@@ -37,7 +38,7 @@ function App() {
           <Route path="/home" element={<AboutUs/>}/>
           <Route path="/members" element={<TeamPage/>} />
           <Route path='/events' element={<EventOrRegister/>}/>
-          <Route path='/admin' element={<UpComingEventCardForAdmin/>}/>
+          <Route path='/admin' element={<AdminPage/>}/>
           <Route path='/addEvent' element={<AddEvent/>}/>
           
           {/* <Route path="/events" element={register ? <RegisterForm/> : <EventPage/>} /> */}
@@ -49,7 +50,7 @@ function App() {
   </Suspense>
       </div>
     </Router>
-    </RegisterProvider>
+    </MainContextProvider>
   );
 }
 

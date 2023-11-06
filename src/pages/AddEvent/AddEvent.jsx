@@ -12,23 +12,18 @@ function AddEvent() {
     const handleSubmit = async(e)=>{
         e.preventDefault()
         let formData = new FormData();
+        formData.append('newEventName',newEventName)
+        formData.append('newEventDate',newEventDate)
+        formData.append('newEventInfo',newEventInfo)
         formData.append('newEventImage',newEventImage)
         try{
-           await fetch('http://localhost:3000/api/addEvent',{
+            let response = await fetch('http://localhost:3000/api/addEvent',{
                 method:'POST',
-                headers:{
-                    'Content-Type':'multipart/form-data; boundary=something'
-                },
-                body:{
-                    newEventName,
-                    newEventDate,
-                    newEventInfo,
-                    formData
-                }
-            }).then(res=>res.json())
-            .then(data=>{
-                console.log(data)
+                body:formData
             })
+            let data = await response.json()
+            alert(data.message)
+
 
         }
         catch(error){

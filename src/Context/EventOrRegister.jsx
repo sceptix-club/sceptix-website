@@ -1,10 +1,10 @@
 import React from 'react'
 import EventPage from '../components/Events/events'
 import RegisterForm from '../components/RegisterForm/registerForm'
-import { RegisterContext } from './RegisterContext'
+import { MainContext } from './MainContext'
 
 function EventOrRegister() {
-    const {showRegister,setShowRegister} = React.useContext(RegisterContext)
+    const {showRegister,setShowRegister} = React.useContext(MainContext)
     
 
   return (
