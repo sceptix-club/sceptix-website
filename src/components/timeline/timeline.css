@@ -264,9 +264,12 @@ div{
 
 } */
 .mainclass{
-  color: red;
+  background-color:black;
+  transition: ease;
+  /* animation: divanimation 10s ease; */
+}
+.mainsvg{
   background-color: red;
-  animation: divanimation 10s ease;
 }
 @keyframes divanimation {
   0%{
