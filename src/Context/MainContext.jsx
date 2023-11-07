@@ -14,6 +14,7 @@ export const MainContextProvider = ({children})=>{
   const [newEvents,setNewEvents] = useState(null)
   
 
+
   return (
     <MainContext.Provider value={{showRegister,setShowRegister,eventName,setEventName,newEvents,setNewEvents}}>
       {children}

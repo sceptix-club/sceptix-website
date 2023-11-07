@@ -103,6 +103,7 @@ useEffect(()=>{
   return (
 
     <>
+    {newEvents != null &&
     <div className="container mx-auto py-5 bg-black">
    <div className="text-center mt-2">
      <h1 className=" h-20 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-0 m-auto bg-gradient-to-l from-sky-500 from-1% to-blue-400 to-70% bg-clip-text text-transparent">
@@ -113,10 +114,10 @@ useEffect(()=>{
    </div>
 
    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mx-auto">
-   {newEvents === null  && <div className="text-white"></div>}
-  {newEvents  && <UpComingEventCards eventName = {newEvents.eventName} date = {newEvents.eventDate} eventInfo = {newEvents.eventInfo} image = {newEvents.eventName+".jpg"} _id = {newEvents._id}/>  }
+  {newEvents  && <UpComingEventCards eventName = {newEvents.eventName} date = {newEvents.eventDate} eventInfo = {newEvents.eventInfo} image = {newEvents.eventImage} _id = {newEvents._id}/>  }
    </div>
  </div>
+}
  
 
     

@@ -7,6 +7,7 @@ function AddEvent() {
     const [newEventDate,setNewEventDate] = useState("")
     const [newEventInfo,setNewEventInfo] = useState("")
     const [newEventImage,setNewEventImage] = useState()
+    const [imgName,setImgName] = useState('')
 
 
     const handleSubmit = async(e)=>{
@@ -16,6 +17,7 @@ function AddEvent() {
         formData.append('newEventDate',newEventDate)
         formData.append('newEventInfo',newEventInfo)
         formData.append('newEventImage',newEventImage)
+        formData.append('imgName',imgName)
         try{
             let response = await fetch('http://localhost:3000/api/addEvent',{
                 method:'POST',
@@ -41,7 +43,10 @@ function AddEvent() {
     <input onChange={(e)=>setNewEventName(e.target.value)} className=' rounded-lg' type='text' placeholder='EventName'/><br></br>
     <input onChange={(e)=>setNewEventDate(e.target.value)} type="date" /><br></br>
     <textarea onChange={(e)=>setNewEventInfo(e.target.value)} type='text' placeholder='eventInfo'/><br></br>
-    <input onChange={(e)=>setNewEventImage(e.target.files[0])} className='text-white center' type='file'/>
+    <input onChange={(e)=>{
+        setNewEventImage(e.target.files[0])
+    }} className='text-white center' type='file'/>
+    <input onChange={(e)=>setImgName(e.target.value)} type='text' placeholder='image file name '/>
     <button type='submit' className='text-white text-2xl'>Submit</button>
         </form>
     

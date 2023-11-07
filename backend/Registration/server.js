@@ -38,16 +38,16 @@ db.once("open", function () {
 var dbModel;
 let EventModel;
 
-app.get('/api/events',(req,res)=>{
-       fs.readFile('eventData.json','utf8',(err,data)=>{
-                 if(err){
-                          console.error(err)
-                     }else{
-                        console.log("inside api")
-                            res.json(JSON.parse(data));
-                         }
-                   })
-                })
+// app.get('/api/events',(req,res)=>{
+//        fs.readFile('eventData.json','utf8',(err,data)=>{
+//                  if(err){
+//                           console.error(err)
+//                      }else{
+//                         console.log("inside api")
+//                             res.json(JSON.parse(data));
+//                          }
+//                    })
+//                 })
                 
                
        
@@ -155,6 +155,7 @@ app.post('/api/addEvent',upload.single('newEventImage'),async(req,res)=>{
         eventName:req.body.newEventName,
         eventDate:req.body.newEventDate,
         eventInfo:req.body.newEventInfo,
+        eventImage:req.body.imgName
         // img:{
         //     data:fs.readFileSync('uploads/' + req.file.filename),
         //     contentType:'image/png'

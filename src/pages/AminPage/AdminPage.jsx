@@ -44,7 +44,7 @@ function AdminPage() {
 
       })} */}
       {newEvents === null  && <div className='text-white'>No data</div>}
-      {newEvents  && <UpComingEventCardForAdmin eventName = {newEvents.eventName} date = {newEvents.eventDate} eventInfo = {newEvents.eventInfo} image = {newEvents.eventName+".jpg"} _id = {newEvents._id}/>  }
+      {newEvents  && <UpComingEventCardForAdmin eventName = {newEvents.eventName} date = {newEvents.eventDate} eventInfo = {newEvents.eventInfo} image = {newEvents.eventImage} _id = {newEvents._id}/>  }
       <div className='flex justify-center '>
     <button className='text-white text-5xl '><Link to="/addevent">Add event</Link></button>
     </div>
