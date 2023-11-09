@@ -49,6 +49,12 @@ function Sidebar() {
   <>
    
       <div className= {`flex  icons ${visible ? toggle = "toggle" : toggle = "" }`}>
+        {/* <div onClick={HandleClick} className="Home">
+         <Link to="/home">
+            <AiOutlineHome />
+          </Link>
+        </div> */}
+      
         <div onClick={HandleClick} className="Landing">
           <Link to="/"> 
           <LuPlaneLanding />
@@ -56,11 +62,7 @@ function Sidebar() {
          
        
         </div>
-        <div onClick={HandleClick} className="Home">
-         <Link to="/home">
-            <AiOutlineHome />
-          </Link>
-        </div>
+        
         <div onClick={HandleClick} className="Event">
           <Link to="/events">
             <SlCalender />

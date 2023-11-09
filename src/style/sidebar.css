@@ -114,6 +114,14 @@
   
   
 }
+.Home {
+  position: absolute;
+  top: 165px;
+  cursor: pointer;
+  /* / */
+  z-index: 20;
+ 
+}
 .Landing {
   position: absolute;
   top: 70px;
@@ -123,14 +131,7 @@
   
 }
 
-.Home {
-  position: absolute;
-  top: 165px;
-  cursor: pointer;
-  /* / */
-  z-index: 20;
- 
-}
+
 
 .Home:hover {
   color: rgb(135, 135, 135);
@@ -196,7 +197,7 @@
 /* } */
 .Landing {
   position: absolute;
-  top: 75px;
+  top: 150px;
   
 }
 
