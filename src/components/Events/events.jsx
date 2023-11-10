@@ -10,7 +10,7 @@ import {EventCards,UpComingEventCards} from "../joywin-cards/Card.jsx";
 import Mainfooter from "../footer/mainfooter.jsx";
 
 const EventPage = () => {
-  const {showRegister,setShowRegister} = useContext(MainContext)
+  
   const {newEvents,setNewEvents} = useContext(MainContext)
   
   
@@ -25,6 +25,11 @@ const EventPage = () => {
       setNewEvents(res.data[0])  
     })
     .catch((err)=> console.log(err," it has an error"))
+    // {if(newEvents){
+    //  await newEvents.map((items)=>{
+    //    setUpComingEvent(...items)
+    //   })
+    // }}
 
     
     
@@ -115,6 +120,12 @@ useEffect(()=>{
 
    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mx-auto">
   {newEvents  && <UpComingEventCards eventName = {newEvents.eventName} date = {newEvents.eventDate} eventInfo = {newEvents.eventInfo} image = {newEvents.eventImage} _id = {newEvents._id}/>  }
+  {/* {newEvents.map((member, index) => (
+    <div className="mr-4 sm:justify-center md:justify-start lg:justify-start xl:justify-start" key={index}>
+      <UpComingEventCards eventName = {member.eventName} date = {member.eventDate} eventInfo = {member.eventInfo} image = {member.eventImage} id = {member._id}/>
+    </div>
+  ))} */}
+  
    </div>
  </div>
 }

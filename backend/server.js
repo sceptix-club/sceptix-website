@@ -2,18 +2,18 @@ const express = require("express");
 const fs = require('fs');
 const cors = require("cors");
 const mongoose = require("mongoose");
-const userSchema = require('../Schema/userSchema')
+const userSchema = require('./Schema/userSchema')
 const bodyParser = require("body-parser");
 const multer = require('multer')
+const jwt = require('jsonwebtoken');
 require("dotenv").config();
 const app = express();
-const newEventModel = require('../Schema/newEventSchema')
-
-const { hashData, verifyHasedData } = require("./hashData");
-const validationcheck = require("./validation");
-
+const newEventModel = require('./Schema/newEventSchema')
+const eventModel = require ('./Schema/eventSchema')
+const { hashData, verifyHasedData } = require("./Registration/hashData");
+const validationcheck = require("./Registration/validation");
+const adminModel = require('./Schema/adminSchema')
 const port = process.env.PORT;
-
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -28,12 +28,7 @@ db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function () {
     console.log("database connected");
 });
-//Schema for DB
 
-
-
-//Model
-// const UserModel = mongoose.model("User", userSchema);
 
 var dbModel;
 let EventModel;
@@ -61,11 +56,11 @@ app.post("/api/reg", async (req, res) => {
     dbModel = eventName
     await createDbModel()
    
-    // const user = new UserModel({userName:username,email:email,date:new Date()})
+   
     //function to check if the user already registered or not
     validationcheck.validationCheck(username, email, EventModel,eventName, res);
 });
-// function to create 
+// function to create db
 const createDbModel = async()=>{
 
     EventModel = mongoose.model(dbModel,userSchema)
@@ -140,7 +135,7 @@ async function verifyOtp({ email, otp }) {
 
 const storage = multer.diskStorage({
     destination:(req,file,cb)=>{
-        cb(null,'../../public')
+        cb(null,'../public')
     },
     filename:(req,file,cb)=>{
         cb(null,file.originalname)
@@ -182,9 +177,48 @@ app.post("/api/deleteEvent",async(req,res)=>{
     const id = req.body.id
     await newEventModel.deleteOne({_id:id})
     
-
-
 })
+////////////////////
+// app.post('/events',async(req,res)=>{
+//     const {eventName,date,image,eventInfo} = req.body
+//     const event = new eventModel({eventName,date,image,eventInfo})
+//     await event.save()
+
+// })
+/////////////////////////////////
+/// to create admin key///////
+// app.post("/api/admin",async(req,res)=>{
+//     const key = req.body.key
+//     let hasedKey =await hashData(key)
+//     let adminKey = await new adminModel({
+//         key:hasedKey
+//     })
+//     await adminKey.save()
+    
+// })
+
+app.post("/api/checkforadmin",async(req,res)=>{
+    const key = req.body.key
+    let adminKey =await adminModel.find().distinct("key")
+    const validateKey = await verifyHasedData(key,adminKey[0])
+    if(validateKey){
+        
+        
+        res.json({data:true})
+
+    }
+    else{
+        res.json({data:false})
+    }
+    
+})
+
+
+
+
+
+
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

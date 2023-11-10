@@ -1,13 +1,24 @@
-import React,{useState} from 'react'
+import React,{useState,useContext, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
+import { MainContext } from '../../Context/MainContext'
 
 
 
 function AddEvent() {
+    const navigate = useNavigate()
+    const {isAdmin} = useContext(MainContext)
     const [newEventName,setNewEventName] = useState("")
     const [newEventDate,setNewEventDate] = useState("")
     const [newEventInfo,setNewEventInfo] = useState("")
     const [newEventImage,setNewEventImage] = useState()
     const [imgName,setImgName] = useState('')
+
+    useEffect(()=>{
+        if(!isAdmin){
+            navigate('/login')
+        }
+    
+    })
 
 
     const handleSubmit = async(e)=>{
@@ -34,6 +45,7 @@ function AddEvent() {
 
 
     }
+    
 
   return (
     <>
@@ -41,7 +53,7 @@ function AddEvent() {
         <form onSubmit={handleSubmit}>
 
     <input onChange={(e)=>setNewEventName(e.target.value)} className=' rounded-lg' type='text' placeholder='EventName'/><br></br>
-    <input onChange={(e)=>setNewEventDate(e.target.value)} type="date" /><br></br>
+    <input onChange={(e)=>setNewEventDate(e.target.value)} type="date" placeholder='DD-MM-YYYY' /><br></br>
     <textarea onChange={(e)=>setNewEventInfo(e.target.value)} type='text' placeholder='eventInfo'/><br></br>
     <input onChange={(e)=>{
         setNewEventImage(e.target.files[0])

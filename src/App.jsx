@@ -16,9 +16,11 @@ const TeamPage = lazy(()=> import("./components/team/team"))
 const Sidebar = lazy(()=> import("./components/sidenav/sidebar.jsx"))
 const AboutUs = lazy(()=> import("./components/About/about.jsx"))
 const EventOrRegister = lazy(()=> import("./Context/EventOrRegister"))
-const UpComingEventCardForAdmin = lazy(()=> import ('./pages/AdminEventCard/upComingEventCardForAdmin.jsx'))
+
 const AdminPage = lazy(()=> import ('./pages/AminPage/AdminPage.jsx'))
 const AddEvent = lazy(()=> import ('./pages/AddEvent/AddEvent.jsx'))
+const Login = lazy(()=> import ('./pages/Login/Login.jsx'))
+const LoginOrAdmin = lazy(()=> import('./pages/Login/LoginOrAdmin.jsx'))
 
 // const Main_timeline = lazy(()=> import("./components/timeline/main_timeline"))
 
@@ -38,11 +40,8 @@ function App() {
           <Route path="/home" element={<AboutUs/>}/>
           <Route path="/members" element={<TeamPage/>} />
           <Route path='/events' element={<EventOrRegister/>}/>
-          <Route path='/admin' element={<AdminPage/>}/>
-          <Route path='/addEvent' element={<AddEvent/>}/>
-          
-          {/* <Route path="/events" element={register ? <RegisterForm/> : <EventPage/>} /> */}
-          {/* <Route path="/timeline" element={<Main_timeline/>} /> */}
+          <Route path='/login' element={<LoginOrAdmin/>}/>
+          <Route path ='/addevent' element={<AddEvent/>}/>
         </Routes>
         
         
