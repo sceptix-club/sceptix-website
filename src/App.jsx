@@ -16,7 +16,6 @@ const TeamPage = lazy(()=> import("./components/team/team"))
 const Sidebar = lazy(()=> import("./components/sidenav/sidebar.jsx"))
 const AboutUs = lazy(()=> import("./components/About/about.jsx"))
 const EventOrRegister = lazy(()=> import("./Context/EventOrRegister"))
-
 const AdminPage = lazy(()=> import ('./pages/AminPage/AdminPage.jsx'))
 const AddEvent = lazy(()=> import ('./pages/AddEvent/AddEvent.jsx'))
 const Login = lazy(()=> import ('./pages/Login/Login.jsx'))
