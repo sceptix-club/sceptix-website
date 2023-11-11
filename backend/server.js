@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const fs = require('fs');
 const cors = require("cors");
@@ -6,7 +7,6 @@ const userSchema = require('./Schema/userSchema')
 const bodyParser = require("body-parser");
 const multer = require('multer')
 const jwt = require('jsonwebtoken');
-require("dotenv").config();
 const app = express();
 const newEventModel = require('./Schema/newEventSchema')
 const eventModel = require ('./Schema/eventSchema')
