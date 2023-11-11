@@ -60,7 +60,7 @@ function Line2(){
                 {/* <div  className={`xl:content-center bg-blue-800 border-[1px] border-red-700 2xl:mt-[-1070px] xl:mt-[-1070px] lg:mt-[-1070px] md:mt-[1050px] sm:mt-[1160px]  ${scrolled} ${scrollValue}`}></div> */}
                 {/* {console.log(scrollState)} */}
                 <div className=''>
-                    <div  className={`${scrollValue} absolute left-[49%] w-[20px] h-[1090px] top-[155%] `}>
+                    <div  className={`${scrollValue} absolute left-[49%] w-[20px] h-[1090px] top-[255%] `}>
                     <svg ref={svgRef} width="10" height="100">
                             <rect fill='#7DF9FF'  width="10" height="150" x="4"  />
                     </svg>
