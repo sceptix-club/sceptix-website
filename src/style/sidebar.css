@@ -1,18 +1,16 @@
-
 .icons {
-  position: absolute;
+  /* position: absolute; */
   width: 50px;
-  /* border: 1px solid; */
-  height: 450px;
-  top: 18%;
-  background-color:#D3D3D3;
-  border-radius: 0px 20px 20px 0px;
+  border: 1px solid; 
+   height: 450px;
+  top: 18%; 
+   background-color:#D3D3D3;
+  border-radius: 0px 20px 20px 0px; 
   transition: 0.5s;
-  /* / */
   z-index: 50;
   position: fixed;
   
-}
+} 
 .menu{
   display: none;
   z-index: 50;
@@ -33,7 +31,7 @@
   .icons.toggle {
     transition: 0.5s;
     width:15%;
-    top: 69%;
+    top: 70%;
   }
   .menu{
     display: block;
@@ -43,7 +41,7 @@
   .icons.toggle .Home, .icons.toggle .Members, .icons.toggle .Event, .icons.toggle .Landing {
     display: block;
     margin-top:10px;
-    margin-left:10px;
+    margin-left:-20px;
     transform: rotate(-90deg);
     left: -4px;
   
@@ -107,56 +105,56 @@
         top: 10%;
     }
 } */
-.Home, .Members, .Event, .Landing {
+/* .Home, .Members, .Event, .Landing {
   font-size: 1.3rem;
   left: 0.7rem;
   color: black;
   
   
-}
-.Landing {
+} */
+/* .Landing {
   position: absolute;
   top: 70px;
   cursor: pointer;
   /* / */
-  z-index: 20;
+  /* z-index: 20; */
   
-}
+/* } */ */
 
-.Home {
+/* .Home {
   position: absolute;
   top: 165px;
   cursor: pointer;
   /* / */
-  z-index: 20;
+  /* z-index: 20; */
  
-}
+/* } */ */
 
 .Home:hover {
   color: rgb(135, 135, 135);
 }
 
-.Event {
+/* .Event {
   position: absolute;
   top: 260px;
   cursor: pointer;
   /* / */
-  z-index: 20;
-  
-}
+  /* z-index: 20;
+   */
+/* } */ */
 
 .Event:hover {
   color: rgb(135, 135, 135);
 }
 
-.Members {
+/* .Members {
   position: absolute;
   top: 360px;
   cursor: pointer;
   /* / */
-  z-index: 20;
+  /* z-index: 20; */
  
-}
+/* } */ */
 
 .Members:hover {
   color: rgb(135, 135, 135);
@@ -194,12 +192,12 @@
         /* / */
 /* z-index: 20; */
 /* } */
-.Landing {
+/* .Landing {
   position: absolute;
   top: 75px;
   
-}
+} */
 
-.Landing:hover {
+/* .Landing:hover {
   color: rgb(135, 135, 135);
-}/*# sourceMappingURL=style.css.map */
+}# sourceMappingURL=style.css.map */
