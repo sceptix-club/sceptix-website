@@ -33,12 +33,12 @@ function Login() {
     .then((data)=>{setIsAdmin(data.data)
       {data.data == false ? alert("You enterd wrong key") : ""}
     })
-    .catch((err)=>console.log(err))
+    .catch((err)=>console.log("error",err))
   }
   return (
     <>
-    <div className='flex justify-center items-center h-screen w-screen  '>
-      <div className=' w-96 h-96 bg-black flex justify-center items-center'>
+    <div className='flex justify-center items-center h-screen w-screen'>
+      <div className=' w-96 h-96 bg-black flex justify-center items-center flex-col'>
         <input value={key} className='rounded-xl placeholder:font-bold placeholder:text-center h-10' placeholder='key' type='password' onChange={(e)=>{setKey(e.target.value)}}/>
         <button className='text-white  mt-10 text-center font-extrabold text-3xl' type='submit' onClick={handleSubmit}>Submit</button>
       </div>
