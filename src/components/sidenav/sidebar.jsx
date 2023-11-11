@@ -48,27 +48,27 @@ function Sidebar() {
   return (
   <>
    
-      <div className= {`flex  icons ${visible ? toggle = "toggle" : toggle = "" }`}>
-        <div onClick={HandleClick} className="Landing">
+      <div className= {`flex bg-D3D3D3 justify-evenly items-center flex-col icons ${visible ? toggle = "toggle" : toggle = "" }`}>
+        {/* <div onClick={HandleClick} className="Landing">
           <Link to="/"> 
           <LuPlaneLanding />
           </Link>
          
        
-        </div>
+        </div> */}
         <div onClick={HandleClick} className="Home">
-         <Link to="/home">
-            <AiOutlineHome />
+         <Link to="/">
+            <AiOutlineHome size={27}/>
           </Link>
         </div>
         <div onClick={HandleClick} className="Event">
           <Link to="/events">
-            <SlCalender />
+            <SlCalender size={27}/>
           </Link>
         </div>
         <div onClick={HandleClick} className="Members">
           <Link to="/members">
-            <RiTeamLine />
+            <RiTeamLine size={27}/>
           </Link>
         </div>
         
