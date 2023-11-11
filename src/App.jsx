@@ -22,8 +22,8 @@ function App() {
         <Sidebar />
 
         <Routes>
-          <Route path="/" element={<><Landing/></>} />
-          <Route path="/home" element={<AboutUs/>}/>
+          <Route path="/" element={<><Landing/> <AboutUs/></>} />
+          {/* <Route path="/home" element={<AboutUs/>}/> */}
           <Route path="/events" element={<EventPage/>} />
           <Route path="/members" element={<TeamPage/>} />
           {/* <Route path="/timeline" element={<Main_timeline/>} /> */}
