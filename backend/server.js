@@ -162,7 +162,7 @@ app.post("/api/addEvent", upload.single("newEventImage"), async (req, res) => {
   }
 });
 
-app.get("/api/getEvent", async (req, res) => {
+app.get("/api/getUpComingEvent", async (req, res) => {
   const allData = await newEventModel.find();
   res.json(allData);
 });
