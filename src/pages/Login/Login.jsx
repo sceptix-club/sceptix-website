@@ -1,6 +1,6 @@
-import React, { useEffect,useContext } from 'react'
+import React, {useContext } from 'react'
 import { useState } from 'react'
-import AdminPage from '../AminPage/AdminPage';
+
 import { MainContext } from '../../Context/MainContext';
 
 
@@ -18,8 +18,7 @@ function Login() {
  
 
   const handleSubmit = async()=>{
-    
-    
+    try{
     await fetch("http://localhost:3000/api/checkforadmin",{
       method:"POST",
       headers:{
@@ -33,7 +32,11 @@ function Login() {
     .then((data)=>{setIsAdmin(data.data)
       {data.data == false ? alert("You enterd wrong key") : ""}
     })
-    .catch((err)=>console.log("error",err))
+    .catch((err)=>console.log(err))
+  }
+  catch(err){
+    alert(err.message) 
+  }
   }
   return (
     <>
