@@ -12,7 +12,7 @@ function AdminPage() {
 
     const getData = async()=>{
         await axios
-        .get("http://localhost:3000/api/getEvent")
+        .get("http://localhost:3000/api/getUpComingEvent")
         .then((res)=> {
           setNewEvents(res.data[0])  
         })
