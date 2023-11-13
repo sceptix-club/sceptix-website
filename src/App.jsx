@@ -23,7 +23,11 @@ function App() {
     <Router>
       <div className='bg-black scroll-smooth'>
       <Suspense fallback = {<h1 className='text-black text-center'>Loading ....</h1>}>
-        <Sidebar />
+       <Main_sidebar />
+=======
+       
+
+
         <Routes>
           <Route path="/" element={<><Landing/> <AboutUs/></>} />
           {/* <Route path="/home" element={<AboutUs/>}/> */}
