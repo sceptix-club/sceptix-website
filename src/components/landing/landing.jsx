@@ -61,7 +61,7 @@ const Landing = () => {
             </h3>
           </div>
         </div>
-        <Sidebar />
+       
       </div>
 
       <div
