@@ -6,6 +6,7 @@ import { MainContextProvider } from './Context/MainContext';
 const Landing = lazy(()=> import("./components/landing/landing"))
 const TeamPage = lazy(()=> import("./components/team/team"))
 const Sidebar = lazy(()=> import("./components/sidenav/sidebar.jsx"))
+const Main_sidebar = lazy(()=> import("./components/sidenav/main_sidebar.jsx"))
 const AboutUs = lazy(()=> import("./components/About/about.jsx"))
 const EventOrRegister = lazy(()=> import("./Context/EventOrRegister"))
 const AddEvent = lazy(()=> import ('./pages/AddEvent/AddEvent.jsx'))
