@@ -52,7 +52,7 @@ function Sidebar() {
   return (
   <>
    
-      <div className={`flex flex-col items-center justify-evenly xl:flex xl:bg-D3D3D3 xl:justify-evenly xl:items-center xl:flex-col icons ${visible ? toggle = "toggle" : toggle = "" }`}>
+      <div className= {`flex flex-col items-center justify-evenly xl:flex xl:bg-D3D3D3 xl:justify-evenly xl:items-center xl:flex-col icons ${visible ? toggle = "toggle" : toggle = "" }`}>
         {/* <div onClick={HandleClick} className="Landing">
           <Link to="/"> 
           <LuPlaneLanding />
@@ -62,17 +62,17 @@ function Sidebar() {
         </div> */}
         <div onClick={HandleClick} className="Home">
          <Link to="/">
-            <AiOutlineHome />
+            <AiOutlineHome size={27}/>
           </Link>
         </div>
         <div onClick={HandleClick} className="Event">
           <Link to="/events">
-            <SlCalender />
+            <SlCalender size={27}/>
           </Link>
         </div>
         <div onClick={HandleClick} className="Members">
           <Link to="/members">
-            <RiTeamLine />
+            <RiTeamLine size={27}/>
           </Link>
         </div>
         

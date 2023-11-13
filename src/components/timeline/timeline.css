@@ -263,3 +263,35 @@ div{
  
 
 } */
+.mainclass{
+  background-color:black;
+  transition: ease;
+  /* animation: divanimation 10s ease; */
+}
+.mainsvg{
+  background-color: red;
+}
+@keyframes divanimation {
+  0%{
+    height: 0%;
+  
+  }
+  25%{
+    height: 25%;
+  }
+  50%{
+    height: 50%;
+  }
+  75%{
+    height: 75%;
+  }
+  85%{
+    height: 85%;
+  }
+
+  90%{
+    height: 100%;
+  }
+
+  
+}
