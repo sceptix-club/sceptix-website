@@ -52,16 +52,16 @@ function Sidebar() {
   return (
   <>
    
-      <div className= {`flex  icons ${visible ? toggle = "toggle" : toggle = "" }`}>
-        <div onClick={HandleClick} className="Landing">
+      <div className={`flex flex-col items-center justify-evenly xl:flex xl:bg-D3D3D3 xl:justify-evenly xl:items-center xl:flex-col icons ${visible ? toggle = "toggle" : toggle = "" }`}>
+        {/* <div onClick={HandleClick} className="Landing">
           <Link to="/"> 
           <LuPlaneLanding />
           </Link>
          
        
-        </div>
+        </div> */}
         <div onClick={HandleClick} className="Home">
-         <Link to="/home">
+         <Link to="/">
             <AiOutlineHome />
           </Link>
         </div>
