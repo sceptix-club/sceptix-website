@@ -5,6 +5,7 @@ import TeamPage from './components/team/team'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/sidenav/sidebar.jsx";
+import Main_sidebar from './components/sidenav/main_sidebar.jsx';
 import AboutUs from "./components/About/about.jsx";
 import EventPage from './components/Events/events.jsx'
 import Main_timeline from './components/timeline/main_timeline';
@@ -19,7 +20,7 @@ function App() {
   return (
     <Router>
       <div className='bg-black scroll-smooth'>
-        <Sidebar />
+        <Main_sidebar />
 
         <Routes>
           <Route path="/" element={<><Landing/> <AboutUs/></>} />
