@@ -39,7 +39,7 @@ function AddEvent() {
 
   return (
     <>
-      <div className="flex justify-center items-center h-screen flex-col">
+      <div className="flex justify-center items-center h-full flex-col">
         <form onSubmit={handleSubmit}>
           <input
             onChange={(e) => setNewEventName(e.target.value)}
@@ -78,7 +78,7 @@ function AddEvent() {
           <br />
           <button
             type="submit"
-            className="text-black text-2xl m-2 py-1 px-3 rounded bg-slate-200  hover:bg-slate-800 hover:text-white transition duration-300 ease-in-out "
+            className="text-black text-2xl m-2 py-1 px-3 rounded-lg font-semibold bg-slate-200  hover:bg-slate-800 hover:text-white transition duration-300 ease-in-out "
           >
             Submit
           </button>
