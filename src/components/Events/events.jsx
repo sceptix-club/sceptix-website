@@ -11,7 +11,6 @@ import Loading from "../Loading/Loading.jsx";
 
 const EventPage = () => {
   const { newEvents, setNewEvents } = useContext(MainContext);
-
   const [upComingEvent, setUpComingEvent] = useState([{}]);
   const [loading,setLoading] = useState(false)
 
@@ -31,7 +30,7 @@ const EventPage = () => {
   };
 
   const getEventData = async()=>{
-    await  axios
+    await axios
     .get("http://localhost:3000/getevents")
     .then((events) => setEvents(events.data))
     .catch((err) => console.log(err));
@@ -154,7 +153,7 @@ const EventPage = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mx-auto">
           {loading ? "" :<Loading/>}
-          {events.map((member, index) => (
+          {events?.map((member, index) => (
             <div
               className="mr-4 sm:justify-center md:justify-start lg:justify-start xl:justify-start"
               key={index}
