@@ -46,7 +46,7 @@ let EventModel;
 //function to get the eventdata from mongodb
 app.get("/getEvents", (req, res) => {
   eventModel
-    .find()
+    .find().sort({_id:-1})
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
