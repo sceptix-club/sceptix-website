@@ -24,6 +24,7 @@
     "react-dom": "^18.2.0",
     "react-email-validator": "^1.0.2",
     "react-icons": "^4.9.0",
+    "react-loader-spinner": "^5.4.5",
     "react-router-dom": "^6.12.1",
     "react-spring": "^9.7.1",
     "react-vertical-timeline-component": "^3.6.0",
