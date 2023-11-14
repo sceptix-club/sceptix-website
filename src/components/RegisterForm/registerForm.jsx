@@ -2,10 +2,11 @@ import React, { useEffect } from 'react'
 import { useState,useContext } from 'react'
 import { validate } from 'react-email-validator';
 import {MainContext} from '../../Context/MainContext'
+import DnaLoading from '../Loading/DnaLoading';
 
 
 function RegisterForm() {
- 
+  const [loading,setLoading] = useState(true)
   const [otpField,setOtpField] = useState("hidden")
   const [registerButton,setRegisterButton] = useState("")
   const [name,setName] = useState("")
@@ -78,6 +79,7 @@ function RegisterForm() {
   const handleSubmit = (e)=>{
     e.preventDefault()
     
+    
     if(!validate(email) || email === ""){
       alert("Please enter a valid email")
       return
@@ -88,6 +90,7 @@ function RegisterForm() {
     }
     else{
       setReadOnly(true)
+      setLoading(false)
     try{
     fetch("http://localhost:3000/api/reg",{
       method:"POST",
@@ -104,6 +107,7 @@ function RegisterForm() {
       if(data.message){
         setMessageFromServer(data.message)
         if(data.message === "otp sent sucessfull"){
+          setLoading(true)
           setOtpField("")
           setRegisterButton("hidden")
         }
@@ -123,8 +127,10 @@ function RegisterForm() {
   }
   return (
     <>
+    
     <div className='flex w-full h-screen bg-black items-center justify-center'>
-      <div className='bg-bkack w-80 h-screen'>
+      {loading ? "" :<DnaLoading/>}
+      <div hidden={!loading}  className={`bg-bkack w-80 h-screen`} >
         
         {eventName != undefined &&  <h1 className='text-center text-white py-8 font-extrabold text-4xl'>{`Registration For ${eventName}`}</h1>}
         
