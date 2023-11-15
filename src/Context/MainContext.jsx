@@ -12,6 +12,7 @@ export const MainContextProvider = ({children})=>{
 
   const [showRegister,setShowRegister] = useState(false);
   const [eventName,setEventName] = useState("")
+  const [eventImage,setEventImage] = useState("")
   const [newEvents,setNewEvents] = useState(null)
   const [isAdmin,setIsAdmin] = useState(false)
   const [showAddEvent,setShowAddEvent] = useState(false)
@@ -20,7 +21,7 @@ export const MainContextProvider = ({children})=>{
 
 
   return (
-    <MainContext.Provider value={{showRegister,setShowRegister,eventName,setEventName,newEvents,setNewEvents,isAdmin,setIsAdmin,showAddEvent,setShowAddEvent}}>
+    <MainContext.Provider value={{showRegister,setShowRegister,eventName,setEventName,newEvents,setNewEvents,isAdmin,setIsAdmin,showAddEvent,setShowAddEvent,eventImage,setEventImage}}>
       {children}
     </MainContext.Provider>
   );
