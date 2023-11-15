@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import { useState,useContext } from 'react'
 import { validate } from 'react-email-validator';
-import {RegisterContext} from '../../Context/RegisterContext'
+import {MainContext} from '../../Context/MainContext'
+import DnaLoading from '../Loading/DnaLoading';
 
 
 function RegisterForm() {
- 
+  const [loading,setLoading] = useState(true)
   const [otpField,setOtpField] = useState("hidden")
   const [registerButton,setRegisterButton] = useState("")
   const [name,setName] = useState("")
@@ -13,8 +14,8 @@ function RegisterForm() {
   const [otp,setOtp] = useState("")
   const [messageFromServer,setMessageFromServer] = useState("")
   const [readOnly,setReadOnly] = useState(false)
-  const {eventName,setEventName} = useContext(RegisterContext)
-  const {showRegister,setShowRegister} = useContext(RegisterContext)
+  const {eventName,setEventName} = useContext(MainContext)
+  const {showRegister,setShowRegister} = useContext(MainContext)
  
 
   const handleOtpSubmit = (e)=>{
@@ -78,6 +79,7 @@ function RegisterForm() {
   const handleSubmit = (e)=>{
     e.preventDefault()
     
+    
     if(!validate(email) || email === ""){
       alert("Please enter a valid email")
       return
@@ -88,6 +90,7 @@ function RegisterForm() {
     }
     else{
       setReadOnly(true)
+      setLoading(false)
     try{
     fetch("http://localhost:3000/api/reg",{
       method:"POST",
@@ -104,6 +107,7 @@ function RegisterForm() {
       if(data.message){
         setMessageFromServer(data.message)
         if(data.message === "otp sent sucessfull"){
+          setLoading(true)
           setOtpField("")
           setRegisterButton("hidden")
         }
@@ -123,7 +127,48 @@ function RegisterForm() {
   }
   return (
     <>
-   
+    
+    <div className='flex w-full h-screen bg-black items-center justify-center'>
+      {loading ? "" :<DnaLoading/>}
+      <div hidden={!loading}  className={`bg-bkack w-80 h-screen`} >
+        
+        {eventName != undefined &&  <h1 className='text-center text-white py-8 font-extrabold text-4xl'>{`Registration For ${eventName}`}</h1>}
+        
+       
+        <form action="">
+          <div className='mt-10'>
+            <label name = "name" className='text-white font-bold text-2xl'>Name</label>
+            <input readOnly = {readOnly}  onChange={(e)=>{setName(e.target.value)}} value={name} type="text" name='name' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
+          </div>
+          <div className='mt-10'>
+            <label name="email" className='text-white font-bold text-2xl'>Email</label>
+            <input  readOnly = {readOnly} onChange={(e)=>setEmail(e.target.value)} value={email} type="text" name='email' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
+          </div>
+            
+          <div className={`mt-10 ${otpField}`}>
+            <label name = "otp" className='text-white font-bold text-2xl'>OTP</label>
+            <input onChange={(e)=>{setOtp(e.target.value)}} value={otp} type="text" className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-serif' />
+          </div>
+          
+          {/* <div className={`mt-10 `}>
+            <p className='text-white text-center'>This is a message from the server</p>
+          </div> */}
+
+          {messageFromServer != "" && <div className=' font-serif text-white mt-8 text-center text-lg font-semibold'>{messageFromServer}</div>}
+          {/* {messageFromServer === "This email Id already registerd" && <div className='text-white mt-8 text-center text-lg font-semibold'>{messageFromServer}</div>} */}
+
+
+          <div className='mt-10 flex justify-center'>
+          <button onClick={handleSubmit} className={`font-bold ${registerButton} text-2xl text-white`}>Submit</button>
+          {registerButton === "hidden" && <button onClick={handleOtpSubmit} className='font-bold text-2xl text-white'>Register</button>}
+          </div>
+
+         
+
+        </form>
+      </div>
+    </div>
+    
     </>
   )
 }
