@@ -7,8 +7,8 @@ function DnaLoading (){
         <div className="h-screen w-screen flex justify-center items-center">
         <Dna
             visible={true}
-            height="480"
-            width="480"
+            height="400"
+            width="400"
             ariaLabel="dna-loading"
             wrapperStyle={{}}
             wrapperClass="dna-wrapper"
