@@ -124,6 +124,9 @@ function RegisterForm() {
     <div className='min-h-screen lg:py-40 py-10 bg-gray-950'>
       <div>
         <div className='container mx-auto'>
+
+        {eventName != undefined &&  <h1 className='text-center text-white py-4 font-extrabold text-4xl'>{`Registration For ${eventName}`}</h1>}
+
           <div className='flex flex-col lg:flex-row w-10/12 lg:w-8/12  bg-gray-900 rounded-xl mx-auto overflow-hidden'>
             <div className='w-full lg:w-5/12 p-40 bg-no-repeat bg-contain bg-center m-2' style={{backgroundImage: `url('public/HackToFuture - 26 April 2023.jpg')`}}>
             </div>
@@ -142,6 +145,9 @@ function RegisterForm() {
               <div className='text-white p-1 text-center'>
                   <p>test mesage</p>
               </div>
+
+              {messageFromServer != "" && <div className=' font-serif text-white mt-3 text-center text-base font-semibold'>{messageFromServer}</div>}
+
               <div className='mt-5'>
                 <button onClick={handleSubmit} className={` ${registerButton} w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900`}>Submit</button>
                 {registerButton === "hidden" && <button onClick={handleOtpSubmit} className='w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900'>Register</button>}
