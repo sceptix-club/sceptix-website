@@ -53,6 +53,7 @@ const EventCards = (props) => {
 const UpComingEventCards = (props) => {  
   const {showRegister,setShowRegister} = useContext(MainContext)
   const {eventName,setEventName} = useContext(MainContext)
+  const {eventImage,setEventImage} = useContext(MainContext)
   const [isExpanded, setIsExpanded] = useState(false);
  
  
@@ -81,6 +82,7 @@ const UpComingEventCards = (props) => {
           <FontAwesomeIcon icon={faCalendarAlt} /> 
           <button onClick={()=>{
             setEventName(props.eventName)
+            setEventImage(props.image)
             setShowRegister(true)
           }} className='font-bold'>Register Now</button>
         </h5>
@@ -94,6 +96,7 @@ const UpComingEventCards = (props) => {
           <p>{props.eventInfo}</p>
           <button onClick={()=>{
             setEventName(props.eventName)
+            setEventImage(props.image)
             setShowRegister(true)
           }} className = "transition-all mt-10 font-bold text-lg absolute bottom-5 hover:scale-125">Register Now</button>
           
