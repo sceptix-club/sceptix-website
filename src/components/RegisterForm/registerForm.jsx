@@ -117,54 +117,42 @@ function RegisterForm() {
     console.log("Error occured",err.message)   
   }
 }
-    
-
-    
+     
   }
   return (
     <>
-    <div className='flex w-full h-screen bg-black items-center justify-center'>
-      <div className='bg-bkack w-80 h-screen'>
-        
-        {eventName != undefined &&  <h1 className='text-center text-white py-8 font-extrabold text-4xl'>{`Registration For ${eventName}`}</h1>}
-        
-       
-        <form action="">
-          <div className='mt-10'>
-            <label name = "name" className='text-white font-bold text-2xl'>Name</label>
-            <input readOnly = {readOnly}  onChange={(e)=>{setName(e.target.value)}} value={name} type="text" name='name' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
+    <div className='min-h-screen lg:py-40 py-10 bg-gray-950'>
+      <div>
+        <div className='container mx-auto'>
+          <div className='flex flex-col lg:flex-row w-10/12 lg:w-8/12  bg-gray-900 rounded-xl mx-auto overflow-hidden'>
+            <div className='w-full lg:w-5/12 p-40 bg-no-repeat bg-contain bg-center m-2' style={{backgroundImage: `url('public/HackToFuture - 26 April 2023.jpg')`}}>
+            </div>
+            <div className='w-full w-5/12 lg:w-2/3 lg:py-24 py-4 px-12 lg:border-2 lg:m-2'>
+            <h2  className='text-4xl mb-4 text-blue-400 font-semibold text-center lg:text-left'>Register</h2>
+            <form action="">
+              <div className='mt-5'>
+                <input readOnly = {readOnly}  onChange={(e)=>{setName(e.target.value)}} value={name} type="text" placeholder="Name" className='border border-gray-400 py-1 px-2 w-full rounded-lg'/>
+              </div>
+              <div className='mt-5'>
+                <input readOnly = {readOnly} onChange={(e)=>setEmail(e.target.value)} value={email} type="text" placeholder="Email" className='border border-gray-400 py-1 px-2 w-full rounded-lg'/>
+              </div>
+              <div className={`mt-5 ${otpField}`}>
+                <input onChange={(e)=>{setOtp(e.target.value)}} value={otp} type="text" placeholder="Enter the OTP sent to your mail" className='border border-gray-400 py-1 px-2 w-full rounded-lg'/>
+              </div>
+              <div className='text-white p-1 text-center'>
+                  <p>test mesage</p>
+              </div>
+              <div className='mt-5'>
+                <button onClick={handleSubmit} className={` ${registerButton} w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900`}>Submit</button>
+                {registerButton === "hidden" && <button onClick={handleOtpSubmit} className='w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900'>Register</button>}
+              </div>
+            </form>
+            </div>
           </div>
-          <div className='mt-10'>
-            <label name="email" className='text-white font-bold text-2xl'>Email</label>
-            <input  readOnly = {readOnly} onChange={(e)=>setEmail(e.target.value)} value={email} type="text" name='email' className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-semibold font-serif text-xl' />
-          </div>
-            
-          <div className={`mt-10 ${otpField}`}>
-            <label name = "otp" className='text-white font-bold text-2xl'>OTP</label>
-            <input onChange={(e)=>{setOtp(e.target.value)}} value={otp} type="text" className='w-full h-10 bg-transparent border-2 border-white rounded-md text-white font-serif' />
-          </div>
-          
-          {/* <div className={`mt-10 `}>
-            <p className='text-white text-center'>This is a message from the server</p>
-          </div> */}
-
-          {messageFromServer != "" && <div className=' font-serif text-white mt-8 text-center text-lg font-semibold'>{messageFromServer}</div>}
-          {/* {messageFromServer === "This email Id already registerd" && <div className='text-white mt-8 text-center text-lg font-semibold'>{messageFromServer}</div>} */}
-
-
-          <div className='mt-10 flex justify-center'>
-          <button onClick={handleSubmit} className={`font-bold ${registerButton} text-2xl text-white`}>Submit</button>
-          {registerButton === "hidden" && <button onClick={handleOtpSubmit} className='font-bold text-2xl text-white'>Register</button>}
-          </div>
-
-         
-
-        </form>
+        </div>
       </div>
     </div>
-    
     </>
-  )
+    )
 }
-
 export default RegisterForm
