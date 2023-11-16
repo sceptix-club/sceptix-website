@@ -151,10 +151,20 @@ function RegisterForm() {
                 <input readOnly = {readOnly}  onChange={(e)=>{setName(e.target.value)}} value={name} type="text" placeholder="Name" className='border border-gray-400 py-1 px-2 w-full rounded-lg'/>
               </div>
               <div className='mt-5'>
-                <input readOnly = {readOnly} onChange={(e)=>setEmail(e.target.value)} value={email} type="text" placeholder="Email" className='border border-gray-400 py-1 px-2 w-full rounded-lg'/>
+                <input readOnly = {readOnly} onChange={(e)=>setEmail(e.target.value)} onKeyDown={(e)=> {
+                  if(e.keyCode == 13 && email !== ""){
+                    e.preventDefault()
+                    handleSubmit()
+                  }
+                } } value={email} type="text" placeholder="Email" className='border border-gray-400 py-1 px-2 w-full rounded-lg'/>
               </div>
               <div className={`mt-5 ${otpField}`}>
-                <input onChange={(e)=>{setOtp(e.target.value)}} value={otp} type="text" placeholder="Enter the OTP sent to your mail" className='border border-gray-400 py-1 px-2 w-full rounded-lg'/>
+                <input onChange={(e)=>{setOtp(e.target.value)}} onKeyDown={(e)=>{
+                  if(e.keyCode == 13 && otp != "" ){
+                    e.preventDefault()
+                    handleOtpSubmit()
+                  }
+                }} value={otp} type="text" placeholder="Enter the OTP sent to your mail" className='border border-gray-400 py-1 px-2 w-full rounded-lg'/>
               </div>
               {/* <div className='text-white p-1 text-center'>
                   <p>test mesage</p>
