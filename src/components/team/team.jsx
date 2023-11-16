@@ -29,11 +29,11 @@ const MemberCard = ({ member }) => {
             <AiFillGithub color="white" size={30} />
           </a>
         </div>
-        { <div className="m-2">
+        {/* { <div className="m-2">
           <a href={member.linked}>
             <AiFillLinkedin color="white" size={30} />
           </a>
-  </div> }
+  </div> } */}
       </div>
     </div>
     </div>
