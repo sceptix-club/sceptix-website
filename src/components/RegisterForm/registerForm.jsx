@@ -9,7 +9,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 function RegisterForm() {
  
   const [otpField,setOtpField] = useState("hidden")
-  // const [loading,setLoading] = useState(false)
+  const [loading,setLoading] = useState(false)
   const [registerButton,setRegisterButton] = useState("")
   const [name,setName] = useState("")
   const [email,setEmail] = useState("")
@@ -91,7 +91,7 @@ function RegisterForm() {
       return
     }
     else{
-      // setLoading(true)
+      setLoading(true)
       setReadOnly(true)
     try{
     fetch("http://localhost:3000/api/reg",{
@@ -109,7 +109,7 @@ function RegisterForm() {
       if(data.message){
         setMessageFromServer(data.message)
         if(data.message === "otp sent sucessfull"){
-          // setLoading(false)
+          setLoading(false)
           setOtpField("")
           setRegisterButton("hidden")
         }
@@ -173,7 +173,12 @@ function RegisterForm() {
               {messageFromServer != "" && <div className=' font-serif text-white mt-3 text-center text-base font-semibold'>{messageFromServer}</div>}
 
               <div className='mt-5'>
-                <button onClick={handleSubmit} className={` ${registerButton} w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900`}>Submit</button>
+                <button hidden = {loading} onClick={handleSubmit} className={` ${registerButton} w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900`}>Submit</button>
+                {loading ? <button onClick={handleOtpSubmit} className='flex justify-center w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900'>
+                  <div className='w-6 h-6 bg-white flex justify-center rounded-full items-center'>
+                    <div className='w-4 h-2 bg-black rounded-full animate-spin'></div>
+                  </div>
+                </button> : ""}
                 {registerButton === "hidden" && <button onClick={handleOtpSubmit} className='w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900'>Register</button>}
               </div>
             </form>
