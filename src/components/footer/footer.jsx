@@ -58,7 +58,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="md:mt-2 lg:mt-0 text-center">
+          <div className="md:mt-2 lg:mt-4 xl:mt-4 2xl:mt-4 text-center">
             <div className="mb-2" onClick={HandleClick}>
               <h1 className="text-lg font-semibold mb-1">About Us</h1>
               <Link
@@ -98,11 +98,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="md:mt-2 lg:mt-0 text-left">
+          <div className="md:mt-2 lg:mt-4  xl:mt-4 2xl:mt-4 text-center">
             <div className="mb-2">
               <h1 className="text-lg font-semibold mb-1">Contact Us</h1>
             </div>
-            <div className="flex flex-col space-y-2">
+            <div className="lg:ml-20 flex flex-col space-y-2">
               {socialIcons.map((socialIcon) => (
                 <a
                   className="flex items-center hover:text-blue-500 transition-colors duration-300"
