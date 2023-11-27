@@ -98,11 +98,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="md:mt-2 lg:mt-4  xl:mt-4 2xl:mt-4 text-center">
+          <div className="md:mt-2 lg:mt-4 xl:mt-4 2xl:mt-4 lg:text-center xl:text-center">
             <div className="mb-2">
               <h1 className="text-lg font-semibold mb-1">Contact Us</h1>
             </div>
-            <div className="lg:ml-20 flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 lg:ml-20 xl:ml-36 2xl:ml-48">
               {socialIcons.map((socialIcon) => (
                 <a
                   className="flex items-center hover:text-blue-500 transition-colors duration-300"
