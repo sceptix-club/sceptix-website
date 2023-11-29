@@ -163,7 +163,7 @@ const EventPage = () => {
             </div>
           ))
           :
-          <div className="h-screen w-screen flex justify-center items-center">
+          <div className="h-full w-screen flex justify-center items-center">
             <h1 className="text-white font-extrabold text-5xl">Server Error</h1>
 
           </div>
