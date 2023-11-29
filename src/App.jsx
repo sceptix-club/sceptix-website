@@ -11,6 +11,7 @@ const AboutUs = lazy(()=> import("./components/About/about.jsx"))
 const EventOrRegister = lazy(()=> import("./Context/EventOrRegister"))
 const AddEvent = lazy(()=> import ('./pages/AddEvent/AddEvent.jsx'))
 const LoginOrAdmin = lazy(()=> import('./pages/Login/LoginOrAdmin.jsx'))
+const PageNotFound = lazy(()=> import ('./pages/PageNotFound/PageNotFound.jsx'))
 
 // const Main_timeline = lazy(()=> import("./components/timeline/main_timeline"))
 
@@ -32,7 +33,8 @@ function App() {
           <Route path='/events' element={<EventOrRegister/>}/>
           <Route path='/login' element={<LoginOrAdmin/>}/>
           <Route path ='/addevent' element={<AddEvent/>}/>
-        </Routes>
+          <Route path = '*' element = {<PageNotFound/>}/>        
+          </Routes>
         
         
         
