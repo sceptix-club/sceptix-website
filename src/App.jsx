@@ -1,39 +1,45 @@
-import { useState } from 'react'
+import { useState,lazy,Suspense, useEffect,useContext } from 'react'
 import './App.css'
-import Landing from './components/landing/landing'
-import TeamPage from './components/team/team'
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/sidenav/sidebar.jsx";
-import Main_sidebar from './components/sidenav/main_sidebar.jsx';
-import AboutUs from "./components/About/about.jsx";
-import EventPage from './components/Events/events.jsx'
-import Main_timeline from './components/timeline/main_timeline';
+import React from "react";
+import { MainContextProvider } from './Context/MainContext';
+const Landing = lazy(()=> import("./components/landing/landing"))
+const TeamPage = lazy(()=> import("./components/team/team"))
+const Sidebar = lazy(()=> import("./components/sidenav/sidebar.jsx"))
+const Main_sidebar = lazy(()=> import("./components/sidenav/main_sidebar.jsx"))
+const AboutUs = lazy(()=> import("./components/About/about.jsx"))
+const EventOrRegister = lazy(()=> import("./Context/EventOrRegister"))
+const AddEvent = lazy(()=> import ('./pages/AddEvent/AddEvent.jsx'))
+const LoginOrAdmin = lazy(()=> import('./pages/Login/LoginOrAdmin.jsx'))
 
-import './App.css';
+// const Main_timeline = lazy(()=> import("./components/timeline/main_timeline"))
 
 
 
 function App() {
   const [count, setCount] = useState(0)
-
   return (
+    <MainContextProvider>
+      
     <Router>
       <div className='bg-black scroll-smooth'>
-        <Main_sidebar />
-
+      <Suspense fallback = {<h1 className='text-black text-center'>Loading ....</h1>}>
+       <Main_sidebar />
         <Routes>
           <Route path="/" element={<><Landing/> <AboutUs/></>} />
           {/* <Route path="/home" element={<AboutUs/>}/> */}
-          <Route path="/events" element={<EventPage/>} />
           <Route path="/members" element={<TeamPage/>} />
-          {/* <Route path="/timeline" element={<Main_timeline/>} /> */}
-
-          
+          <Route path='/events' element={<EventOrRegister/>}/>
+          <Route path='/login' element={<LoginOrAdmin/>}/>
+          <Route path ='/addevent' element={<AddEvent/>}/>
         </Routes>
         
+        
+        
+  </Suspense>
       </div>
     </Router>
+    </MainContextProvider>
   );
 }
 

@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "aos": "^2.3.4",
+    "axios": "^1.6.0",
     "font-awesome": "^4.7.0",
     "gsap": "^3.12.2",
     "hamburger-react": "^2.5.0",
@@ -21,11 +22,15 @@
     "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-email-validator": "^1.0.2",
     "react-icons": "^4.9.0",
+    "react-loader-spinner": "^5.4.5",
     "react-router-dom": "^6.12.1",
     "react-spring": "^9.7.1",
     "react-vertical-timeline-component": "^3.6.0",
-    "styled-component": "^2.8.0"
+    "scrollmagic": "^2.0.8",
+    "styled-component": "^2.8.0",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
