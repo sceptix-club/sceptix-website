@@ -174,7 +174,7 @@ function RegisterForm() {
 
               <div className='mt-5'>
                 <button hidden = {loading} onClick={handleSubmit} className={` ${registerButton} w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900`}>Submit</button>
-                {loading ? <button onClick={handleOtpSubmit} className='flex justify-center w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900'>
+                {loading ? <button disabled={true} onClick={handleOtpSubmit} className='flex justify-center w-full bg-blue-900 py-3 text-center text-white rounded-xl lg:hover:bg-white lg:hover:text-blue-900'>
                   <div className='w-6 h-6 bg-white flex justify-center rounded-full items-center'>
                     <div className='w-4 h-2 bg-black rounded-full animate-spin'></div>
                   </div>
