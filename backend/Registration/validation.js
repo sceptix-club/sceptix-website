@@ -8,6 +8,7 @@ const {hashData,verifyHasedData} = require('./hashData')
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 module.exports.validationCheck = async function (username,email,EventModel,eventName,res,duration = 1) {
+    let responseFromDb = await EventModel.findOne({email})
    
     EventModel.find({ email: email }).then(async (response) => {
         if (response.length === 0) {
@@ -49,6 +50,9 @@ module.exports.validationCheck = async function (username,email,EventModel,event
             // await user.save()
             // const statusCode = 200;
             // res.status(statusCode).json({message:"Registration Successfull"})
+        }
+        else if (responseFromDb.verified === false){
+            res.status(401).json({message:"Your Registration is not successfull please contact admin"});
         } 
         else {
             console.log("user exist");
